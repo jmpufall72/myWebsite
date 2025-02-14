@@ -14,9 +14,9 @@ header {
     color: white;
     padding: 20px;
     display: flex;
+    justify-content: space-between; /* Space out logo and title */
     align-items: center; /* Vertically align items in the center */
-    justify-content: flex-start; /* Keep the logo on the left side */
-    flex-wrap: wrap; /* Allow text to wrap below the logo on smaller screens */
+    flex-wrap: wrap;
 }
 
     /* Style for the logo */
@@ -26,11 +26,11 @@ header {
         margin-right: 20px; /* Space between the logo and the text */
     }
 
-    /* Center the title */
+    /* Style for the title (Centered on the page) */
     header h1 {
         margin: 0;
         font-size: 2em; /* Adjust font size for the heading */
-        flex-grow: 1; /* Make h1 take up remaining space to center it */
+        flex: 1 1 100%; /* Allow the title to take full width */
         text-align: center; /* Center the text */
     }
 
@@ -38,6 +38,7 @@ header {
     header p {
         margin: 30px 0; /* Adds margin between the heading and the paragraph */
         font-size: 1.2em;
+        text-align: center; /* Center the paragraph text */
     }
 
 /* Add responsiveness */
@@ -45,12 +46,14 @@ header {
     header {
         flex-direction: column; /* Stack items vertically on small screens */
         align-items: center; /* Center items horizontally */
+        text-align: center; /* Ensure the text is also centered */
     }
 
         header .logo img {
             margin-bottom: 15px; /* Adds space below the logo */
         }
 }
+
 
 
 

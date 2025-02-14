@@ -15,48 +15,54 @@ header {
     padding: 20px;
     display: flex;
     align-items: center;
-    justify-content: center; /* Centers "Jonathan Pufall" */
-    flex-wrap: wrap; /* Allows wrapping on small screens */
+    justify-content: center; /* Center content */
+    flex-wrap: wrap;
     text-align: center;
-    position: relative; /* Allows absolute positioning for the tagline */
+    position: relative;
 }
 
     /* Style for the logo */
     header .logo img {
-        width: 60px; /* Adjust size */
+        width: 60px;
         height: auto;
-        margin-right: 20px; /* Space between the logo and text */
+        margin-right: 20px;
     }
 
-    /* Header text styles */
-    header h1 {
-        margin: 0;
-        font-size: 2em;
-        flex: 1; /* Allows flexibility for centering */
-    }
+/* Container for text */
+.header-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
 
-    /* Position the tagline */
-    header p {
-        margin: 0;
-        font-size: 1.2em;
-        position: absolute;
-        right: 20px;
-        top: 50%;
-        transform: translateY(-50%);
-    }
+/* Center the title */
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+/* Position the tagline */
+header p {
+    font-size: 1.2em;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
 
 /* Responsive design: move tagline under name on small screens */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
         align-items: center;
-        text-align: center;
     }
 
         header p {
             position: static;
             transform: none;
             margin-top: 10px;
+            text-align: center;
         }
 }
 

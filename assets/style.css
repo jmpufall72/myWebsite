@@ -14,8 +14,9 @@ header {
     color: white;
     padding: 20px;
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    align-items: center; /* Vertically align items in the center */
+    justify-content: flex-start; /* Align everything to the left */
+    flex-wrap: wrap; /* Allow text to wrap below the logo on smaller screens */
 }
 
     /* Style for the logo */
@@ -28,12 +29,25 @@ header {
     /* Header text styles */
     header h1 {
         margin: 0; /* Removes any default margin */
+        font-size: 2em; /* Adjust font size for the heading */
     }
 
     header p {
-        margin: 10px 0; /* Adds margin between the two elements */
+        margin: 10px 0; /* Adds margin between the heading and the paragraph */
         font-size: 1.2em; /* Optional, adjust to make it look better */
     }
+
+/* Add responsiveness */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: center; /* Center items horizontally */
+    }
+
+        header .logo img {
+            margin-bottom: 15px; /* Adds space below the logo */
+        }
+}
 
 /* Navigation */
 nav {

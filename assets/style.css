@@ -14,40 +14,52 @@ header {
     color: white;
     padding: 20px;
     display: flex;
-    align-items: center; /* Vertically align items in the center */
-    justify-content: flex-start; /* Align everything to the left */
-    flex-wrap: wrap; /* Allow text to wrap below the logo on smaller screens */
+    align-items: center;
+    justify-content: center; /* Centers "Jonathan Pufall" */
+    flex-wrap: wrap; /* Allows wrapping on small screens */
+    text-align: center;
+    position: relative; /* Allows absolute positioning for the tagline */
 }
 
     /* Style for the logo */
     header .logo img {
-        width: 60px; /* Adjust the size of the logo */
+        width: 60px; /* Adjust size */
         height: auto;
-        margin-right: 20px; /* Space between the logo and the text */
+        margin-right: 20px; /* Space between the logo and text */
     }
 
     /* Header text styles */
     header h1 {
-        margin: 0; /* Removes any default margin */
-        font-size: 2em; /* Adjust font size for the heading */
+        margin: 0;
+        font-size: 2em;
+        flex: 1; /* Allows flexibility for centering */
     }
 
+    /* Position the tagline */
     header p {
-        margin: 30px 0; /* Adds margin between the heading and the paragraph */
-        font-size: 1.2em; /* Optional, adjust to make it look better */
+        margin: 0;
+        font-size: 1.2em;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
     }
 
-/* Add responsiveness */
-@media (max-width: 600px) {
+/* Responsive design: move tagline under name on small screens */
+@media (max-width: 768px) {
     header {
-        flex-direction: column; /* Stack items vertically on small screens */
-        align-items: center; /* Center items horizontally */
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 
-        header .logo img {
-            margin-bottom: 15px; /* Adds space below the logo */
+        header p {
+            position: static;
+            transform: none;
+            margin-top: 10px;
         }
 }
+
 
 /* Navigation */
 nav {

@@ -14,55 +14,48 @@ header {
     color: white;
     padding: 20px;
     display: flex;
-    align-items: center;
-    justify-content: center; /* Center content */
-    flex-wrap: wrap;
-    text-align: center;
-    position: relative;
+    align-items: center; /* Vertically align items in the center */
+    justify-content: flex-start; /* Align everything to the left */
+    flex-wrap: wrap; /* Allow text to wrap below the logo on smaller screens */
 }
 
     /* Style for the logo */
     header .logo img {
-        width: 60px;
+        width: 60px; /* Adjust the size of the logo */
         height: auto;
-        margin-right: 20px;
+        margin-right: 20px; /* Space between the logo and the text */
     }
 
-/* Container for text */
-.header-text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex: 1;
-}
+    /* Header text styles */
+    header h1 {
+        margin: 0; /* Removes any default margin */
+        font-size: 2em; /* Adjust font size for the heading */
+        text-align: center; /* Center the heading text */
+        flex: 1; /* Allow the heading to take the remaining space */
+    }
 
-/* Center the title */
-header h1 {
-    margin: 0;
-    font-size: 2em;
-}
+    /* Style for the tagline (Bridging Entertainment, Tech, and Business) */
+    header p {
+        margin: 10px 0; /* Adds margin between the heading and the paragraph */
+        font-size: 1.2em; /* Optional, adjust to make it look better */
+        text-align: right; /* Align text to the right */
+        flex: 1; /* Allow the paragraph to take the remaining space */
+    }
 
-/* Position the tagline */
-header p {
-    font-size: 1.2em;
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-/* Responsive design: move tagline under name on small screens */
-@media (max-width: 768px) {
+/* Add responsiveness */
+@media (max-width: 600px) {
     header {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: center; /* Center items horizontally */
     }
+
+        header h1, header p {
+            text-align: center; /* Center both the heading and tagline on small screens */
+            flex: none; /* Prevent text from taking extra space */
+        }
 
         header p {
-            position: static;
-            transform: none;
-            margin-top: 10px;
-            text-align: center;
+            margin-top: 10px; /* Adjust margin for better spacing */
         }
 }
 

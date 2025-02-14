@@ -20,7 +20,7 @@ header {
 
     /* Style for the logo */
     header .logo img {
-        width: 30px; /* Adjust the size of the logo */
+        width: 60px; /* Adjust the size of the logo */
         height: auto;
         margin-right: 20px; /* Space between the logo and the text */
     }

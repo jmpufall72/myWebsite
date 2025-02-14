@@ -33,7 +33,7 @@ header {
     }
 
     header p {
-        margin: 10px 0; /* Adds margin between the heading and the paragraph */
+        margin: 100px 0; /* Adds margin between the heading and the paragraph */
         font-size: 1.2em; /* Optional, adjust to make it look better */
     }
 

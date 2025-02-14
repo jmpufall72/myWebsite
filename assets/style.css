@@ -51,6 +51,9 @@ header {
 
 /* Navigation */
 nav {
+    display: flex;
+    justify-content: center; /* Center the links */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
     margin: 20px 0;
     background: #fff;
     padding: 15px;
@@ -71,6 +74,21 @@ nav {
             color: #007bff;
             border-bottom: 2px solid #007bff;
         }
+
+/* Mobile Navigation (Stack Links for Small Screens) */
+@media screen and (max-width: 600px) {
+    nav {
+        flex-direction: column; /* Stack links vertically */
+        align-items: center;
+    }
+
+        nav a {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 15px;
+        }
+}
 
 /* Project Section */
 .project-container {

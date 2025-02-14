@@ -52,7 +52,8 @@ header {
 /* Navigation */
 nav {
     display: flex;
-    justify-content: center; /* Center the links */
+    justify-content: center; /* Center the links horizontally */
+    align-items: center;
     flex-wrap: wrap; /* Allow wrapping for smaller screens */
     margin: 20px 0;
     background: #fff;
@@ -61,34 +62,37 @@ nav {
 }
 
     nav a {
-        margin: 0 15px;
+        margin: 10px; /* Equal spacing for better alignment */
         text-decoration: none;
         color: #222;
         font-weight: bold;
         font-size: 1rem;
         padding: 10px 15px;
         transition: all 0.3s ease-in-out;
+        text-align: center; /* Ensures text is centered */
     }
 
+        /* Hover Effect */
         nav a:hover {
             color: #007bff;
             border-bottom: 2px solid #007bff;
         }
 
-/* Mobile Navigation (Stack Links for Small Screens) */
+/* Mobile Navigation (Fixing Centering Issues) */
 @media screen and (max-width: 600px) {
     nav {
         flex-direction: column; /* Stack links vertically */
-        align-items: center;
+        align-items: center; /* Center items */
     }
 
         nav a {
             display: block;
-            width: 100%;
-            text-align: center;
-            padding: 15px;
+            width: 100%; /* Make links take full width */
+            text-align: center; /* Center text */
+            padding: 12px;
         }
 }
+
 
 /* Project Section */
 .project-container {

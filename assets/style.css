@@ -14,18 +14,18 @@ header {
     color: white;
     padding: 20px;
     display: flex;
-    flex-direction: row; /* Align items in a row (horizontal layout) */
+    flex-direction: row; /* Align items horizontally */
+    justify-content: center; /* Center the title and message */
     align-items: center; /* Vertically center the content */
-    justify-content: center; /* Horizontally center the content */
-    text-align: center; /* Center the text inside the header */
-    height: 200px; /* Adjust header height as necessary */
-    position: relative; /* Allow absolute positioning of the logo */
+    text-align: center; /* Center the text */
+    height: 200px; /* Adjust header height */
+    position: relative; /* Positioning context for the logo */
 }
 
     /* Style for the logo */
     header .logo {
         position: absolute; /* Position the logo on the left */
-        left: 20px; /* Space from the left side of the header */
+        left: 20px; /* Space from the left side */
     }
 
         header .logo img {
@@ -37,7 +37,7 @@ header {
     header h1 {
         margin: 0;
         font-size: 2em; /* Adjust font size for the heading */
-        flex: 1; /* Allow the title to take up the full width */
+        text-align: center; /* Center the title */
     }
 
     /* Style for the bridging message */
@@ -56,7 +56,7 @@ header {
     }
 
         header .logo {
-            position: static; /* Allow the logo to be centered on smaller screens */
+            position: static; /* Logo will no longer be absolute on smaller screens */
             margin-bottom: 15px; /* Adds space below the logo */
         }
 }

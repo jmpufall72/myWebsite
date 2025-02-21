@@ -14,25 +14,30 @@ header {
     color: white;
     padding: 20px;
     display: flex;
-    flex-direction: column; /* Stack logo, title, and message vertically */
-    align-items: center; /* Center the content horizontally */
-    justify-content: center; /* Center content vertically */
-    text-align: center; /* Center the text in the header */
+    flex-direction: row; /* Align items in a row (horizontal layout) */
+    align-items: center; /* Vertically center the content */
+    justify-content: center; /* Horizontally center the content */
+    text-align: center; /* Center the text inside the header */
     height: 200px; /* Adjust header height as necessary */
+    position: relative; /* Allow absolute positioning of the logo */
 }
 
     /* Style for the logo */
-    header .logo img {
-        width: 60px; /* Adjust the size of the logo */
-        height: auto;
-        margin-bottom: 10px; /* Adds space between the logo and title */
+    header .logo {
+        position: absolute; /* Position the logo on the left */
+        left: 20px; /* Space from the left side of the header */
     }
+
+        header .logo img {
+            width: 60px; /* Adjust the size of the logo */
+            height: auto;
+        }
 
     /* Style for the title (Centered on the page) */
     header h1 {
         margin: 0;
         font-size: 2em; /* Adjust font size for the heading */
-        text-align: center; /* Center the text */
+        flex: 1; /* Allow the title to take up the full width */
     }
 
     /* Style for the bridging message */
@@ -50,7 +55,8 @@ header {
         text-align: center; /* Ensure the text is also centered */
     }
 
-        header .logo img {
+        header .logo {
+            position: static; /* Allow the logo to be centered on smaller screens */
             margin-bottom: 15px; /* Adds space below the logo */
         }
 }
@@ -59,17 +65,17 @@ header {
 nav {
     display: flex;
     justify-content: center; /* Center the navigation items */
-    background-color: #fff;
+    background-color: #333; /* Darker background color */
     padding: 10px 0; /* Adds padding to the top and bottom */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for effect */
-    margin-top: 20px; /* Adds some space between the header and the navigation */
+    margin-top: 0; /* Remove margin-top to keep it attached directly to the header */
 }
 
     /* Style for the navigation links */
     nav a {
         margin: 0 15px; /* Adds space between each link */
         text-decoration: none;
-        color: #333; /* Text color */
+        color: #fff; /* White text color for contrast */
         font-weight: bold;
         font-size: 1rem;
         padding: 8px 12px; /* Adds padding for better button-like look */
@@ -95,7 +101,7 @@ nav {
             text-align: center; /* Center text */
             padding: 12px;
         }
-}
+}}
 
 
 /* Project Section */

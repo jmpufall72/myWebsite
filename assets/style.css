@@ -54,36 +54,31 @@ header {
         }
 }
 
-
-
-
-/* Navigation */
+/* Navigation container */
 nav {
     display: flex;
-    justify-content: center; /* Center the links horizontally */
-    align-items: center;
-    flex-wrap: wrap; /* Allow wrapping for smaller screens */
-    margin: 20px 0;
-    background: #fff;
-    padding: 15px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    justify-content: center; /* Center the navigation items */
+    background-color: #fff;
+    padding: 10px 0; /* Adds padding to the top and bottom */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for effect */
+    margin-top: 20px; /* Adds some space between the header and the navigation */
 }
 
+    /* Style for the navigation links */
     nav a {
-        margin: 10px; /* Equal spacing for better alignment */
+        margin: 0 15px; /* Adds space between each link */
         text-decoration: none;
-        color: #222;
+        color: #333; /* Text color */
         font-weight: bold;
         font-size: 1rem;
-        padding: 10px 15px;
-        transition: all 0.3s ease-in-out;
-        text-align: center; /* Ensures text is centered */
+        padding: 8px 12px; /* Adds padding for better button-like look */
+        transition: all 0.3s ease-in-out; /* Smooth hover effect */
     }
 
-        /* Hover Effect */
+        /* Style for the hover effect */
         nav a:hover {
             color: #007bff;
-            border-bottom: 2px solid #007bff;
+            border-bottom: 2px solid #007bff; /* Adds underline effect */
         }
 
 /* Mobile Navigation (Fixing Centering Issues) */

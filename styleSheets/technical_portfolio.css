@@ -217,6 +217,7 @@ nav {
     .project-category p {
         font-size: 1.1em;
         color: #555;
+        text-align: left; /* Ensure text is aligned to the left */
     }
 
 .project-item {
@@ -233,6 +234,7 @@ nav {
         font-size: 1.1em;
         color: #666;
         margin: 10px 0;
+        text-align: left; /* Ensure text is aligned to the left */
     }
 
     .project-item a {

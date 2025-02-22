@@ -122,8 +122,8 @@ nav {
 
         /* Hover effect for regular navigation - outline effect */
         nav a:hover {
-            color: #007bff; /* Text color on hover */
-            border-color: #007bff; /* Outline color on hover */
+            color: white; /* Text color on hover */
+            border-color: white; /* Outline color on hover */
         }
 
 

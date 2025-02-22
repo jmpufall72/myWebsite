@@ -28,14 +28,109 @@
         <a href="contact.html">Contact</a>
     </nav>
 
-    <section>
-        <h2>My Work</h2>
-        <p>*Info will go here</p>
-        <p>Embed videos, images, or audio files.</p>
-    </section>
+    Here’s your revamped Artistic Portfolio page, designed to be visually engaging, immersive, and creative! 🎭🎶
 
-    <footer>
-        <p>© 2025 Jonathan Pufall | jonathanpufall.com</p>
-    </footer>
-</body>
+    New Features:
+    ✅ Overview Section – Sets the stage for your artistic journey.
+    ✅ Album Section (Bridges) – Includes cover art, a description, an embedded SoundCloud/Spotify preview, and a tracklist area.
+    ✅ Acting & Musical Theater Section – Features a grid of show images, descriptions of your roles, and a spotlight section for standout performances.
+    ✅ Embedded Videos & Audio – Helps make the page more interactive with performance clips and music previews.
+    ✅ Creative Layout – A mix of grids, hero banners, and parallax effects (you can style these in CSS).
+
+    Updated HTML:
+    html
+    Copy
+    Edit
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Artistic Portfolio - Jonathan Pufall</title>
+        <link rel="stylesheet" href="../assets/style.css">
+        <link rel="icon" href="../assets/images/favicon/favicon.ico" type="image/x-icon">
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <img src="../assets/images/logo.png" alt="JP Logo">
+            </div>
+            <div>
+                <h1>Artistic Portfolio</h1>
+                <p>A Collection of My Work in Acting, Music, and Entertainment</p>
+            </div>
+        </header>
+
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="resume.html">Resume</a>
+            <a href="artistic-portfolio.html">Artistic Portfolio</a>
+            <a href="technical-portfolio.html">Technical Portfolio</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <!-- Overview Section -->
+        <section class="overview">
+            <h2>About My Artistic Journey</h2>
+            <p>From the stage to the studio, my passion lies in storytelling through music, acting, and performance. Whether it’s composing songs that bring people together or portraying complex characters on stage, I strive to create meaningful experiences that resonate with audiences.</p>
+        </section>
+
+        <!-- Album Section -->
+        <section class="album">
+            <h2>My Music: Bridges (Upcoming Album)</h2>
+            <div class="album-content">
+                <img src="../assets/images/album_cover.jpg" alt="Bridges Album Cover" class="album-art">
+                <div class="album-info">
+                    <p><strong>Bridges</strong> is an album about unity, breaking barriers, and finding common ground through music. Blending R&B, pop, and cinematic soundscapes, this project is my most personal and ambitious work yet.</p>
+                    <!-- Embedded Music Player (Spotify or SoundCloud) -->
+                    <iframe width="100%" height="150" scrolling="no" frameborder="no" allow="autoplay"
+                            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/your_track_id&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
+                    </iframe>
+                    <h3>Tracklist (Preview)</h3>
+                    <ul>
+                        <li>1. Bridges</li>
+                        <li>2. Divided Roads</li>
+                        <li>3. Echoes of Us</li>
+                        <li>4. City Lights</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Acting & Musical Theater Section -->
+        <section class="acting">
+            <h2>Acting & Musical Theater</h2>
+            <p>Performing on stage has been one of the most transformative experiences of my life. Below are some of the productions I’ve been a part of.</p>
+
+            <div class="showcase-grid">
+                <div class="show-item">
+                    <img src="../assets/images/spring_awakening.jpg" alt="Spring Awakening">
+                    <h3>Spring Awakening</h3>
+                    <p>Role: Melchior</p>
+                    <p>UW-Madison, 2025</p>
+                </div>
+                <div class="show-item">
+                    <img src="../assets/images/other_show.jpg" alt="Other Show">
+                    <h3>Other Show</h3>
+                    <p>Role: Character Name</p>
+                    <p>Theater Name, Year</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Performances -->
+        <section class="featured-performance">
+            <h2>Featured Performance</h2>
+            <p>Here’s a highlight from one of my performances.</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/your_video_id"
+                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+                encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+            </iframe>
+        </section>
+
+        <footer>
+            <p>© 2025 Jonathan Pufall | jonathanpufall.com</p>
+        </footer>
+    </body>
 </html>

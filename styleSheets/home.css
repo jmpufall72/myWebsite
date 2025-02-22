@@ -226,6 +226,7 @@ nav {
         text-align: left;
     }
 
+/* Show Dates */
 .show-dates {
     text-align: center;
     margin: 15px 0;
@@ -248,15 +249,27 @@ nav {
         margin: 3px 0;
     }
 
+/* Tickets */
 .tickets {
     text-align: center;
     font-size: 1.1em;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically if needed */
+    flex-direction: column;
+    margin-top: 10px;
 }
+
+    .tickets p {
+        text-align: center; /* Ensure all text inside is centered */
+    }
 
     .tickets a {
         color: #007bff;
         text-decoration: none;
         font-weight: bold;
+        display: inline-block;
+        margin-top: 5px; /* Adjust spacing */
     }
 
         .tickets a:hover {

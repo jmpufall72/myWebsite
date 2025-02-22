@@ -16,7 +16,7 @@ header {
     display: flex;
     justify-content: center; /* Center the content */
     align-items: center; /* Vertically align items in the center */
-    height: 200px; /* Adjust header height as necessary */
+    height: 100px; /* Adjust header height as necessary */
     position: relative;
 }
 

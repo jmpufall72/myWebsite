@@ -1,0 +1,218 @@
+﻿/* General Styles */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    color: #333;
+}
+
+/* Style for the header */
+header {
+    background: #333;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: center; /* Center the content */
+    align-items: center; /* Vertically align items in the center */
+    height: 100px; /* Adjust header height as necessary */
+    position: relative;
+}
+
+    /* Style for the logo */
+    header .logo {
+        position: absolute; /* Position the logo on the left */
+        left: 20px; /* Space from the left side */
+    }
+
+        header .logo img {
+            width: 60px; /* Adjust the size of the logo */
+            height: auto;
+        }
+
+    /* Style for the title and bridging message (Centered) */
+    header div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-grow: 1; /* Allow this section to take up available space */
+    }
+
+    header h1 {
+        margin: 0;
+        font-size: 2em; /* Adjust font size for the heading */
+    }
+
+    header p {
+        margin: 10px 0; /* Adds margin between the heading and the paragraph */
+        font-size: 1.2em;
+    }
+
+/* Add responsiveness */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: center; /* Center items horizontally */
+        height: auto; /* Allow height to adjust */
+        padding: 20px 0; /* Add padding for space around the content */
+    }
+
+        /* Center logo on mobile */
+        header .logo {
+            display: flex;
+            justify-content: center; /* Horizontally center logo */
+            align-items: center; /* Vertically center logo */
+            width: 100%; /* Make logo container take up full width */
+            margin-bottom: 15px; /* Space below the logo */
+        }
+
+            header .logo img {
+                width: 60px; /* Adjust logo size as needed */
+                height: auto;
+            }
+
+        /* Adjust title and paragraph section */
+        header div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-grow: 1; /* Allow title and paragraph section to grow */
+            width: 100%; /* Take up full width */
+        }
+
+        header h1 {
+            margin: 10px 0; /* Add margin for spacing */
+            font-size: 2em; /* Adjust font size */
+        }
+
+        header p {
+            margin: 5px 0; /* Adjust margin for spacing */
+            font-size: 1.2em; /* Adjust font size */
+        }
+}
+
+
+/* Regular Navigation */
+nav {
+    display: flex;
+    justify-content: center; /* Center the navigation items */
+    background-color: #222; /* Darker background to distinguish from header */
+    padding: 15px 0; /* Adds padding to the top and bottom */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for effect */
+    margin-top: 0px; /* Adds some space between the header and the navigation */
+}
+
+    nav a {
+        margin: 0 20px; /* Adds space between each link */
+        text-decoration: none;
+        color: white; /* Light text color */
+        font-weight: bold;
+        font-size: 1rem;
+        padding: 10px 15px; /* Adds padding for better button-like look */
+        border-radius: 5px; /* Rounded corners for buttons */
+        transition: all 0.3s ease-in-out; /* Smooth hover effect */
+        background-color: transparent; /* Transparent background */
+        border: 2px solid transparent; /* Invisible border for hover effect */
+    }
+
+        /* Hover effect for regular navigation - outline effect */
+        nav a:hover {
+            color: white; /* Text color on hover */
+            border-color: white; /* Outline color on hover */
+        }
+
+
+
+/* Mobile Navigation */
+@media screen and (max-width: 600px) {
+    nav {
+        flex-direction: column; /* Stack links vertically */
+        align-items: center; /* Center items */
+        background-color: #222; /* Dark background for mobile */
+        padding: 15px 0; /* Add padding to top and bottom */
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Optional shadow effect */
+    }
+
+        /* Style for the mobile navigation links */
+        nav a {
+            display: block;
+            width: 80%; /* Make links take up most of the width but with some space around */
+            margin: 10px 0; /* Add spacing between links */
+            text-align: center; /* Center the text */
+            padding: 12px;
+            color: white; /* Light text color */
+            font-weight: bold;
+            font-size: 1.1rem;
+            border-radius: 5px;
+            transition: all 0.3s ease-in-out; /* Smooth hover effect */
+            background-color: transparent; /* Keep the background transparent */
+            border: 2px solid transparent; /* Invisible border for hover effect */
+        }
+
+            /* Hover effect for mobile - outline effect */
+            nav a:hover {
+                background-color: transparent; /* No background color */
+                color: white; /* Change text color */
+                border-color: white; /* Outline color on hover */
+            }
+}
+
+
+
+/* Project Section */
+.project-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 40px auto;
+    flex-wrap: wrap;
+    max-width: 1000px;
+}
+
+.project {
+    width: 250px;
+    height: 150px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+    .project:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    }
+
+/* Footer */
+footer {
+    background: #222;
+    color: white;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+    footer p {
+        margin: 0;
+        font-size: 0.9rem;
+        opacity: 0.7;
+    }
+
+    footer a {
+        color: #007bff;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+        footer a:hover {
+            text-decoration: underline;
+        }

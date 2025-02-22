@@ -56,70 +56,86 @@ header {
     header {
         flex-direction: column; /* Stack items vertically on small screens */
         align-items: center; /* Center items horizontally */
-        justify-content: flex-start; /* Align items at the top */
+        height: auto; /* Adjust height for smaller screens */
     }
 
-        /* Ensure the logo is centered on mobile screens */
+        /* Center logo on mobile */
         header .logo {
             display: flex;
-            justify-content: center;
-            width: 100%; /* Make sure it takes the full width */
-            margin-bottom: 15px; /* Space between logo and title */
+            justify-content: center; /* Horizontally center logo */
+            align-items: center; /* Vertically center logo */
+            width: 100%; /* Make logo container take up full width */
+            margin-bottom: 15px; /* Adds space below the logo */
         }
 
             header .logo img {
-                margin-bottom: 15px; /* Adds space below the logo */
+                width: 60px; /* Adjust logo size as needed */
+                height: auto;
             }
 
-        /* Adjust the title and message layout */
         header div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             text-align: center;
-            width: 100%;
+            flex-grow: 1; /* Allow the title and paragraph section to take available space */
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2em; /* Adjust font size for mobile */
+        }
+
+        header p {
+            margin: 10px 0; /* Margin between the title and description */
+            font-size: 1.2em; /* Adjust font size */
         }
 }
 
 
-/* Navigation container */
+/* Regular Navigation */
 nav {
     display: flex;
     justify-content: center; /* Center the navigation items */
-    background-color: #222; /* Darker background to distinguish it */
-    padding: 15px 0; /* Add padding for better spacing */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+    background-color: #333; /* Darker background to distinguish from header */
+    padding: 15px 0; /* Adds padding to the top and bottom */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for effect */
+    margin-top: 20px; /* Adds some space between the header and the navigation */
 }
 
-    /* Style for the navigation links (Buttons look) */
     nav a {
-        margin: 0 20px; /* Adds space between each link */
+        margin: 0 15px; /* Adds space between each link */
         text-decoration: none;
         color: white; /* Light text color */
         font-weight: bold;
-        font-size: 1.1rem;
-        padding: 10px 20px; /* Adds padding for a button-like appearance */
-        border-radius: 5px; /* Rounded corners */
+        font-size: 1rem;
+        padding: 10px 15px; /* Adds padding for better button-like look */
+        border-radius: 5px; /* Rounded corners for buttons */
         transition: all 0.3s ease-in-out; /* Smooth hover effect */
+        background-color: transparent; /* Transparent background */
         border: 2px solid transparent; /* Invisible border for hover effect */
     }
 
-        /* Hover effect for buttons */
+        /* Hover effect for regular navigation - outline effect */
         nav a:hover {
-            background-color: #007bff; /* Highlight color on hover */
-            color: white; /* Ensure text stays visible */
-            border-color: #007bff; /* Border color on hover */
+            color: #007bff; /* Text color on hover */
+            border-color: #007bff; /* Outline color on hover */
         }
 
-        /* Active link */
+        /* Active link for regular navigation */
         nav a.active {
-            background-color: #0056b3; /* Darker background when active */
-            border-color: #0056b3; /* Active border color */
+            background-color: transparent; /* Keep the background transparent */
+            border-color: #0056b3; /* Darker border color when active */
+            color: #0056b3; /* Change text color when active */
         }
 
-/* Mobile Navigation (Fixing Centering Issues) */
+/* Mobile Navigation */
 @media screen and (max-width: 600px) {
     nav {
         flex-direction: column; /* Stack links vertically */
         align-items: center; /* Center items */
-        background-color: #222; /* Keep the darker background */
+        background-color: #222; /* Dark background for mobile */
         padding: 15px 0; /* Add padding to top and bottom */
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Optional shadow effect */
     }
@@ -136,20 +152,22 @@ nav {
             font-size: 1.1rem;
             border-radius: 5px;
             transition: all 0.3s ease-in-out; /* Smooth hover effect */
+            background-color: transparent; /* Keep the background transparent */
             border: 2px solid transparent; /* Invisible border for hover effect */
         }
 
-            /* Hover effect for mobile */
+            /* Hover effect for mobile - outline effect */
             nav a:hover {
-                background-color: #007bff; /* Highlight color on hover */
-                color: white;
-                border-color: #007bff; /* Border color on hover */
+                background-color: transparent; /* No background color */
+                color: #007bff; /* Change text color */
+                border-color: #007bff; /* Outline color on hover */
             }
 
             /* Active link for mobile */
             nav a.active {
-                background-color: #0056b3; /* Darker background when active */
-                border-color: #0056b3; /* Active border color */
+                background-color: transparent; /* Keep the background transparent */
+                border-color: #0056b3; /* Darker border color when active */
+                color: #0056b3; /* Change text color when active */
             }
 }
 

@@ -14,37 +14,36 @@ header {
     color: white;
     padding: 20px;
     display: flex;
-    flex-direction: row; /* Align items horizontally */
-    justify-content: center; /* Center the title and message */
-    align-items: center; /* Vertically center the content */
-    text-align: center; /* Center the text */
-    height: 200px; /* Adjust header height */
-    position: relative; /* Positioning context for the logo */
+    justify-content: flex-start; /* Keep the logo on the left */
+    align-items: center; /* Vertically align items in the center */
+    height: 200px; /* Adjust header height as necessary */
 }
 
     /* Style for the logo */
-    header .logo {
-        position: absolute; /* Position the logo on the left */
-        left: 20px; /* Space from the left side */
+    header .logo img {
+        width: 60px; /* Adjust the size of the logo */
+        height: auto;
+        margin-right: 20px; /* Space between the logo and text */
     }
 
-        header .logo img {
-            width: 60px; /* Adjust the size of the logo */
-            height: auto;
-        }
+    /* Style for the title and bridging message (Centered) */
+    header div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-grow: 1; /* Allow this section to take up available space */
+    }
 
-    /* Style for the title (Centered on the page) */
     header h1 {
         margin: 0;
         font-size: 2em; /* Adjust font size for the heading */
-        text-align: center; /* Center the title */
     }
 
-    /* Style for the bridging message */
     header p {
         margin: 10px 0; /* Adds margin between the heading and the paragraph */
         font-size: 1.2em;
-        text-align: center; /* Center the paragraph text */
     }
 
 /* Add responsiveness */
@@ -52,14 +51,13 @@ header {
     header {
         flex-direction: column; /* Stack items vertically on small screens */
         align-items: center; /* Center items horizontally */
-        text-align: center; /* Ensure the text is also centered */
     }
 
-        header .logo {
-            position: static; /* Logo will no longer be absolute on smaller screens */
+        header .logo img {
             margin-bottom: 15px; /* Adds space below the logo */
         }
 }
+
 
 /* Navigation container */
 nav {

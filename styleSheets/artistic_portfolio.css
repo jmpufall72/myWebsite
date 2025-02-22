@@ -164,39 +164,109 @@ nav {
 
 
 
-/* Project Section */
-.project-container {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin: 40px auto;
-    flex-wrap: wrap;
-    max-width: 1000px;
+/* Section Styles */
+section {
+    padding: 40px 20px;
+    margin: 20px 0;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.project {
-    width: 250px;
-    height: 150px;
-    background: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+h2 {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Album Section */
+.album {
+    background: #fff;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-    font-size: 1.2rem;
-    font-weight: bold;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-    .project:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+.album-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.album-art {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.album-info {
+    max-width: 600px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+    .album-info h3 {
+        margin-top: 30px;
+        font-size: 1.5em;
     }
 
-/* Footer */
+    .album-info ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .album-info li {
+        margin-bottom: 10px;
+    }
+
+/* Acting Section */
+.acting .showcase-grid {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.acting .show-item {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    width: 220px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+    .acting .show-item img {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .acting .show-item h3 {
+        font-size: 1.3em;
+        margin-top: 10px;
+    }
+
+    .acting .show-item p {
+        font-size: 1.1rem;
+    }
+
+/* Footer Styling */
 footer {
     background: #222;
     color: white;
+    text-align: center;
     padding: 20px;
     margin-top: 50px;
 }

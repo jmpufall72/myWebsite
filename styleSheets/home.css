@@ -167,34 +167,130 @@ nav {
 
 
 
-/* Project Section */
-.project-container {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin: 40px auto;
-    flex-wrap: wrap;
-    max-width: 1000px;
+To make this HTML section work properly on your homepage, you'll need to ensure that the following elements are in place:
+
+Proper CSS Styling – Ensure that the .featured-project section is visually appealing and responsive.
+Proper Structure – Adjust how the event details are displayed for better readability.
+Correct Asset Path – Ensure that "assets/images/spring-awakening-album-cover.jpg" is correctly located relative to your project directory.
+Full Code Implementation:
+1. HTML (Home Page Section)
+html
+Copy
+Edit
+<section id="projects" >
+<h2 > Featured Project</h2 >
+<div class="featured-project" >
+<img src="assets/images/spring-awakening-album-cover.jpg" alt="Spring Awakening Album Cover" >
+<p class="title" > <strong > UW-Madison's 2025 Spring Production of <em>Spring Awakening</em></strong></p>
+<p > This spring, I take on the role of Melchior in <em > Spring Awakening</em >, UW-Madison’s 2025 mainstage production. A story of youthful rebellion, discovery, and the consequences of a repressive society, this Tony Award-winning musical blends raw emotion with a powerful rock score.</p >
+
+<div class="show-dates" >
+<h3 > 📅 Show Dates:</h3 >
+<ul >
+<li > <strong > April 17 (Preview)</strong > – 7:30 PM</li >
+<li > <strong > April 18</strong > – 7:30 PM</li >
+<li > <strong > April 19</strong > – 7:30 PM</li >
+<li > <strong > April 20</strong > – 2:00 PM</li >
+<li > <strong > April 24</strong > – 7:30 PM</li >
+<li > <strong > April 25</strong > – 7:30 PM</li >
+<li > <strong > April 26</strong > – 7:30 PM</li >
+<li > <strong > April 27</strong > – 2:00 PM</li >
+</ul >
+</div >
+
+<p class="tickets" >
+🎟️ <strong > Tickets:</strong >
+<a href="https://artsticketing.wisc.edu/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=5EC7D6FD-034C-404A-A662-62E11D408DE5" target="_blank" >
+University Theater
+</a >
+</p >
+</div >
+</section >
+
+<footer >
+<p > © 2025 Jonathan Pufall | <a href="https://jonathanpufall.com" > jonathanpufall.com</a > </p >
+</footer >
+2. CSS (Add this to your main stylesheet)
+css
+Copy
+Edit
+/* Featured Project Section */
+#projects {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #fff;
 }
 
-.project {
-    width: 250px;
-    height: 150px;
-    background: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.featured-project {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #f9f9f9;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-    font-size: 1.2rem;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+    .featured-project img {
+        max-width: 100%;
+        border-radius: 8px;
+        margin-bottom: 15px;
+    }
+
+    .featured-project .title {
+        font-size: 1.5em;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+.show-dates {
+    margin: 15px 0;
+}
+
+    .show-dates h3 {
+        font-size: 1.2em;
+        margin-bottom: 5px;
+    }
+
+    .show-dates ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .show-dates li {
+        font-size: 1em;
+        margin: 3px 0;
+    }
+
+.tickets a {
+    color: #007bff;
+    text-decoration: none;
     font-weight: bold;
 }
 
-    .project:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    .tickets a:hover {
+        text-decoration: underline;
     }
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .featured-project {
+        padding: 15px;
+    }
+
+        .featured-project .title {
+            font-size: 1.3em;
+        }
+
+    .show-dates li {
+        font-size: 0.9em;
+    }
+
+    .tickets a {
+        font-size: 1em;
+    }
+}
+
 
 /* Footer */
 footer {

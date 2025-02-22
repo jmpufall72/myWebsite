@@ -56,20 +56,27 @@ header {
     header {
         flex-direction: column; /* Stack items vertically on small screens */
         align-items: center; /* Center items horizontally */
-        height: auto; /* Allow height to adjust for stacked layout */
+        justify-content: flex-start; /* Align items at the top */
     }
 
-        /* Style for the logo on mobile */
+        /* Ensure the logo is centered on mobile screens */
         header .logo {
-            margin-bottom: 15px; /* Adds space below the logo */
+            display: flex;
+            justify-content: center;
+            width: 100%; /* Make sure it takes the full width */
+            margin-bottom: 15px; /* Space between logo and title */
         }
 
-        /* Optional: Adjust title and paragraph margins on mobile for better spacing */
-        header h1, header p {
-            margin: 10px 0;
+            header .logo img {
+                margin-bottom: 15px; /* Adds space below the logo */
+            }
+
+        /* Adjust the title and message layout */
+        header div {
+            text-align: center;
+            width: 100%;
         }
 }
-
 
 
 /* Navigation container */

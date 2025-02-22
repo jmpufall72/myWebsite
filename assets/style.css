@@ -98,14 +98,14 @@ header {
 nav {
     display: flex;
     justify-content: center; /* Center the navigation items */
-    background-color: #333; /* Darker background to distinguish from header */
+    background-color: #222; /* Darker background to distinguish from header */
     padding: 15px 0; /* Adds padding to the top and bottom */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for effect */
-    margin-top: 20px; /* Adds some space between the header and the navigation */
+    margin-top: 0px; /* Adds some space between the header and the navigation */
 }
 
     nav a {
-        margin: 0 15px; /* Adds space between each link */
+        margin: 0 20px; /* Adds space between each link */
         text-decoration: none;
         color: white; /* Light text color */
         font-weight: bold;
@@ -123,12 +123,7 @@ nav {
             border-color: #007bff; /* Outline color on hover */
         }
 
-        /* Active link for regular navigation */
-        nav a.active {
-            background-color: transparent; /* Keep the background transparent */
-            border-color: #0056b3; /* Darker border color when active */
-            color: #0056b3; /* Change text color when active */
-        }
+
 
 /* Mobile Navigation */
 @media screen and (max-width: 600px) {
@@ -163,12 +158,7 @@ nav {
                 border-color: #007bff; /* Outline color on hover */
             }
 
-            /* Active link for mobile */
-            nav a.active {
-                background-color: transparent; /* Keep the background transparent */
-                border-color: #0056b3; /* Darker border color when active */
-                color: #0056b3; /* Change text color when active */
-            }
+            
 }
 
 

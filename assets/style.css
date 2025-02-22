@@ -56,7 +56,8 @@ header {
     header {
         flex-direction: column; /* Stack items vertically on small screens */
         align-items: center; /* Center items horizontally */
-        height: auto; /* Adjust height for smaller screens */
+        height: auto; /* Allow height to adjust */
+        padding: 20px 0; /* Add padding for space around the content */
     }
 
         /* Center logo on mobile */
@@ -65,7 +66,7 @@ header {
             justify-content: center; /* Horizontally center logo */
             align-items: center; /* Vertically center logo */
             width: 100%; /* Make logo container take up full width */
-            margin-bottom: 15px; /* Adds space below the logo */
+            margin-bottom: 15px; /* Space below the logo */
         }
 
             header .logo img {
@@ -73,22 +74,24 @@ header {
                 height: auto;
             }
 
+        /* Adjust title and paragraph section */
         header div {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            flex-grow: 1; /* Allow the title and paragraph section to take available space */
+            flex-grow: 1; /* Allow title and paragraph section to grow */
+            width: 100%; /* Take up full width */
         }
 
         header h1 {
-            margin: 0;
-            font-size: 2em; /* Adjust font size for mobile */
+            margin: 10px 0; /* Add margin for spacing */
+            font-size: 2em; /* Adjust font size */
         }
 
         header p {
-            margin: 10px 0; /* Margin between the title and description */
+            margin: 5px 0; /* Adjust margin for spacing */
             font-size: 1.2em; /* Adjust font size */
         }
 }

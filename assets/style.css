@@ -157,8 +157,8 @@ nav {
             /* Hover effect for mobile - outline effect */
             nav a:hover {
                 background-color: transparent; /* No background color */
-                color: #007bff; /* Change text color */
-                border-color: #007bff; /* Outline color on hover */
+                color: white; /* Change text color */
+                border-color: white; /* Outline color on hover */
             }
 
             

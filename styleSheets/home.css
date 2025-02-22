@@ -227,7 +227,7 @@ nav {
     }
 
 .show-dates {
-    text-align: left;
+    text-align: center;
     margin: 15px 0;
 }
 
@@ -240,7 +240,7 @@ nav {
         list-style: none;
         padding: 0;
         margin: 0;
-        text-align: left;
+        text-align: center;
     }
 
     .show-dates li {
@@ -249,7 +249,7 @@ nav {
     }
 
 .tickets {
-    text-align: left;
+    text-align: center;
     font-size: 1.1em;
 }
 

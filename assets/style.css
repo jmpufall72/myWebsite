@@ -56,16 +56,18 @@ header {
     header {
         flex-direction: column; /* Stack items vertically on small screens */
         align-items: center; /* Center items horizontally */
+        height: auto; /* Allow height to adjust for stacked layout */
     }
 
+        /* Style for the logo on mobile */
         header .logo {
-            position: absolute;
-            left: 20px;
+            margin-bottom: 15px; /* Adds space below the logo */
         }
 
-            header .logo img {
-                margin-bottom: 15px; /* Adds space below the logo */
-            }
+        /* Optional: Adjust title and paragraph margins on mobile for better spacing */
+        header h1, header p {
+            margin: 10px 0;
+        }
 }
 
 

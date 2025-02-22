@@ -185,6 +185,7 @@ p {
     max-width: 900px;
     margin-left: auto;
     margin-right: auto;
+    text-align: left; /* Ensure text is aligned to the left */
 }
 
 /* Album Section */

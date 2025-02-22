@@ -83,27 +83,35 @@ header {
 nav {
     display: flex;
     justify-content: center; /* Center the navigation items */
-    background-color: #333; /* Darker background color */
-    padding: 10px 0; /* Adds padding to the top and bottom */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for effect */
-    margin-top: 0; /* Remove margin-top to keep it attached directly to the header */
+    background-color: #222; /* Darker background to distinguish it */
+    padding: 15px 0; /* Add padding for better spacing */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
 }
 
-    /* Style for the navigation links */
+    /* Style for the navigation links (Buttons look) */
     nav a {
-        margin: 0 15px; /* Adds space between each link */
+        margin: 0 20px; /* Adds space between each link */
         text-decoration: none;
-        color: #fff; /* White text color for contrast */
+        color: white; /* Light text color */
         font-weight: bold;
-        font-size: 1rem;
-        padding: 8px 12px; /* Adds padding for better button-like look */
+        font-size: 1.1rem;
+        padding: 10px 20px; /* Adds padding for a button-like appearance */
+        border-radius: 5px; /* Rounded corners */
         transition: all 0.3s ease-in-out; /* Smooth hover effect */
+        border: 2px solid transparent; /* Invisible border for hover effect */
     }
 
-        /* Style for the hover effect */
+        /* Hover effect for buttons */
         nav a:hover {
-            color: #007bff;
-            border-bottom: 2px solid #007bff; /* Adds underline effect */
+            background-color: #007bff; /* Highlight color on hover */
+            color: white; /* Ensure text stays visible */
+            border-color: #007bff; /* Border color on hover */
+        }
+
+        /* Active link */
+        nav a.active {
+            background-color: #0056b3; /* Darker background when active */
+            border-color: #0056b3; /* Active border color */
         }
 
 /* Mobile Navigation (Fixing Centering Issues) */
@@ -111,15 +119,40 @@ nav {
     nav {
         flex-direction: column; /* Stack links vertically */
         align-items: center; /* Center items */
+        background-color: #222; /* Keep the darker background */
+        padding: 15px 0; /* Add padding to top and bottom */
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Optional shadow effect */
     }
 
+        /* Style for the mobile navigation links */
         nav a {
             display: block;
-            width: 100%; /* Make links take full width */
-            text-align: center; /* Center text */
+            width: 80%; /* Make links take up most of the width but with some space around */
+            margin: 10px 0; /* Add spacing between links */
+            text-align: center; /* Center the text */
             padding: 12px;
+            color: white; /* Light text color */
+            font-weight: bold;
+            font-size: 1.1rem;
+            border-radius: 5px;
+            transition: all 0.3s ease-in-out; /* Smooth hover effect */
+            border: 2px solid transparent; /* Invisible border for hover effect */
         }
-}}
+
+            /* Hover effect for mobile */
+            nav a:hover {
+                background-color: #007bff; /* Highlight color on hover */
+                color: white;
+                border-color: #007bff; /* Border color on hover */
+            }
+
+            /* Active link for mobile */
+            nav a.active {
+                background-color: #0056b3; /* Darker background when active */
+                border-color: #0056b3; /* Active border color */
+            }
+}
+
 
 
 /* Project Section */

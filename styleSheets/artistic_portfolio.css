@@ -63,11 +63,10 @@ header {
         /* Center logo on mobile */
         header .logo {
             position: relative; /* Reset positioning */
-            display: flex;
-            justify-content: center; /* Horizontally center logo */
-            align-items: center; /* Vertically center logo */
-            width: 100%; /* Make logo container take up full width */
+            display: block; /* Use block to make it take full width */
             margin-bottom: 15px; /* Space below the logo */
+            left: 50%; /* Ensure it's centered horizontally */
+            transform: translateX(-50%); /* Adjust for exact centering */
         }
 
             header .logo img {

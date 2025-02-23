@@ -20,33 +20,33 @@ header {
     position: relative;
 }
 
-    /* Style for the logo */
-    header .logo {
-        position: absolute; /* Position the logo on the left */
-        left: 20px; /* Space from the left side */
-        top: 50%; /* Vertically center the logo */
-        transform: translateY(-50%); /* Ensure the logo is perfectly centered */
-    }
+/* Style for the logo */
+header .logo {
+    position: absolute; /* Position the logo on the left */
+    left: 20px; /* Space from the left side */
+    top: 50%; /* Vertically center the logo */
+    transform: translateY(-50%); /* Ensure the logo is perfectly centered */
+}
 
-    /* Style for the title and bridging message (Centered) */
-    header div {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        flex-grow: 1; /* Allow this section to take up available space */
-    }
+/* Style for the title and bridging message (Centered) */
+header div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-grow: 1; /* Allow this section to take up available space */
+}
 
-    header h1 {
-        margin: 0;
-        font-size: 2em; /* Adjust font size for the heading */
-    }
+header h1 {
+    margin: 0;
+    font-size: 2em; /* Adjust font size for the heading */
+}
 
-    header p {
-        margin: 10px 0; /* Adds margin between the heading and the paragraph */
-        font-size: 1.2em;
-    }
+header p {
+    margin: 10px 0; /* Adds margin between the heading and the paragraph */
+    font-size: 1.2em;
+}
 
 /* Add responsiveness */
 @media (max-width: 600px) {
@@ -60,11 +60,10 @@ header {
         /* Center logo on mobile */
         header .logo {
             position: relative; /* Reset positioning */
-            display: flex;
-            justify-content: center; /* Horizontally center logo */
-            align-items: center; /* Vertically center logo */
-            width: 100%; /* Make logo container take up full width */
+            display: block; /* Use block to make it take full width */
             margin-bottom: 15px; /* Space below the logo */
+            left: 50%; /* Ensure it's centered horizontally */
+            transform: translateX(-50%); /* Adjust for exact centering */
         }
 
             header .logo img {

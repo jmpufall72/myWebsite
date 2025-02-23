@@ -20,33 +20,36 @@ header {
     position: relative;
 }
 
-/* Style for the logo */
-header .logo {
-    position: absolute; /* Position the logo on the left */
-    left: 20px; /* Space from the left side */
-    top: 50%; /* Vertically center the logo */
-    transform: translateY(-50%); /* Ensure the logo is perfectly centered */
-}
+    /* Style for the logo */
+    header .logo {
+        position: absolute; /* Position the logo on the left */
+        left: 20px; /* Space from the left side */
+    }
 
-/* Style for the title and bridging message (Centered) */
-header div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    flex-grow: 1; /* Allow this section to take up available space */
-}
+        header .logo img {
+            width: 60px; /* Adjust the size of the logo */
+            height: auto;
+        }
 
-header h1 {
-    margin: 0;
-    font-size: 2em; /* Adjust font size for the heading */
-}
+    /* Style for the title and bridging message (Centered) */
+    header div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-grow: 1; /* Allow this section to take up available space */
+    }
 
-header p {
-    margin: 10px 0; /* Adds margin between the heading and the paragraph */
-    font-size: 1.2em;
-}
+    header h1 {
+        margin: 0;
+        font-size: 2em; /* Adjust font size for the heading */
+    }
+
+    header p {
+        margin: 10px 0; /* Adds margin between the heading and the paragraph */
+        font-size: 1.2em;
+    }
 
 /* Add responsiveness */
 @media (max-width: 600px) {

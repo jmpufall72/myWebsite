@@ -233,7 +233,7 @@ main {
 
 /* Case Studies Section */
 #case-studies {
-    text-align: center;
+    text-align: center; /* Keeps the content centered for the section */
 }
 
 .case-study {
@@ -255,10 +255,15 @@ main {
         margin-bottom: 10px;
     }
 
+    /* Align paragraphs to the left */
     .case-study p {
         font-size: 1rem;
         color: #555;
         margin-bottom: 15px;
+        text-align: left; /* Align paragraphs to the left */
+        max-width: 600px; /* Optional: Control paragraph width for readability */
+        margin-left: auto;
+        margin-right: auto; /* Keeps the paragraph centered while aligning text left */
     }
 
 /* Project Box */

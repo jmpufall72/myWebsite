@@ -301,10 +301,11 @@ nav {
 }
 
 
-/* Footer */
+/* Footer Styling */
 footer {
     background: #222;
     color: white;
+    text-align: center;
     padding: 20px;
     margin-top: 50px;
 }

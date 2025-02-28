@@ -269,10 +269,11 @@ nav {
             transform: scale(1.05);
         }
 
-/* Footer */
+/* Footer Styling */
 footer {
     background: #222;
     color: white;
+    text-align: center;
     padding: 20px;
     margin-top: 50px;
 }

@@ -281,10 +281,11 @@ main {
         box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
     }
 
-/* Footer */
+/* Footer Styling */
 footer {
     background: #222;
     color: white;
+    text-align: center;
     padding: 20px;
     margin-top: 50px;
 }

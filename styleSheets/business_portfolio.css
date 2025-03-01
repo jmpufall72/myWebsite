@@ -194,16 +194,18 @@ main {
 
 .resume-container {
     display: flex;
+    flex-direction: column; /* Stack elements vertically */
     align-items: center;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+    text-align: center;
 }
 
     .resume-container img {
-        width: 200px;
+        width: 80%; /* Adjust width for better visibility */
+        max-width: 600px; /* Limit max size */
+        display: block;
+        margin-top: 20px; /* Space between paragraph and image */
         border-radius: 8px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
     }
 
 .resume-info {
@@ -286,27 +288,13 @@ main {
         box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
     }
 
-/* Footer Styling */
+/* Stretch Footer to Full Width */
 footer {
     background: #222;
     color: white;
     text-align: center;
     padding: 20px;
     margin-top: 50px;
+    width: 100%; /* Ensure full width */
+    position: relative; /* Keep it positioned properly */
 }
-
-    footer p {
-        margin: 0;
-        font-size: 0.9rem;
-        opacity: 0.7;
-    }
-
-    footer a {
-        color: #007bff;
-        text-decoration: none;
-        font-weight: bold;
-    }
-
-        footer a:hover {
-            text-decoration: underline;
-        }

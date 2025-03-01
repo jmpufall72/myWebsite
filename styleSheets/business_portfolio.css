@@ -293,12 +293,14 @@ main {
 
 /* Footer Styling */
 footer {
-    width: 100%; /* Ensures it spans the full screen */
-    background: #222;
+    width: 100%;
+    background: #222; /* Adjust background color as needed */
     color: white;
     text-align: center;
-    padding: 20px;
-    margin-top: 50px;
+    padding: 20px 0;
+    position: relative; /* Change to fixed if you want it to always stick */
+    bottom: 0;
+    left: 0;
 }
 
     footer p {

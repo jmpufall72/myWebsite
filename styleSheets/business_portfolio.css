@@ -164,7 +164,87 @@ nav {
 
 
 
-/* Project Section */
+/* Overview Section Styles */
+.overview {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    padding: 40px 30px;
+    margin: 25px auto;
+    width: 85%;
+    max-width: 1000px;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5), inset 0 0 10px rgba(255, 255, 255, 0.05);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+    .overview:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 50px rgba(0, 0, 0, 0.6), inset 0 0 15px rgba(255, 255, 255, 0.1);
+    }
+
+    .overview::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
+        opacity: 0.6;
+        z-index: 0;
+    }
+
+    .overview h2 {
+        font-size: 2em;
+        color: #ffffff;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        position: relative;
+        z-index: 1;
+        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        font-family: 'SF Pro Display', sans-serif;
+        animation: fadeInDown 1s ease-out;
+    }
+
+    .overview p {
+        font-size: 1.1em;
+        line-height: 1.8;
+        color: #d0d0d0;
+        margin-top: 20px;
+        text-align: left;
+        position: relative;
+        z-index: 1;
+        opacity: 0;
+        animation: fadeInUp 1s ease-out 0.3s forwards;
+        font-family: 'SF Pro Text', sans-serif;
+    }
+
+/* Projects Section */
+.projects {
+    padding: 50px 30px;
+    background: linear-gradient(to bottom, #0f0f0f 0%, #1c1c1c 100%);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 50px;
+    position: relative;
+    overflow: hidden;
+}
+
+    .projects::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="10" cy="10" r="0.6" fill="rgba(255,255,255,0.1)"/><circle cx="90" cy="20" r="0.8" fill="rgba(255,255,255,0.08)"/><circle cx="50" cy="80" r="0.5" fill="rgba(255,255,255,0.12)"/></svg>');
+        opacity: 0.1;
+        pointer-events: none;
+    }
+
+/* Project Container (Unused but kept for consistency) */
 .project-container {
     display: flex;
     justify-content: center;
@@ -173,17 +253,17 @@ nav {
     flex-wrap: wrap;
     max-width: 1080px;
     padding: 20px;
-    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); /* Dark gradient */
-    border-radius: 16px; /* Softer, modern corners */
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5), inset 0 0 10px rgba(255, 255, 255, 0.05); /* Deep shadow + glow */
-    border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle outline */
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5), inset 0 0 10px rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     transition: box-shadow 0.4s ease, transform 0.4s ease;
-    backdrop-filter: blur(8px); /* Glassmorphism */
+    backdrop-filter: blur(8px);
 }
 
     .project-container:hover {
         box-shadow: 0 15px 50px rgba(0, 0, 0, 0.6), inset 0 0 15px rgba(255, 255, 255, 0.1);
-        transform: translateY(-5px); /* Sleek lift */
+        transform: translateY(-5px);
     }
 
 /* Main Content */
@@ -193,27 +273,36 @@ main {
     margin: 45px auto;
     padding: 20px;
     color: #d0d0d0;
-    background: linear-gradient(to bottom, #0f0f0f, #1c1c1c); /* Deep dark gradient */
+    background: linear-gradient(to bottom, #0f0f0f, #1c1c1c);
     border-radius: 16px;
     box-shadow: 0 10px 35px rgba(0, 0, 0, 0.5);
-    border: 1px solid rgba(255, 255, 255, 0.08); /* Minimal edge */
+    border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 /* Featured Section - Resume */
 #featured {
-    background: rgba(30, 30, 30, 0.9); /* Dark, semi-transparent */
+    background: rgba(30, 30, 30, 0.9);
     padding: 35px;
     border-radius: 16px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4), inset 0 0 8px rgba(74, 110, 224, 0.1); /* Blue glow */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4), inset 0 0 8px rgba(74, 110, 224, 0.1);
     text-align: center;
     margin-bottom: 45px;
     transition: box-shadow 0.4s ease, transform 0.4s ease;
-    border: 1px solid rgba(74, 110, 224, 0.2); /* Subtle blue accent */
+    border: 1px solid rgba(74, 110, 224, 0.2);
 }
 
     #featured:hover {
         box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5), inset 0 0 12px rgba(74, 110, 224, 0.15);
-        transform: scale(1.02); /* Gentle zoom */
+        transform: scale(1.02);
+    }
+
+    #featured h2 {
+        font-size: 2em;
+        color: #ffffff;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        font-family: 'SF Pro Display', sans-serif;
     }
 
 .resume-container {
@@ -245,7 +334,7 @@ main {
 .resume-info {
     text-align: center;
     max-width: 640px;
-    color: #d0d0d0; /* Light gray for contrast */
+    color: #d0d0d0;
 }
 
     .resume-info p {
@@ -259,7 +348,7 @@ main {
     display: inline-block;
     text-align: center;
     padding: 12px 24px;
-    background: #4a6ee0; /* Modern blue retained */
+    background: #4a6ee0;
     color: #fff;
     font-weight: 600;
     text-decoration: none;
@@ -271,29 +360,38 @@ main {
 }
 
     .btn:hover {
-        background: #5b81ff; /* Lighter blue for hover */
+        background: #5b81ff;
         box-shadow: 0 6px 18px rgba(74, 110, 224, 0.4);
-        transform: translateY(-2px); /* Subtle lift */
+        transform: translateY(-2px);
     }
 
 /* Case Studies Section */
 #case-studies {
     text-align: center;
     padding: 20px;
-    background: linear-gradient(to bottom, #1f1f1f, #333333); /* Darker backdrop */
+    background: rgba(30, 30, 30, 0.9); /* Matches inner sections */
     border-radius: 16px;
-    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4), inset 0 0 8px rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
+    #case-studies h2 {
+        font-size: 2em;
+        color: #ffffff;
+        text-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+        letter-spacing: 2px;
+        font-family: 'SF Pro Display', sans-serif;
+        text-align: center;
+    }
+
 .case-study {
-    background: rgba(40, 40, 40, 0.9); /* Slightly lighter dark card */
+    background: rgba(40, 40, 40, 0.9);
     padding: 25px;
     border-radius: 12px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4), inset 0 0 8px rgba(255, 255, 255, 0.05);
     margin-bottom: 25px;
     transition: transform 0.4s ease, box-shadow 0.4s ease;
-    border-left: 3px solid #4a6ee0; /* Blue accent for distinction */
+    border-left: 3px solid #4a6ee0;
 }
 
     .case-study:hover {
@@ -304,7 +402,7 @@ main {
     .case-study h3 {
         font-size: 1.65rem;
         margin-bottom: 12px;
-        color: #ffffff; /* Crisp white */
+        color: #ffffff;
         font-weight: 600;
         font-family: 'SF Pro Display', sans-serif;
         text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
@@ -312,7 +410,7 @@ main {
 
     .case-study p {
         font-size: 1.15rem;
-        color: #c0c0c0; /* Softer gray */
+        color: #c0c0c0;
         margin-bottom: 15px;
         text-align: left;
         max-width: 640px;
@@ -321,11 +419,11 @@ main {
         font-family: 'SF Pro Text', sans-serif;
     }
 
-/* Project Box */
+/* Project Box (Unused but kept for consistency) */
 .project {
     width: 270px;
     height: 160px;
-    background: linear-gradient(145deg, #252525, #383838); /* Dynamic dark gradient */
+    background: linear-gradient(145deg, #252525, #383838);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -336,13 +434,24 @@ main {
     font-weight: 600;
     color: #ffffff;
     position: relative;
-    border-left: 4px solid #4a6ee0; /* Blue accent retained */
+    border-left: 4px solid #4a6ee0;
 }
 
     .project:hover {
         transform: translateY(-6px);
         box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5), 0 0 15px rgba(74, 110, 224, 0.3);
     }
+
+/* Keyframe Animations */
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
 
 /* Footer Styling */
 footer {

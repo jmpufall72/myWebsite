@@ -299,7 +299,7 @@ section p {
         font-weight: 600;
         font-family: 'SF Pro Display', sans-serif;
         text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-        text-align: left;
+        text-align: center;
     }
 
         .album-info h3::after {
@@ -330,15 +330,6 @@ section p {
         color: #c0c0c0;
         font-family: 'SF Pro Text', sans-serif;
     }
-
-        .album-info li::before {
-            content: '—';
-            position: absolute;
-            left: 0;
-            color: #ffffff;
-            font-size: 1.2em;
-            line-height: 1;
-        }
 
 /* Acting Section */
 .acting .showcase-grid {

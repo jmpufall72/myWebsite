@@ -4,7 +4,7 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
-    background: #f4f4f4;
+    background: #22274a;
     color: #333;
 }
 
@@ -317,14 +317,6 @@ nav {
         position: relative;
         padding-left: 20px;
     }
-
-        .show-dates li::before { /* Subtle accent */
-            content: '—';
-            position: absolute;
-            left: 0;
-            color: #4a6ee0;
-            font-size: 1.2em;
-        }
 
 /* Tickets Section */
 .tickets {

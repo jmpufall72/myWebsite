@@ -4,7 +4,7 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
-    background: #f4f4f4;
+    background: #22274a;
     color: #333;
 }
 
@@ -158,28 +158,145 @@ nav a:hover {
         border-color: white; /* Outline color on hover */
     }
 }
+/* About Section Styles */
+#about {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); /* Matches .overview */
+    padding: 40px 30px;
+    margin: 25px auto;
+    width: 85%;
+    max-width: 1000px;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5), inset 0 0 10px rgba(255, 255, 255, 0.05);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+    #about:hover {
+        transform: translateY(-8px); /* Matches .overview hover */
+        box-shadow: 0 15px 50px rgba(0, 0, 0, 0.6), inset 0 0 15px rgba(255, 255, 255, 0.1);
+    }
+
+    #about::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
+        opacity: 0.6;
+        z-index: 0;
+    }
+
+    #about h2 {
+        font-size: 2.5em;
+        color: #ffffff;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        position: relative;
+        z-index: 1;
+        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        font-family: 'SF Pro Display', sans-serif;
+        animation: fadeInDown 1s ease-out;
+    }
+
+    #about h3 {
+        font-size: 1.8em;
+        color: #ffffff;
+        text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+        font-family: 'SF Pro Display', sans-serif;
+        margin-top: 20px;
+        margin-bottom: 15px;
+    }
 
 .about-container {
     display: flex;
     align-items: center;
-    gap: 20px;
-    justify-content: center; /* Added to center content horizontally */
+    gap: 30px; /* Increased for breathing room, consistent with other layouts */
+    justify-content: center;
+    position: relative;
+    z-index: 1;
 }
 
 .profile-picture {
-    width: 150px;
-    height: 150px;
-    border-radius: 60%;
+    width: 180px; /* Slightly larger for prominence */
+    height: 180px;
+    border-radius: 50%; /* Adjusted from 60% to standard circle */
     object-fit: cover;
+    border: 2px solid #ff5f6d; /* Subtle pop of color from artistic portfolio */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
+    .profile-picture:hover {
+        transform: scale(1.05); /* Matches image hover effects */
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5), 0 0 15px rgba(255, 95, 109, 0.2);
+    }
+
 .bio {
-    max-width: 600px;
+    max-width: 650px; /* Matches .album-info and .resume-info widths */
+    color: #d0d0d0;
 }
+
+    .bio p {
+        font-size: 1.1em;
+        line-height: 1.8;
+        text-align: left;
+        font-family: 'SF Pro Text', sans-serif;
+        opacity: 0;
+        animation: fadeInUp 1s ease-out 0.3s forwards;
+    }
 
 .education-list {
     list-style-type: none;
     padding: 0;
+    margin: 0;
+}
+
+    .education-list li {
+        font-size: 1em;
+        color: #c0c0c0;
+        margin-bottom: 15px;
+        position: relative;
+        padding-left: 20px;
+        font-family: 'SF Pro Text', sans-serif;
+        line-height: 1.7;
+    }
+
+        .education-list li::before {
+            content: '—'; /* Matches .album-info li styling */
+            position: absolute;
+            left: 0;
+            color: #ff5f6d; /* Subtle pop of color */
+            font-size: 1.2em;
+            line-height: 1;
+        }
+
+/* Keyframe Animations */
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Main Content (for consistency with other pages) */
+main {
+    width: 94%;
+    max-width: 1080px;
+    margin: 45px auto;
+    padding: 20px;
+    color: #d0d0d0;
+    background: linear-gradient(to bottom, #0f0f0f, #1c1c1c);
+    border-radius: 16px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 /* Footer Styling */

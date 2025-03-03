@@ -6,6 +6,10 @@ body {
     padding: 0;
     background: #f4f4f4;
     color: #333;
+    height: 100%; /* Added to center content vertically */
+    display: flex; /* Added to center content */
+    align-items: center; /* Added to center content vertically */
+    justify-content: center; /* Added to center content horizontally */
 }
 
 /* Style for the header */
@@ -96,7 +100,6 @@ header {
         }
 }
 
-
 /* Regular Navigation */
 nav {
     display: flex;
@@ -125,8 +128,6 @@ nav {
             color: white; /* Text color on hover */
             border-color: white; /* Outline color on hover */
         }
-
-
 
 /* Mobile Navigation */
 @media screen and (max-width: 600px) {
@@ -161,8 +162,6 @@ nav {
                 border-color: white; /* Outline color on hover */
             }
 }
-
-
 
 .about-container {
     display: flex;

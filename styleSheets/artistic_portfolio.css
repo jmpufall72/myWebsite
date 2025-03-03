@@ -272,6 +272,7 @@ section p {
     width: 300px;
     height: auto;
     border-radius: 12px;
+    color: #c0c0c0;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
     transition: transform 0.4s ease, box-shadow 0.4s ease, filter 0.4s ease;
     border: 1px solid #ff5f6d; /* Subtle pink accent for creativity */

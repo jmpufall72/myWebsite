@@ -168,127 +168,163 @@ nav {
 .project-container {
     display: flex;
     justify-content: center;
-    gap: 30px;
-    margin: 40px auto;
+    gap: 35px;
+    margin: 45px auto;
     flex-wrap: wrap;
-    max-width: 1000px;
+    max-width: 1080px;
+    padding: 20px;
+    background: #e8ecef; /* Cool, light gray */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid #d1d9e6; /* Subtle outline */
+    transition: box-shadow 0.3s ease;
 }
 
+    .project-container:hover {
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.14); /* Slight depth */
+    }
 
 /* Main Content */
 main {
-    width: 90%;
-    max-width: 1000px;
-    margin: 40px auto;
+    width: 94%;
+    max-width: 1080px;
+    margin: 45px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e1e5eb; /* Clean edge */
 }
 
 /* Featured Section - Resume */
 #featured {
-    background: white;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    background: #ffffff;
+    padding: 35px;
+    border-radius: 10px;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 45px;
+    transition: box-shadow 0.3s ease;
 }
+
+    #featured:hover {
+        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15); /* Subtle hover */
+    }
 
 .resume-container {
     display: flex;
-    flex-direction: column; /* Stack elements vertically */
-    align-items: center; /* Center everything horizontally */
-    text-align: center; /* Ensure text aligns centrally */
-    width: 100%; /* Make sure it spans full width */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
 }
 
     .resume-container img {
-        width: 90%; /* Enlarge for better visibility */
-        max-width: 700px; /* Set a reasonable max size */
+        width: 92%;
+        max-width: 740px;
         display: block;
-        margin: 20px auto; /* Centers image and adds spacing */
+        margin: 25px auto;
         border-radius: 8px;
-        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
+        .resume-container img:hover {
+            transform: translateY(-4px); /* Minimal lift */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.18);
+        }
+
 .resume-info {
-    text-align: center; /* Center text */
-    max-width: 600px; /* Keep text readable */
+    text-align: center;
+    max-width: 640px;
+    color: #2b2f38; /* Darker gray for polish */
 }
 
     .resume-info p {
-        font-size: 1.2rem;
+        font-size: 1.25rem;
         margin-bottom: 20px;
+        line-height: 1.6;
     }
 
 .btn {
     display: inline-block;
     text-align: center;
-    padding: 12px 20px;
-    background: #2a5298;
-    color: white;
-    font-weight: bold;
+    padding: 12px 24px;
+    background: #4a6ee0; /* Sharp, modern blue */
+    color: #fff;
+    font-weight: 600;
     text-decoration: none;
-    border-radius: 8px;
-    transition: all 0.3s ease-in-out;
-    margin-top: 10px; /* Space between text and button */
+    border-radius: 6px;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 12px;
+    letter-spacing: 0.5px; /* Crisp spacing */
 }
 
     .btn:hover {
-        background: #1e3c72;
+        background: #3b5bcb; /* Deeper blue */
+        box-shadow: 0 4px 12px rgba(74, 110, 224, 0.3); /* Soft glow */
     }
 
 /* Case Studies Section */
 #case-studies {
-    text-align: center; /* Keeps the content centered for the section */
+    text-align: center;
+    padding: 20px;
+    background: #f8f9fa; /* Light, clean backdrop */
+    border-radius: 10px;
 }
 
 .case-study {
-    background: white;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
     .case-study:hover {
         transform: translateY(-5px);
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
     }
 
     .case-study h3 {
-        font-size: 1.5rem;
-        margin-bottom: 10px;
+        font-size: 1.65rem;
+        margin-bottom: 12px;
+        color: #000000; /* All black headers */
+        font-weight: 600;
     }
 
-    /* Align paragraphs to the left */
     .case-study p {
-        font-size: 1rem;
+        font-size: 1.15rem;
         color: #555;
         margin-bottom: 15px;
-        text-align: left; /* Align paragraphs to the left */
-        max-width: 600px; /* Optional: Control paragraph width for readability */
+        text-align: left;
+        max-width: 640px;
         margin-left: auto;
-        margin-right: auto; /* Keeps the paragraph centered while aligning text left */
+        margin-right: auto;
     }
 
 /* Project Box */
 .project {
-    width: 250px;
-    height: 150px;
-    background: white;
+    width: 270px;
+    height: 160px;
+    background: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    font-size: 1.2rem;
-    font-weight: bold;
+    border-radius: 8px;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #2b2f38;
+    position: relative;
+    border-left: 4px solid #4a6ee0; /* Blue accent */
 }
 
     .project:hover {
         transform: translateY(-5px);
-        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
     }
 
 /* Footer Styling */
@@ -298,6 +334,7 @@ footer {
     text-align: center;
     padding: 20px;
     margin-top: 50px;
+    width: 100%;
 }
 
 footer p {

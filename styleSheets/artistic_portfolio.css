@@ -166,60 +166,123 @@ nav {
 
 /* Section Styles */
 section {
-    padding: 40px 20px;
-    margin: 20px 0;
-    max-width: 1100px;
+    padding: 50px 30px;
+    margin: 30px 0;
+    max-width: 1280px; /* Wider, like Apple's layouts */
     margin-left: auto;
     margin-right: auto;
+    background: linear-gradient(135deg, #1e2a38 0%, #3e5a8c 100%); /* Refined blue gradient */
+    border-radius: 12px; /* Softer, modern corners */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Subtle, professional depth */
+    position: relative;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
 }
+
+    section:hover {
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* Clean hover effect */
+    }
+
+    section::before { /* Heartbeat-inspired texture, less playful */
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to right, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.03));
+        opacity: 0.6;
+        z-index: 0;
+    }
 
 h2 {
-    font-size: 2.2em;
-    margin-bottom: 20px;
+    font-size: 2.5em; /* Slightly smaller, more refined */
+    margin-bottom: 25px;
+    color: #ffffff; /* Pure white, like Apple's clarity */
+    font-weight: 600; /* Bold but not overly heavy */
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    position: relative;
+    z-index: 1;
+    letter-spacing: 0.5px;
 }
 
-p {
-    font-size: 1.1rem;
-    line-height: 1.6;
+/* Scoped <p> styles */
+section p {
+    font-size: 1.2rem;
+    line-height: 1.7;
     margin-bottom: 20px;
     max-width: 900px;
     margin-left: auto;
     margin-right: auto;
-    text-align: left; /* Ensure text is aligned to the left */
+    text-align: left;
+    color: #e0e6ed; /* Clean, light gray-blue */
+    font-weight: 400; /* Lighter weight for sophistication */
 }
 
 /* Album Section */
 .album {
-    background: #fff;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to bottom, #1e2a38, #2e4066); /* Sleek, mature gradient */
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    position: relative;
+    transition: box-shadow 0.3s ease;
+    z-index: 1;
 }
+
+    .album:hover {
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .album::after { /* Simplified bridge accent */
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 60%;
+        height: 1px;
+        background: rgba(135, 206, 235, 0.3); /* Subtle sky-blue */
+        transform: translateX(-50%);
+        z-index: -1;
+    }
 
 .album-content {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 30px;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+    z-index: 1;
 }
 
 .album-art {
-    width: 300px;
+    width: 320px;
     height: auto;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #3e5a8c; /* Minimal, sleek frame */
 }
 
+    .album-art:hover {
+        transform: translateY(-5px); /* Cleaner lift, no scale */
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    }
+
 .album-info {
-    max-width: 600px;
-    font-size: 1.1rem;
-    line-height: 1.6;
+    max-width: 700px;
+    font-size: 1.2rem;
+    line-height: 1.7;
+    color: #e0e6ed;
 }
 
     .album-info h3 {
-        margin-top: 30px;
-        font-size: 1.5em;
+        margin-top: 35px;
+        font-size: 1.7em;
+        color: #87ceeb; /* Sky-blue retained for creativity */
+        font-weight: 500; /* Lighter, more elegant */
+        text-shadow: none; /* Removed for cleanliness */
     }
 
     .album-info ul {
@@ -228,39 +291,65 @@ p {
     }
 
     .album-info li {
-        margin-bottom: 10px;
+        margin-bottom: 15px;
+        position: relative;
+        padding-left: 20px;
     }
+
+        .album-info li::before { /* Minimal, professional line */
+            content: '—';
+            position: absolute;
+            left: 0;
+            color: #87ceeb;
+            font-size: 1.2em;
+            line-height: 1;
+        }
 
 /* Acting Section */
 .acting .showcase-grid {
     display: flex;
-    gap: 30px;
+    gap: 35px;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .acting .show-item {
-    background: #fff;
-    padding: 15px;
+    background: #ffffff;
+    padding: 20px;
     border-radius: 10px;
-    width: 220px;
+    width: 260px;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 1px solid #3e5a8c; /* Subtle accent */
 }
+
+    .acting .show-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    }
 
     .acting .show-item img {
         width: 100%;
-        border-radius: 10px;
+        border-radius: 8px;
+        transition: box-shadow 0.3s ease;
     }
 
+        .acting .show-item:hover img {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle enhancement */
+        }
+
     .acting .show-item h3 {
-        font-size: 1.3em;
-        margin-top: 10px;
+        font-size: 1.4em;
+        margin-top: 15px;
+        color: #1e2a38;
+        font-weight: 500;
     }
 
     .acting .show-item p {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
+        color: #5a6a85; /* Muted, professional blue-gray */
     }
 
 /* Footer Styling */
@@ -270,20 +359,21 @@ footer {
     text-align: center;
     padding: 20px;
     margin-top: 50px;
+    width: 100%;
 }
 
-    footer p {
-        margin: 0;
-        font-size: 0.9rem;
-        opacity: 0.7;
-    }
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
 
-    footer a {
-        color: #007bff;
-        text-decoration: none;
-        font-weight: bold;
-    }
+footer a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
 
-        footer a:hover {
-            text-decoration: underline;
-        }
+footer a:hover {
+    text-decoration: underline;
+}

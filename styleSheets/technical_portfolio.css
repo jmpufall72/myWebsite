@@ -197,9 +197,8 @@ nav {
     }
 
     .overview h2 {
-        font-size: 2.5em; /* Slightly smaller for elegance */
+        font-size: 2em; /* Slightly smaller for elegance */
         color: #ffffff;
-        text-transform: uppercase;
         letter-spacing: 2px;
         position: relative;
         z-index: 1;

@@ -200,7 +200,6 @@ nav {
     .overview h2 {
         font-size: 2em;
         color: #ffffff;
-        text-transform: uppercase;
         letter-spacing: 2px;
         position: relative;
         z-index: 1;
@@ -299,7 +298,6 @@ main {
     #featured h2 {
         font-size: 2em;
         color: #ffffff;
-        text-transform: uppercase;
         letter-spacing: 2px;
         text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
         font-family: 'SF Pro Display', sans-serif;

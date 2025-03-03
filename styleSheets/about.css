@@ -6,10 +6,6 @@ body {
     padding: 0;
     background: #f4f4f4;
     color: #333;
-    height: 100%; /* Added to center content vertically */
-    display: flex; /* Added to center content */
-    align-items: center; /* Added to center content vertically */
-    justify-content: center; /* Added to center content horizontally */
 }
 
 /* Style for the header */
@@ -24,36 +20,36 @@ header {
     position: relative;
 }
 
-/* Style for the logo */
-header .logo {
-    position: absolute; /* Position the logo on the left */
-    left: 20px; /* Space from the left side */
-}
+    /* Style for the logo */
+    header .logo {
+        position: absolute; /* Position the logo on the left */
+        left: 20px; /* Space from the left side */
+    }
 
-header .logo img {
-    width: 60px; /* Adjust the size of the logo */
-    height: auto;
-}
+        header .logo img {
+            width: 60px; /* Adjust the size of the logo */
+            height: auto;
+        }
 
-/* Style for the title and bridging message (Centered) */
-header div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    flex-grow: 1; /* Allow this section to take up available space */
-}
+    /* Style for the title and bridging message (Centered) */
+    header div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-grow: 1; /* Allow this section to take up available space */
+    }
 
-header h1 {
-    margin: 0;
-    font-size: 2em; /* Adjust font size for the heading */
-}
+    header h1 {
+        margin: 0;
+        font-size: 2em; /* Adjust font size for the heading */
+    }
 
-header p {
-    margin: 10px 0; /* Adds margin between the heading and the paragraph */
-    font-size: 1.2em;
-}
+    header p {
+        margin: 10px 0; /* Adds margin between the heading and the paragraph */
+        font-size: 1.2em;
+    }
 
 /* Add responsiveness */
 @media (max-width: 600px) {
@@ -64,41 +60,42 @@ header p {
         padding: 20px 0; /* Add padding for space around the content */
     }
 
-    /* Center logo on mobile */
-    header .logo {
-        position: relative; /* Reset positioning */
-        display: block; /* Use block to make it take full width */
-        margin-bottom: 15px; /* Space below the logo */
-        left: 50%; /* Ensure it's centered horizontally */
-        transform: translateX(-50%); /* Adjust for exact centering */
-    }
+        /* Center logo on mobile */
+        header .logo {
+            position: relative; /* Reset positioning */
+            display: block; /* Use block to make it take full width */
+            margin-bottom: 15px; /* Space below the logo */
+            left: 50%; /* Ensure it's centered horizontally */
+            transform: translateX(-50%); /* Adjust for exact centering */
+        }
 
-    header .logo img {
-        width: 60px; /* Adjust logo size as needed */
-        height: auto;
-    }
+            header .logo img {
+                width: 60px; /* Adjust logo size as needed */
+                height: auto;
+            }
 
-    /* Adjust title and paragraph section */
-    header div {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        flex-grow: 1; /* Allow title and paragraph section to grow */
-        width: 100%; /* Take up full width */
-    }
+        /* Adjust title and paragraph section */
+        header div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-grow: 1; /* Allow title and paragraph section to grow */
+            width: 100%; /* Take up full width */
+        }
 
-    header h1 {
-        margin: 10px 0; /* Add margin for spacing */
-        font-size: 2em; /* Adjust font size */
-    }
+        header h1 {
+            margin: 10px 0; /* Add margin for spacing */
+            font-size: 2em; /* Adjust font size */
+        }
 
-    header p {
-        margin: 5px 0; /* Adjust margin for spacing */
-        font-size: 1.2em; /* Adjust font size */
-    }
+        header p {
+            margin: 5px 0; /* Adjust margin for spacing */
+            font-size: 1.2em; /* Adjust font size */
+        }
 }
+
 
 /* Regular Navigation */
 nav {
@@ -110,24 +107,26 @@ nav {
     margin-top: 0px; /* Adds some space between the header and the navigation */
 }
 
-nav a {
-    margin: 0 20px; /* Adds space between each link */
-    text-decoration: none;
-    color: white; /* Light text color */
-    font-weight: bold;
-    font-size: 1rem;
-    padding: 10px 15px; /* Adds padding for better button-like look */
-    border-radius: 5px; /* Rounded corners for buttons */
-    transition: all 0.3s ease-in-out; /* Smooth hover effect */
-    background-color: transparent; /* Transparent background */
-    border: 2px solid transparent; /* Invisible border for hover effect */
-}
+    nav a {
+        margin: 0 20px; /* Adds space between each link */
+        text-decoration: none;
+        color: white; /* Light text color */
+        font-weight: bold;
+        font-size: 1rem;
+        padding: 10px 15px; /* Adds padding for better button-like look */
+        border-radius: 5px; /* Rounded corners for buttons */
+        transition: all 0.3s ease-in-out; /* Smooth hover effect */
+        background-color: transparent; /* Transparent background */
+        border: 2px solid transparent; /* Invisible border for hover effect */
+    }
 
-/* Hover effect for regular navigation - outline effect */
-nav a:hover {
-    color: white; /* Text color on hover */
-    border-color: white; /* Outline color on hover */
-}
+        /* Hover effect for regular navigation - outline effect */
+        nav a:hover {
+            color: white; /* Text color on hover */
+            border-color: white; /* Outline color on hover */
+        }
+
+
 
 /* Mobile Navigation */
 @media screen and (max-width: 600px) {
@@ -139,29 +138,31 @@ nav a:hover {
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Optional shadow effect */
     }
 
-    /* Style for the mobile navigation links */
-    nav a {
-        display: block;
-        width: 80%; /* Make links take up most of the width but with some space around */
-        margin: 10px 0; /* Add spacing between links */
-        text-align: center; /* Center the text */
-        padding: 12px;
-        color: white; /* Light text color */
-        font-weight: bold;
-        font-size: 1.1rem;
-        border-radius: 5px;
-        transition: all 0.3s ease-in-out; /* Smooth hover effect */
-        background-color: transparent; /* Keep the background transparent */
-        border: 2px solid transparent; /* Invisible border for hover effect */
-    }
+        /* Style for the mobile navigation links */
+        nav a {
+            display: block;
+            width: 80%; /* Make links take up most of the width but with some space around */
+            margin: 10px 0; /* Add spacing between links */
+            text-align: center; /* Center the text */
+            padding: 12px;
+            color: white; /* Light text color */
+            font-weight: bold;
+            font-size: 1.1rem;
+            border-radius: 5px;
+            transition: all 0.3s ease-in-out; /* Smooth hover effect */
+            background-color: transparent; /* Keep the background transparent */
+            border: 2px solid transparent; /* Invisible border for hover effect */
+        }
 
-    /* Hover effect for mobile - outline effect */
-    nav a:hover {
-        background-color: transparent; /* No background color */
-        color: white; /* Change text color */
-        border-color: white; /* Outline color on hover */
-    }
+            /* Hover effect for mobile - outline effect */
+            nav a:hover {
+                background-color: transparent; /* No background color */
+                color: white; /* Change text color */
+                border-color: white; /* Outline color on hover */
+            }
 }
+
+
 
 .about-container {
     display: flex;
@@ -194,17 +195,18 @@ footer {
     margin-top: 50px;
 }
 
-footer p {
-    margin: 0;
-    font-size: 0.9rem;
-    opacity: 0.7;
-}
+    footer p {
+        margin: 0;
+        font-size: 0.9rem;
+        opacity: 0.7;
+    }
 
-footer a {
-    color: #007bff;
-    text-decoration: none;
-    font-weight: bold;
-}
+    footer a {
+        color: #007bff;
+        text-decoration: none;
+        font-weight: bold;
+    }
 
-footer a:hover {
-    text-decoration: underline;
+        footer a:hover {
+            text-decoration: underline;
+        }

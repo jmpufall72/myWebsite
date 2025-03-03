@@ -4,7 +4,7 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
-    background: #f4f4f4;
+    background: #22274a;
     color: #333;
 }
 
@@ -168,88 +168,100 @@ nav {
 section {
     padding: 50px 30px;
     margin: 30px 0;
-    max-width: 1280px; /* Wider, like Apple's layouts */
+    max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
-    background: linear-gradient(135deg, #1e2a38 0%, #3e5a8c 100%); /* Refined blue gradient */
-    border-radius: 12px; /* Softer, modern corners */
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Subtle, professional depth */
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5), inset 0 0 10px rgba(255, 255, 255, 0.05);
     position: relative;
     overflow: hidden;
-    transition: box-shadow 0.3s ease;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
     section:hover {
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* Clean hover effect */
+        transform: translateY(-8px);
+        box-shadow: 0 15px 50px rgba(0, 0, 0, 0.6), inset 0 0 15px rgba(255, 255, 255, 0.1);
     }
 
-    section::before { /* Heartbeat-inspired texture, less playful */
+    section::before {
         content: '';
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background: linear-gradient(to right, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.03));
+        background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
         opacity: 0.6;
         z-index: 0;
     }
 
 h2 {
-    font-size: 2.5em; /* Slightly smaller, more refined */
-    margin-bottom: 25px;
-    color: #ffffff; /* Pure white, like Apple's clarity */
-    font-weight: 600; /* Bold but not overly heavy */
-    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    font-size: 2.5em;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
     position: relative;
     z-index: 1;
-    letter-spacing: 0.5px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    font-family: 'SF Pro Display', sans-serif;
+    text-align: center;
+    animation: fadeInDown 1s ease-out;
 }
 
 /* Scoped <p> styles */
 section p {
-    font-size: 1.2rem;
-    line-height: 1.7;
+    font-size: 1.1em;
+    line-height: 1.8;
     margin-bottom: 20px;
-    max-width: 900px;
+    max-width: 850px;
     margin-left: auto;
     margin-right: auto;
     text-align: left;
-    color: #e0e6ed; /* Clean, light gray-blue */
-    font-weight: 400; /* Lighter weight for sophistication */
+    color: #d0d0d0;
+    font-weight: 400;
+    font-family: 'SF Pro Text', sans-serif;
+    opacity: 0;
+    animation: fadeInUp 1s ease-out 0.3s forwards;
 }
 
 /* Album Section */
 .album {
-    background: linear-gradient(to bottom, #1e2a38, #2e4066); /* Sleek, mature gradient */
-    border-radius: 12px;
+    background: linear-gradient(to bottom, #0f0f0f, #1c1c1c);
+    border-radius: 16px;
     padding: 30px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4), inset 0 0 8px rgba(255, 255, 255, 0.05);
     position: relative;
-    transition: box-shadow 0.3s ease;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
     z-index: 1;
+    border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
     .album:hover {
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        transform: translateY(-8px);
+        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5), inset 0 0 12px rgba(255, 255, 255, 0.1);
     }
 
-    .album::after { /* Simplified bridge accent */
+    .album::after { /* Subtle pop of color */
         content: '';
         position: absolute;
         bottom: 0;
         left: 50%;
-        width: 60%;
-        height: 1px;
-        background: rgba(135, 206, 235, 0.3); /* Subtle sky-blue */
+        width: 50%;
+        height: 2px; /* Slightly thicker for visibility */
+        background: #ff5f6d; /* Vibrant pinkish-red for creativity */
         transform: translateX(-50%);
         z-index: -1;
+        opacity: 0.8;
+        box-shadow: 0 0 8px rgba(255, 95, 109, 0.3); /* Faint glow */
     }
 
 .album-content {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 25px;
     justify-content: space-between;
     align-items: center;
     position: relative;
@@ -257,33 +269,54 @@ section p {
 }
 
 .album-art {
-    width: 320px;
+    width: 300px;
     height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid #3e5a8c; /* Minimal, sleek frame */
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.4s ease, box-shadow 0.4s ease, filter 0.4s ease;
+    border: 1px solid #ff5f6d; /* Subtle pink accent for creativity */
+    filter: brightness(90%) contrast(110%);
+    object-fit: cover;
 }
 
     .album-art:hover {
-        transform: translateY(-5px); /* Cleaner lift, no scale */
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+        transform: scale(1.05);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6), 0 0 15px rgba(255, 95, 109, 0.2); /* Tie in pink glow */
+        filter: brightness(100%) contrast(115%);
     }
 
 .album-info {
-    max-width: 700px;
-    font-size: 1.2rem;
-    line-height: 1.7;
-    color: #e0e6ed;
+    max-width: 650px;
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #c0c0c0;
 }
 
     .album-info h3 {
-        margin-top: 35px;
-        font-size: 1.7em;
-        color: #87ceeb; /* Sky-blue retained for creativity */
-        font-weight: 500; /* Lighter, more elegant */
-        text-shadow: none; /* Removed for cleanliness */
+        margin-top: 20px;
+        font-size: 2em;
+        color: #ffffff;
+        font-weight: 600;
+        font-family: 'SF Pro Display', sans-serif;
+        text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+        text-align: left;
     }
+
+        .album-info h3::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background: #ffffff;
+            border-radius: 1px;
+            transition: width 0.4s ease;
+        }
+
+        .album-info:hover h3::after {
+            width: 80px;
+        }
 
     .album-info ul {
         list-style-type: none;
@@ -294,13 +327,15 @@ section p {
         margin-bottom: 15px;
         position: relative;
         padding-left: 20px;
+        color: #c0c0c0;
+        font-family: 'SF Pro Text', sans-serif;
     }
 
-        .album-info li::before { /* Minimal, professional line */
+        .album-info li::before {
             content: '—';
             position: absolute;
             left: 0;
-            color: #87ceeb;
+            color: #ffffff;
             font-size: 1.2em;
             line-height: 1;
         }
@@ -308,49 +343,67 @@ section p {
 /* Acting Section */
 .acting .showcase-grid {
     display: flex;
-    gap: 35px;
+    gap: 25px;
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 30px;
 }
 
 .acting .show-item {
-    background: #ffffff;
+    background: rgba(30, 30, 30, 0.9);
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 16px;
     width: 260px;
     text-align: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-top: 1px solid #3e5a8c; /* Subtle accent */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4), inset 0 0 8px rgba(255, 255, 255, 0.05);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
     .acting .show-item:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+        transform: translateY(-8px);
+        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5), inset 0 0 12px rgba(255, 255, 255, 0.1);
     }
 
     .acting .show-item img {
         width: 100%;
-        border-radius: 8px;
-        transition: box-shadow 0.3s ease;
+        border-radius: 12px;
+        transition: box-shadow 0.4s ease, filter 0.4s ease;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        filter: brightness(90%) contrast(110%);
     }
 
         .acting .show-item:hover img {
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle enhancement */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+            filter: brightness(100%) contrast(115%);
         }
 
     .acting .show-item h3 {
-        font-size: 1.4em;
+        font-size: 1.5em;
         margin-top: 15px;
-        color: #1e2a38;
-        font-weight: 500;
+        color: #ffffff;
+        font-weight: 600;
+        font-family: 'SF Pro Display', sans-serif;
+        text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
     }
 
     .acting .show-item p {
-        font-size: 1.2rem;
-        color: #5a6a85; /* Muted, professional blue-gray */
+        font-size: 1em;
+        color: #c0c0c0;
+        font-family: 'SF Pro Text', sans-serif;
+        line-height: 1.7;
     }
+
+/* Keyframe Animations */
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
 
 /* Footer Styling */
 footer {

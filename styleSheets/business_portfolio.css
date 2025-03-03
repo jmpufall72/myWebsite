@@ -4,7 +4,7 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
-    background: #f4f4f4;
+    background: #22274a;
     color: #333;
 }
 
@@ -173,15 +173,17 @@ nav {
     flex-wrap: wrap;
     max-width: 1080px;
     padding: 20px;
-    background: #e8ecef; /* Cool, light gray */
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    border: 1px solid #d1d9e6; /* Subtle outline */
-    transition: box-shadow 0.3s ease;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); /* Dark gradient */
+    border-radius: 16px; /* Softer, modern corners */
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5), inset 0 0 10px rgba(255, 255, 255, 0.05); /* Deep shadow + glow */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle outline */
+    transition: box-shadow 0.4s ease, transform 0.4s ease;
+    backdrop-filter: blur(8px); /* Glassmorphism */
 }
 
     .project-container:hover {
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.14); /* Slight depth */
+        box-shadow: 0 15px 50px rgba(0, 0, 0, 0.6), inset 0 0 15px rgba(255, 255, 255, 0.1);
+        transform: translateY(-5px); /* Sleek lift */
     }
 
 /* Main Content */
@@ -190,25 +192,28 @@ main {
     max-width: 1080px;
     margin: 45px auto;
     padding: 20px;
-    background: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-    border: 1px solid #e1e5eb; /* Clean edge */
+    color: #d0d0d0;
+    background: linear-gradient(to bottom, #0f0f0f, #1c1c1c); /* Deep dark gradient */
+    border-radius: 16px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.08); /* Minimal edge */
 }
 
 /* Featured Section - Resume */
 #featured {
-    background: #ffffff;
+    background: rgba(30, 30, 30, 0.9); /* Dark, semi-transparent */
     padding: 35px;
-    border-radius: 10px;
-    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4), inset 0 0 8px rgba(74, 110, 224, 0.1); /* Blue glow */
     text-align: center;
     margin-bottom: 45px;
-    transition: box-shadow 0.3s ease;
+    transition: box-shadow 0.4s ease, transform 0.4s ease;
+    border: 1px solid rgba(74, 110, 224, 0.2); /* Subtle blue accent */
 }
 
     #featured:hover {
-        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15); /* Subtle hover */
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5), inset 0 0 12px rgba(74, 110, 224, 0.15);
+        transform: scale(1.02); /* Gentle zoom */
     }
 
 .resume-container {
@@ -224,107 +229,119 @@ main {
         max-width: 740px;
         display: block;
         margin: 25px auto;
-        border-radius: 8px;
-        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border-radius: 12px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+        transition: transform 0.4s ease, box-shadow 0.4s ease, filter 0.4s ease;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        filter: brightness(90%) contrast(110%);
     }
 
         .resume-container img:hover {
-            transform: translateY(-4px); /* Minimal lift */
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.18);
+            transform: translateY(-6px);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6), 0 0 15px rgba(74, 110, 224, 0.3);
+            filter: brightness(100%) contrast(115%);
         }
 
 .resume-info {
     text-align: center;
     max-width: 640px;
-    color: #2b2f38; /* Darker gray for polish */
+    color: #d0d0d0; /* Light gray for contrast */
 }
 
     .resume-info p {
         font-size: 1.25rem;
         margin-bottom: 20px;
         line-height: 1.6;
+        font-family: 'SF Pro Text', sans-serif;
     }
 
 .btn {
     display: inline-block;
     text-align: center;
     padding: 12px 24px;
-    background: #4a6ee0; /* Sharp, modern blue */
+    background: #4a6ee0; /* Modern blue retained */
     color: #fff;
     font-weight: 600;
     text-decoration: none;
-    border-radius: 6px;
-    transition: background 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 8px;
+    transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
     margin-top: 12px;
-    letter-spacing: 0.5px; /* Crisp spacing */
+    letter-spacing: 0.5px;
+    font-family: 'SF Pro Display', sans-serif;
 }
 
     .btn:hover {
-        background: #3b5bcb; /* Deeper blue */
-        box-shadow: 0 4px 12px rgba(74, 110, 224, 0.3); /* Soft glow */
+        background: #5b81ff; /* Lighter blue for hover */
+        box-shadow: 0 6px 18px rgba(74, 110, 224, 0.4);
+        transform: translateY(-2px); /* Subtle lift */
     }
 
 /* Case Studies Section */
 #case-studies {
     text-align: center;
     padding: 20px;
-    background: #f8f9fa; /* Light, clean backdrop */
-    border-radius: 10px;
+    background: linear-gradient(to bottom, #1f1f1f, #333333); /* Darker backdrop */
+    border-radius: 16px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .case-study {
-    background: #ffffff;
+    background: rgba(40, 40, 40, 0.9); /* Slightly lighter dark card */
     padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4), inset 0 0 8px rgba(255, 255, 255, 0.05);
     margin-bottom: 25px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    border-left: 3px solid #4a6ee0; /* Blue accent for distinction */
 }
 
     .case-study:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+        transform: translateY(-6px);
+        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5), inset 0 0 12px rgba(255, 255, 255, 0.1);
     }
 
     .case-study h3 {
         font-size: 1.65rem;
         margin-bottom: 12px;
-        color: #000000; /* All black headers */
+        color: #ffffff; /* Crisp white */
         font-weight: 600;
+        font-family: 'SF Pro Display', sans-serif;
+        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
     }
 
     .case-study p {
         font-size: 1.15rem;
-        color: #555;
+        color: #c0c0c0; /* Softer gray */
         margin-bottom: 15px;
         text-align: left;
         max-width: 640px;
         margin-left: auto;
         margin-right: auto;
+        font-family: 'SF Pro Text', sans-serif;
     }
 
 /* Project Box */
 .project {
     width: 270px;
     height: 160px;
-    background: #ffffff;
+    background: linear-gradient(145deg, #252525, #383838); /* Dynamic dark gradient */
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 8px;
-    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
     font-size: 1.25rem;
     font-weight: 600;
-    color: #2b2f38;
+    color: #ffffff;
     position: relative;
-    border-left: 4px solid #4a6ee0; /* Blue accent */
+    border-left: 4px solid #4a6ee0; /* Blue accent retained */
 }
 
     .project:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+        transform: translateY(-6px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5), 0 0 15px rgba(74, 110, 224, 0.3);
     }
 
 /* Footer Styling */

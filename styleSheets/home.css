@@ -4,7 +4,7 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
-    background: #22274a;
+    background: #333;
     color: #333;
 }
 
@@ -167,7 +167,7 @@ nav {
 
 /* Welcome Section */
 #welcome {
-    background: linear-gradient(135deg, #0a0a0a, #1e3a8a); /* Deeper dark blue gradient */
+    background: linear-gradient(135deg, #0a0a0a, #540000); /* Deeper red gradient */
     color: #ffffff;
     text-align: center;
     padding: 80px 20px; /* Increased padding for a grand feel */
@@ -225,7 +225,7 @@ nav {
     text-align: center;
     padding: 60px 20px; /* Increased padding */
     color: #d0d0d0; /* Light gray for contrast */
-    background: linear-gradient(to bottom, #0f0f0f, #1c1c1c); /* Dark gradient */
+    background: linear-gradient(to bottom, #0f0f0f, #000000); /* Dark red gradient */
     position: relative;
     border-top: 1px solid rgba(255, 255, 255, 0.08);
 }

@@ -4,7 +4,7 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
-    background: #22274a;
+    background: linear-gradient(135deg, #0a0a0a, #47016a); /* Deeper purple gradient */
     color: #333;
 }
 
@@ -218,7 +218,7 @@ section p {
     max-width: 850px;
     margin-left: auto;
     margin-right: auto;
-    text-align: left;
+    text-align: center; /* Center the description paragraphs */
     color: #d0d0d0;
     font-weight: 400;
     font-family: 'SF Pro Text', sans-serif;
@@ -243,26 +243,24 @@ section p {
         box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5), inset 0 0 12px rgba(255, 255, 255, 0.1);
     }
 
-    .album::after { /* Subtle pop of color */
+    .album::after {
         content: '';
         position: absolute;
         bottom: 0;
         left: 50%;
         width: 50%;
-        height: 2px; /* Slightly thicker for visibility */
-        background: #ff5f6d; /* Vibrant pinkish-red for creativity */
+        height: 2px;
+        background: #ff5f6d;
         transform: translateX(-50%);
         z-index: -1;
         opacity: 0.8;
-        box-shadow: 0 0 8px rgba(255, 95, 109, 0.3); /* Faint glow */
+        box-shadow: 0 0 8px rgba(255, 95, 109, 0.3);
     }
 
 .album-content {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column; /* Stack elements vertically */
     gap: 25px;
-    justify-content: space-between;
-    align-items: center;
     position: relative;
     z-index: 1;
 }
@@ -271,29 +269,30 @@ section p {
     width: 300px;
     height: auto;
     border-radius: 12px;
-    color: #c0c0c0;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
     transition: transform 0.4s ease, box-shadow 0.4s ease, filter 0.4s ease;
-    border: 1px solid #ff5f6d; /* Subtle pink accent for creativity */
+    border: 1px solid #ff5f6d;
     filter: brightness(90%) contrast(110%);
     object-fit: cover;
 }
 
     .album-art:hover {
         transform: scale(1.05);
-        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6), 0 0 15px rgba(255, 95, 109, 0.2); /* Tie in pink glow */
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6), 0 0 15px rgba(255, 95, 109, 0.2);
         filter: brightness(100%) contrast(115%);
     }
 
 .album-info {
-    max-width: 650px;
+    max-width: 100%; /* Full width for centering description */
     font-size: 1.1em;
     line-height: 1.8;
     color: #c0c0c0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
     .album-info h3 {
-        margin-top: 20px;
         font-size: 2em;
         color: #ffffff;
         font-weight: 600;
@@ -306,11 +305,12 @@ section p {
             content: '';
             position: absolute;
             bottom: -5px;
-            left: 0;
+            left: 50%; /* Center the underline */
             width: 40px;
             height: 2px;
             background: #ffffff;
             border-radius: 1px;
+            transform: translateX(-50%); /* Center horizontally */
             transition: width 0.4s ease;
         }
 
@@ -321,6 +321,8 @@ section p {
     .album-info ul {
         list-style-type: none;
         padding: 0;
+        margin: 0;
+        max-width: 300px; /* Matches album-art width */
     }
 
     .album-info li {
@@ -329,6 +331,15 @@ section p {
         padding-left: 20px;
         color: #c0c0c0;
         font-family: 'SF Pro Text', sans-serif;
+    }
+
+    /* New wrapper for album-art and tracklist */
+    .album-info .album-details {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 25px;
+        justify-content: center; /* Center the group */
+        align-items: flex-start; /* Align tops */
     }
 
 /* Acting Section */

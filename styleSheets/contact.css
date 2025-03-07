@@ -4,7 +4,7 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
-    background: #22274a;
+    background: linear-gradient(to bottom, #0f0f0f, #4c0000); /* Dark red gradient */
     color: #333;
 }
 

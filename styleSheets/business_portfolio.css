@@ -4,7 +4,7 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
-    background: #22274a;
+    background: linear-gradient(135deg, #0a0a0a, #1e3a8a); /* Deeper dark blue gradient */
     color: #333;
 }
 

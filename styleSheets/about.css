@@ -4,7 +4,7 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
-    background: #22274a;
+    background: linear-gradient(to bottom, #0f0f0f, #4c0000); /* Dark red gradient */
     color: #333;
 }
 
@@ -307,18 +307,19 @@ footer {
     margin-top: 50px;
 }
 
-footer p {
-    margin: 0;
-    font-size: 0.9rem;
-    opacity: 0.7;
-}
+    footer p {
+        margin: 0;
+        font-size: 0.9rem;
+        opacity: 0.7;
+    }
 
-footer a {
-    color: #007bff;
-    text-decoration: none;
-    font-weight: bold;
-}
+    footer a {
+        color: #007bff;
+        text-decoration: none;
+        font-weight: bold;
+    }
 
-footer a:hover {
-    text-decoration: underline;
-}
+        footer a:hover {
+            text-decoration: underline;
+        }
+    

@@ -226,6 +226,142 @@ section p {
     animation: fadeInUp 1s ease-out 0.3s forwards;
 }
 
+.photo-carousel {
+  padding: 50px 30px;
+  margin: 30px auto;
+  max-width: 1000px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #1a1a1a, #320047);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5), inset 0 0 10px rgba(255, 255, 255, 0.05);
+  text-align: center;
+  position: relative;
+}
+
+.carousel-wrapper {
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.8s ease-in-out;
+  width: 100%;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 12px;
+  filter: brightness(95%) contrast(110%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.carousel-slide:nth-child(5) {
+  object-position: 40% 45%;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  font-size: 28px;
+  background-color: rgba(255,255,255,0.1);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 12px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  z-index: 1;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(255,255,255,0.25);
+}
+
+.prev { left: 15px; }
+.next { right: 15px; }
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.carousel-dot {
+  width: 12px;
+  height: 12px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-dot.active {
+  background-color: #ff5f6d;
+}
+
+.prev { left: 15px; }
+.next { right: 15px; }
+
+/* Acting Section */
+.acting .showcase-grid {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.acting .show-item {
+    background: rgba(30, 30, 30, 0.9);
+    padding: 20px;
+    border-radius: 16px;
+    width: 260px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4), inset 0 0 8px rgba(255, 255, 255, 0.05);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+    .acting .show-item:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5), inset 0 0 12px rgba(255, 255, 255, 0.1);
+    }
+
+    .acting .show-item img {
+        width: 100%;
+        border-radius: 12px;
+        transition: box-shadow 0.4s ease, filter 0.4s ease;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        filter: brightness(90%) contrast(110%);
+    }
+
+        .acting .show-item:hover img {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+            filter: brightness(100%) contrast(115%);
+        }
+
+    .acting .show-item h3 {
+        font-size: 1.5em;
+        margin-top: 15px;
+        color: #ffffff;
+        font-weight: 600;
+        font-family: 'SF Pro Display', sans-serif;
+        text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .acting .show-item p {
+        font-size: 1em;
+        color: #c0c0c0;
+        font-family: 'SF Pro Text', sans-serif;
+        line-height: 1.7;
+    }
+
 /* Album Section */
 .album {
     background: linear-gradient(to bottom, #0f0f0f, #1c1c1c);
@@ -342,59 +478,62 @@ section p {
         align-items: flex-start; /* Align tops */
     }
 
-/* Acting Section */
-.acting .showcase-grid {
+.skills-instruments {
+    padding: 50px 30px;
+    margin: 30px auto;
+    max-width: 1000px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #1a1a1a, #320047);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5), inset 0 0 10px rgba(255, 255, 255, 0.05);
+    text-align: center;
+}
+
+.skills-container {
     display: flex;
-    gap: 25px;
-    justify-content: center;
     flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
     margin-top: 30px;
 }
 
-.acting .show-item {
-    background: rgba(30, 30, 30, 0.9);
-    padding: 20px;
-    border-radius: 16px;
-    width: 260px;
-    text-align: center;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4), inset 0 0 8px rgba(255, 255, 255, 0.05);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
+.skills-box {
+    background: rgba(35, 35, 35, 0.95);
+    border-radius: 12px;
+    padding: 25px;
+    width: 280px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5), inset 0 0 8px rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-    .acting .show-item:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5), inset 0 0 12px rgba(255, 255, 255, 0.1);
-    }
+.skills-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6), inset 0 0 12px rgba(255, 255, 255, 0.08);
+}
 
-    .acting .show-item img {
-        width: 100%;
-        border-radius: 12px;
-        transition: box-shadow 0.4s ease, filter 0.4s ease;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        filter: brightness(90%) contrast(110%);
-    }
+.skills-box h3 {
+    color: #fff;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    font-family: 'SF Pro Display', sans-serif;
+}
 
-        .acting .show-item:hover img {
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-            filter: brightness(100%) contrast(115%);
-        }
+.skills-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-family: 'SF Pro Text', sans-serif;
+    font-size: 1em;
+    line-height: 1.7;
+    text-align: left;
+    color: #d0d0d0;
+}
 
-    .acting .show-item h3 {
-        font-size: 1.5em;
-        margin-top: 15px;
-        color: #ffffff;
-        font-weight: 600;
-        font-family: 'SF Pro Display', sans-serif;
-        text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-    }
-
-    .acting .show-item p {
-        font-size: 1em;
-        color: #c0c0c0;
-        font-family: 'SF Pro Text', sans-serif;
-        line-height: 1.7;
-    }
+.skills-box li {
+    margin-bottom: 10px;
+    padding-left: 28px;
+    position: relative;
+}
 
 /* Keyframe Animations */
 @keyframes fadeInDown {

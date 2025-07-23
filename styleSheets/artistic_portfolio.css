@@ -259,7 +259,7 @@ section p {
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.carousel-slide:nth-child(5) {
+.carousel-slide:nth-child(6) {
   object-position: 40% 45%;
 }
 
@@ -362,6 +362,21 @@ section p {
         line-height: 1.7;
     }
 
+    .watch-button {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #92000c;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.watch-button:hover {
+  background-color: #d90016;
+  transform: translateY(-2px);
+}
 /* Album Section */
 .album {
     background: linear-gradient(to bottom, #0f0f0f, #1c1c1c);

@@ -21,6 +21,17 @@
   gtag('config', 'G-SF82PDKYSH');
 </script>
 
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggle = document.getElementById("nav-toggle");
+    const navLinks = document.getElementById("nav-links");
+
+    toggle.addEventListener("click", function () {
+      navLinks.classList.toggle("show");
+    });
+  });
+</script>
+
 <body>
   <!-- (UNCHANGED) HEADER -->
   <header>
@@ -33,15 +44,20 @@
     </div>
   </header>
 
-  <!-- (UNCHANGED) NAV -->
   <nav>
-    <a href="../index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="business_portfolio.html">Business Portfolio</a>
-    <a class="active" href="artistic_portfolio.html">Artistic Portfolio</a>
-    <a href="technical_portfolio.html">Technical Portfolio</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+  <div class="nav-toggle-wrapper">
+    <span class="menu-label">Menu</span>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">☰</button>
+  </div>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="business_portfolio.html">Business Portfolio</a></li>
+    <li><a href="artistic_portfolio.html">Artistic Portfolio</a></li>
+    <li><a href="technical_portfolio.html">Technical Portfolio</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
 
   <main>
     <!-- 1) FULL‑BLEED HERO -->

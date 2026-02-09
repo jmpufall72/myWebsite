@@ -1,156 +1,169 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Technical Portfolio - Jonathan Pufall</title>
-    <link rel="stylesheet" href="technical_portfolio/technical_portfolio.css">
-    <!-- Link to the favicon -->
-    <link rel="icon" href="assets/images/favicon/favicon.ico" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Jonathan Pufall's technical portfolio - projects in Unreal Engine, web development, SolidWorks, and Java programming.">
+  <meta property="og:title" content="Technical Portfolio - Jonathan Pufall">
+  <meta property="og:description" content="Coding projects, 3D environments, and engineering design.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jonathanpufall.com/technical_portfolio.html">
+  <title>Technical Portfolio - Jonathan Pufall</title>
+
+  <link rel="stylesheet" href="shared/shared.css">
+  <link rel="stylesheet" href="technical_portfolio/technical_portfolio.css">
+  <link rel="icon" href="assets/images/favicon/favicon.ico" type="image/x-icon">
 </head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SF82PDKYSH"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<body class="page-technical"
+      data-page-id="technical"
+      data-page-title="Technical Portfolio"
+      data-page-subtitle="A Showcase of my Coding Projects and Technical Skills">
 
-  gtag('config', 'G-SF82PDKYSH');
-</script>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const toggle = document.getElementById("nav-toggle");
-    const navLinks = document.getElementById("nav-links");
-
-    toggle.addEventListener("click", function () {
-      navLinks.classList.toggle("show");
-    });
-  });
-</script>
-
-<body>
-  <header>
-    <div class="logo">
-      <a href="index.html">
-        <img src="assets/images/logo.png" alt="JP Logo">
-      </a>
-    </div>
-    <div>
-      <h1>Technical Portfolio</h1>
-      <p>A Showcase of my Coding Projects and Technical Skills</p>
-    </div>
-  </header>
-
-
-    <nav>
-  <div class="nav-toggle-wrapper">
-    <span class="menu-label">Menu</span>
-    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">☰</button>
-  </div>
-  <ul class="nav-links" id="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="business_portfolio.html">Business Portfolio</a></li>
-    <li><a href="artistic_portfolio.html">Artistic Portfolio</a></li>
-    <li><a href="technical_portfolio.html">Technical Portfolio</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
-
-    <main>
-    <!-- Overview Section -->
-    <section class="overview">
-        <h2>Overview of My Technical Skills</h2>
-        <p>My work in technology is driven by a passion for problem-solving and innovation, always with a focus on creating practical, impactful solutions that enable inspiring storytelling. Whether I'm coding dynamic applications, developing websites, or building immersive 3D environments, my goal is to combine creativity with technical precision to craft systems that engage audiences and enhance the storytelling experience.</p>
-
-        <p>With a foundation in computer science and finance, I am deeply passionate about the transformative potential of AI and technology in the entertainment industry. I believe we are on the brink of a revolution where these advancements will reshape how stories are told, experienced, and connected with global audiences. I am determined to be at the forefront of this revolution, constantly learning and adapting to stay ahead. My work spans from web development to using tools like Unreal Engine to build 3D cinematic environments and SolidWorks for mechanical design, reflecting my commitment to mastering both creative and technical disciplines. I aim to contribute to this shift by blending technology, storytelling, and design to craft experiences that inspire and leave a lasting impact.</p>
+  <main>
+    <!-- Overview -->
+    <section class="tech-overview" data-reveal="up">
+      <h2>Overview</h2>
+      <p>My work in technology is driven by a passion for problem-solving and innovation, always with a focus on creating practical, impactful solutions that enable inspiring storytelling.</p>
+      <p>With a foundation in computer science and finance, I'm deeply excited about the transformative potential of AI and technology in the entertainment industry. My projects span web development, 3D environments, mechanical design, and software engineering.</p>
     </section>
 
-    <!-- Projects Section -->
-    <section class="projects">
-        <h2>Projects</h2>
-
-        <!-- Unreal Engine Projects -->
-        <div class="project-category">
-            <h3>Unreal Engine Projects</h3>
-            <p>Game development projects built using Unreal Engine.</p>
-            <div class="project-item">
-                <h4>Rocky Desert Environment</h4>
-                <p>A detailed environment simulation featuring rocky desert terrain with dynamic lighting and weather effects.</p>
-                <div class="project-images">
-                    <img src="assets/images/unreal_engine/rocky_desert_1.png" alt="Rocky Desert Environment 1" />
-                    <img src="assets/images/unreal_engine/rocky_desert_2.png" alt="Rocky Desert Environment 2" />
-                    <img src="assets/images/unreal_engine/rocky_desert_3.png" alt="Rocky Desert Environment 3" />
-                </div>
-                <a href="link-to-project">View Project</a>
-            </div>
+    <!-- Tech Stack -->
+    <section class="tech-stack" data-reveal="up">
+      <h2>Tech Stack</h2>
+      <div class="stack-groups" data-reveal-stagger>
+        <div class="stack-group">
+          <h3>Languages</h3>
+          <div class="stack-tags">
+            <span class="tech-tag">Java</span>
+            <span class="tech-tag">HTML</span>
+            <span class="tech-tag">CSS</span>
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">R</span>
+          </div>
         </div>
-
-        <!-- Web Development Projects -->
-        <div class="project-category">
-            <h3>Web Development</h3>
-            <p>This website serves as my personal portfolio, built from the ground up to showcase both my technical and artistic projects. The design focuses on user experience, simplicity, and showcasing my skills in web development, design, and content creation.</p>
-            <div class="project-item">
-                <h4>Personal Portfolio Website</h4>
-                <p>The website is custom-built using HTML, CSS, and JavaScript, with a focus on clean, responsive design. I utilized GitHub Pages for hosting and structured the layout to be both visually engaging and easy to navigate. Key features include:</p>
-                <ul>
-                    <li>A responsive layout that adapts to different screen sizes and devices.</li>
-                    <li>Interactive sections for my technical and artistic portfolios.</li>
-                    <li>Custom CSS stylesheets for different pages, improving page load speed and organization.</li>
-                    <li>Professional sections such as an About Me page, Resume, and Future Plans.</li>
-                    <li>Embedded project showcases, including links to my work in music, acting, and coding.</li>
-                </ul>
-                <p>Building this portfolio has allowed me to integrate my skills in front-end development and design while keeping the user experience as a top priority.</p>
-            </div>
+        <div class="stack-group">
+          <h3>Tools &amp; Platforms</h3>
+          <div class="stack-tags">
+            <span class="tech-tag">Unreal Engine 5</span>
+            <span class="tech-tag">GitHub</span>
+            <span class="tech-tag">VS Code</span>
+            <span class="tech-tag">Ableton Live</span>
+          </div>
         </div>
-
-        <!-- SolidWorks Projects -->
-        <div class="project-category">
-            <h3>SolidWorks Projects</h3>
-            <p>My work with SolidWorks, including 3D modeling and mechanical design.</p>
-            <div class="project-item">
-                <h4>V-12 Engine</h4>
-                <p>Currently designing a complex V-12 engine, focusing on advanced mechanical engineering principles. The project involves detailed modeling of each engine component, assembly, and functional simulation. The goal is to create a fully interactive model for testing and visualization.</p>
-                <div class="project-images">
-                    <img src="assets/images/solidworks/connecting_rod_assembly.JPG" alt="V-12 Engine Model View 1" />
-                    <img src="assets/images/solidworks/engine_block.JPG" alt="V-12 Engine Model View 2" />
-                    <img src="assets/images/solidworks/piston.JPG" alt="V-12 Engine Model View 3" />
-                </div>
-                <p>Each image demonstrates a different aspect of the design, from the overall engine assembly to specific components in high detail.</p>
-                <a href="link-to-project">View Model</a>
-            </div>
+        <div class="stack-group">
+          <h3>Design &amp; Engineering</h3>
+          <div class="stack-tags">
+            <span class="tech-tag">SolidWorks</span>
+            <span class="tech-tag">Figma</span>
+            <span class="tech-tag">3D Modeling</span>
+          </div>
         </div>
+      </div>
+    </section>
 
-        <!-- Coding Projects -->
-        <div class="project-category">
-            <h3>Coding Projects</h3>
-            <p>Explore my Java projects that showcase a variety of practical applications.</p>
-            <div class="project-item">
-                <h4>Hardy-Weinberg Equilibrium</h4>
-                <p>A simple Java program to solve the Hardy-Weinberg equation, commonly used in biology to calculate allele frequencies in a population.</p>
-                <a href="assets/code/HardyWeinbergEquilibrium.java">View Code</a>
-            </div>
-            <div class="project-item">
-                <h4>Password Strength</h4>
-                <p>This program prompts the user to create a password and then evaluates its strength based on various criteria.</p>
-                <a href="assets/code/PasswordStrength.java">View Code</a>
-            </div>
-            <div class="project-item">
-                <h4>Playlist Creation</h4>
-                <p>A program where the user selects 5 of their top songs from a list and the code automatically shuffles their playlist.</p>
-                <a href="assets/code/PlaylistCreation.java">View Code</a>
-            </div>
-            <div class="project-item">
-                <h4>Read and Write</h4>
-                <p>This project allows the user to input a new name for "Romeo" and "Juliet" in the script of *Romeo and Juliet* and create a new file with those changes.</p>
-                <a href="assets/code/RewrittenRomeoAndJuliet.java">View Code</a>
-            </div>
+    <!-- Visual Projects -->
+    <section class="tech-projects" data-reveal="up">
+      <h2>Projects</h2>
+
+      <!-- Unreal Engine -->
+      <article class="project-showcase" data-reveal="up">
+        <div class="showcase-header">
+          <h3>Rocky Desert Environment</h3>
+          <span class="showcase-label">Unreal Engine 5</span>
         </div>
-    </main>
+        <p class="showcase-desc">A detailed environment simulation featuring rocky desert terrain with dynamic lighting and weather effects. Built as an exploration of cinematic-quality real-time rendering.</p>
+        <div class="showcase-gallery">
+          <img src="assets/images/unreal_engine/rocky_desert_1.png" alt="Rocky Desert — wide landscape view" loading="lazy" width="400" height="260">
+          <img src="assets/images/unreal_engine/rocky_desert_2.png" alt="Rocky Desert — lighting detail" loading="lazy" width="400" height="260">
+          <img src="assets/images/unreal_engine/rocky_desert_3.png" alt="Rocky Desert — terrain close-up" loading="lazy" width="400" height="260">
+        </div>
+        <div class="showcase-tags">
+          <span class="tech-tag">Unreal Engine 5</span>
+          <span class="tech-tag">Environment Design</span>
+          <span class="tech-tag">Dynamic Lighting</span>
+        </div>
+      </article>
 
-        <footer>
-            <p>© 2025 Jonathan Pufall | jonathanpufall.com</p>
-        </footer>
+      <!-- SolidWorks -->
+      <article class="project-showcase" data-reveal="up">
+        <div class="showcase-header">
+          <h3>V-12 Engine</h3>
+          <span class="showcase-label">SolidWorks</span>
+        </div>
+        <p class="showcase-desc">A complex V-12 engine model focused on advanced mechanical engineering principles. Detailed modeling of each component — connecting rod assembly, engine block, and piston — with functional simulation and visualization.</p>
+        <div class="showcase-gallery">
+          <img src="assets/images/solidworks/connecting_rod_assembly.JPG" alt="V-12 Engine — connecting rod assembly" loading="lazy" width="400" height="260">
+          <img src="assets/images/solidworks/engine_block.JPG" alt="V-12 Engine — engine block" loading="lazy" width="400" height="260">
+          <img src="assets/images/solidworks/piston.JPG" alt="V-12 Engine — piston detail" loading="lazy" width="400" height="260">
+          <img src="assets/images/solidworks/engine_block_2.JPG" alt="V-12 Engine — engine block alternate view" loading="lazy" width="400" height="260">
+        </div>
+        <div class="showcase-tags">
+          <span class="tech-tag">SolidWorks</span>
+          <span class="tech-tag">3D Modeling</span>
+          <span class="tech-tag">Mechanical Design</span>
+        </div>
+      </article>
+
+      <!-- Portfolio Website -->
+      <article class="project-showcase" data-reveal="up">
+        <div class="showcase-header">
+          <h3>Personal Portfolio Website</h3>
+          <span class="showcase-label">Web Development</span>
+        </div>
+        <p class="showcase-desc">This website — custom-built from scratch using vanilla HTML, CSS, and JavaScript. Designed with a focus on responsive layout, clean typography, and smooth scroll-driven animations. Hosted on GitHub Pages with a custom domain.</p>
+        <div class="showcase-tags">
+          <span class="tech-tag">HTML</span>
+          <span class="tech-tag">CSS</span>
+          <span class="tech-tag">JavaScript</span>
+          <span class="tech-tag">GitHub Pages</span>
+        </div>
+      </article>
+    </section>
+
+    <!-- Code Lab -->
+    <section class="tech-code" data-reveal="up">
+      <h2>Code Lab</h2>
+      <p class="code-intro">Smaller Java projects that showcase practical applications and problem-solving.</p>
+
+      <div class="code-grid" data-reveal-stagger>
+        <a href="assets/code/HardyWeinbergEquilibrium.java" class="code-card">
+          <h3>Hardy-Weinberg Equilibrium</h3>
+          <p>Solves the Hardy-Weinberg equation to calculate allele frequencies in a population.</p>
+          <span class="code-lang">Java</span>
+        </a>
+
+        <a href="assets/code/PasswordStrength.java" class="code-card">
+          <h3>Password Strength</h3>
+          <p>Evaluates password strength based on length, complexity, and character variety.</p>
+          <span class="code-lang">Java</span>
+        </a>
+
+        <a href="assets/code/PlaylistCreation.java" class="code-card">
+          <h3>Playlist Creation</h3>
+          <p>Select your top 5 songs from a list and the program automatically shuffles your playlist.</p>
+          <span class="code-lang">Java</span>
+        </a>
+
+        <a href="assets/code/RewrittenRomeoAndJuliet.java" class="code-card">
+          <h3>Read &amp; Write</h3>
+          <p>Input new character names for Romeo &amp; Juliet and generate a rewritten script file.</p>
+          <span class="code-lang">Java</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="tech-cta" data-reveal="up">
+      <h2>Want to see more?</h2>
+      <p>Check out my GitHub for more projects, or get in touch to collaborate.</p>
+      <div class="cta-buttons">
+        <a href="https://github.com/jmpufall72" target="_blank" rel="noopener noreferrer" class="btn btn-primary">GitHub</a>
+        <a href="contact.html" class="btn btn-ghost">Contact Me</a>
+      </div>
+    </section>
+  </main>
+
+  <script src="shared/shared.js"></script>
 </body>
 </html>

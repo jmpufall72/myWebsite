@@ -1,83 +1,165 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Jonathan Pufall</title>
-    <link rel="stylesheet" href="about/about.css">
-    <!-- Link to the favicon -->
-    <link rel="icon" href="assets/images/favicon/favicon.ico" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn about Jonathan Pufall - a University of Wisconsin-Madison student majoring in Finance with a Certificate in Theater and Drama.">
+  <meta property="og:title" content="About - Jonathan Pufall">
+  <meta property="og:description" content="Actor, business strategist, and technologist at UW-Madison.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jonathanpufall.com/about.html">
+  <meta property="og:image" content="https://jonathanpufall.com/assets/images/jonathan.jpg">
+  <title>About - Jonathan Pufall</title>
+  <link rel="stylesheet" href="shared/shared.css">
+  <link rel="stylesheet" href="about/about.css">
+  <link rel="icon" href="assets/images/favicon/favicon.ico" type="image/x-icon">
 </head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SF82PDKYSH"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<body class="page-about"
+      data-page-id="about"
+      data-page-title="About"
+      data-page-subtitle="Learn More About Me">
 
-  gtag('config', 'G-SF82PDKYSH');
-</script>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const toggle = document.getElementById("nav-toggle");
-    const navLinks = document.getElementById("nav-links");
-
-    toggle.addEventListener("click", function () {
-      navLinks.classList.toggle("show");
-    });
-  });
-</script>
-
-<body>
-  <header>
-    <div class="logo">
-      <a href="index.html">
-        <img src="assets/images/logo.png" alt="JP Logo">
-      </a>
-    </div>
-    <div>
-      <h1>About</h1>
-      <p>Learn More About Me</p>
-    </div>
-  </header>
-
-    <nav>
-  <div class="nav-toggle-wrapper">
-    <span class="menu-label">Menu</span>
-    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">☰</button>
-  </div>
-  <ul class="nav-links" id="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="business_portfolio.html">Business Portfolio</a></li>
-    <li><a href="artistic_portfolio.html">Artistic Portfolio</a></li>
-    <li><a href="technical_portfolio.html">Technical Portfolio</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
-
-    <section id="about">
-        <h2>About Me</h2>
-        <div class="about-container">
-            <img src="assets/images/jonathan.jpg" alt="Jonathan Pufall" class="profile-picture">
-            <div class="bio">
-                <p>I’m a student at the University of Wisconsin–Madison, majoring in Finance, Investment, and Banking with a Certificate in Theater and Drama. With a background that bridges business and the arts, I’m passionate about creating bold, story-driven experiences that connect with people in meaningful ways.</p>
-                <p>As an actor who thrives on creative problem-solving, I’m especially drawn to the intersection of entertainment, innovation, and technology. I enjoy crafting strategies that bring ideas to life—whether through developing new business approaches or exploring how emerging technologies can unlock new forms of storytelling.</p>
-                <p>Long-term, I aim to launch my own venture in the entertainment space—blending storytelling, strategy, and innovation to help shape the future of the industry and transform how stories are told and experienced.</p>
-            </div>
+  <main>
+    <!-- Hero / Bio -->
+    <section class="about-hero" data-reveal="up">
+      <div class="about-container">
+        <img src="assets/images/headshot.png" alt="Jonathan Pufall" class="profile-picture" width="280" height="280">
+        <div class="bio">
+          <h2>About Me</h2>
+          <p>Originally from Green Bay, Wisconsin, I grew up performing on stage and figuring out how to turn ideas into something real. Today I'm a student at the University of Wisconsin-Madison studying Finance, Investment, and Banking with a Certificate in Theater and Drama.</p>
+          <p>Driven by a deep passion for storytelling, I strive to make a meaningful impact at the intersection of finance, entertainment, and technology &mdash; combining the strategic mindset of a business leader with a creative foundation to democratize entertainment and advance emerging technologies that expand access to how stories are created, experienced, and shared.</p>
         </div>
-
-        <h3>Education</h3>
-        <ul class="education-list">
-            <li><strong>University of Wisconsin-Madison</strong> – BBA in Finance, Investment, and Banking (Expected Graduation: 2027)</li>
-            <li><strong>University of Wisconsin-Madison</strong> – Certificate in Theater and Drama (Expected Graduation: 2027)</li>
-        </ul>
+      </div>
     </section>
 
+    <!-- Journey Timeline -->
+    <section class="about-journey" data-reveal="up">
+      <h2>My Journey</h2>
+      <div class="timeline">
+        <div class="timeline-item" data-reveal="left">
+          <span class="timeline-year">2023</span>
+          <div class="timeline-content">
+            <h3>University of Wisconsin-Madison</h3>
+            <p>Enrolled at UW-Madison pursuing a BBA in Finance, Investment &amp; Banking alongside a Certificate in Theater &amp; Drama.</p>
+          </div>
+        </div>
+        <div class="timeline-item" data-reveal="right">
+          <span class="timeline-year">2024</span>
+          <div class="timeline-content">
+            <h3>EcoWash — Divisional Manager</h3>
+            <p>Launched a new regional division in Chicago from scratch. Managed all finance, recruiting, and marketing — generating 250+ leads, converting 50 clients, and crafting $500K in project proposals.</p>
+          </div>
+        </div>
+        <div class="timeline-item" data-reveal="left">
+          <span class="timeline-year">2024</span>
+          <div class="timeline-content">
+            <h3>WUD Music Committee</h3>
+            <p>Joined Wisconsin Union Directorate Music, booking and promoting live performances across Madison venues while negotiating artist contracts and driving event marketing.</p>
+          </div>
+        </div>
+        <div class="timeline-item" data-reveal="right">
+          <span class="timeline-year">2025</span>
+          <div class="timeline-content">
+            <h3>Lead Role — <em>Spring Awakening</em></h3>
+            <p>Cast as Melchior in UW-Madison's mainstage production, working alongside professional directors, choreographers, and stage managers.</p>
+          </div>
+        </div>
+        <div class="timeline-item" data-reveal="left">
+          <span class="timeline-year">2025</span>
+          <div class="timeline-content">
+            <h3>Co-Founded Client Magnet CRM</h3>
+            <p>Co-founded a SaaS startup focused on CRM solutions. Building financial models projecting ARR and FCF, designing tiered growth strategies, and overseeing operational infrastructure.</p>
+          </div>
+        </div>
+        <div class="timeline-item" data-reveal="right">
+          <span class="timeline-year">2025</span>
+          <div class="timeline-content">
+            <h3>Corporate Finance Club</h3>
+            <p>Joined the Wisconsin School of Business Corporate Finance Club — modeling valuation scenarios and DCF analyses for mock M&amp;A cases in media and tech sectors.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <footer>
-        <p>© 2025 Jonathan Pufall | jonathanpufall.com</p>
-    </footer>
+    <!-- What Drives Me -->
+    <section class="about-skills" data-reveal="up">
+      <h2>What Drives Me</h2>
+      <div class="skills-grid" data-reveal-stagger>
+        <div class="skill-card">
+          <div class="skill-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/><path d="m21 3 1 11h-2"/><path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3"/><path d="M3 4h8"/></svg>
+          </div>
+          <h3>Relationships</h3>
+          <p>The best work comes from real connection. I invest in the people around me because that's what makes everything else possible.</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg>
+          </div>
+          <h3>Business Strategy</h3>
+          <p>I like taking an idea from zero to something real. Whether it's a startup or a new division, I want to build things that actually work and grow.</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+          </div>
+          <h3>Sustainability</h3>
+          <p>I care about building things that last and doing it responsibly. Long-term thinking matters more to me than short-term wins.</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>
+          </div>
+          <h3>Emerging Technology</h3>
+          <p>AI, immersive media, real-time rendering &mdash; I'm drawn to the tools that are reshaping how stories are created and experienced.</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          </div>
+          <h3>Storytelling</h3>
+          <p>Everything I do circles back to this. On stage, in a pitch, or through a product &mdash; I want to tell stories that stay with people.</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3>Leadership</h3>
+          <p>I lead by showing up for the people I work with. Building trust and bringing out the best in a team is how real things get done.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section class="about-education" data-reveal="up">
+      <h2>Education</h2>
+      <div class="education-cards" data-reveal-stagger>
+        <div class="edu-card">
+          <img src="assets/images/schoolofbusiness_logo.jpg" alt="Wisconsin School of Business" class="edu-card-logo" width="80" height="80" loading="lazy">
+          <h3>University of Wisconsin-Madison</h3>
+          <p class="degree">BBA in Finance, Investment, and Banking</p>
+          <p class="year">Expected May 2027</p>
+        </div>
+        <div class="edu-card">
+          <img src="assets/images/uwmadison_logo.png" alt="University of Wisconsin-Madison" class="edu-card-logo" width="80" height="80" loading="lazy">
+          <h3>University of Wisconsin-Madison</h3>
+          <p class="degree">Certificate in Theater and Drama</p>
+          <p class="year">Expected May 2027</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resume -->
+    <section class="about-resume" data-reveal="up">
+      <h2>Resume</h2>
+      <div class="resume-container">
+        <p class="resume-tagline">View my professional experience and accomplishments.</p>
+        <img src="assets/images/resume.png" alt="Resume Preview" width="740" height="960" loading="lazy">
+        <a href="assets/documents/resume.pdf" target="_blank" class="btn btn-primary">Download Resume</a>
+      </div>
+    </section>
+  </main>
+
+  <script src="shared/shared.js"></script>
 </body>
 </html>

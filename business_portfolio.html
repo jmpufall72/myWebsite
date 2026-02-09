@@ -1,154 +1,172 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume - Jonathan Pufall</title>
-    <link rel="stylesheet" href="business_portfolio/business_portfolio.css">
-    <link rel="icon" href="assets/images/favicon/favicon.ico" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Jonathan Pufall's business portfolio featuring case studies in data analysis, strategic consulting, and business development experience.">
+  <meta property="og:title" content="Business Portfolio - Jonathan Pufall">
+  <meta property="og:description" content="Case studies, business development experience, and data-driven strategy work.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jonathanpufall.com/business_portfolio.html">
+  <meta property="og:image" content="https://jonathanpufall.com/assets/images/logo.png">
+  <title>Business Portfolio - Jonathan Pufall</title>
+  <link rel="stylesheet" href="shared/shared.css">
+  <link rel="stylesheet" href="business_portfolio/business_portfolio.css">
+  <link rel="icon" href="assets/images/favicon/favicon.ico" type="image/x-icon">
 </head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SF82PDKYSH"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<body class="page-business"
+      data-page-id="business"
+      data-page-title="Business Portfolio"
+      data-page-subtitle="My Experience in Business and Strategy">
 
-  gtag('config', 'G-SF82PDKYSH');
-</script>
+  <main>
+    <!-- Overview -->
+    <section class="biz-overview" data-reveal="up">
+      <h2>Overview</h2>
+      <p>I work hard, move fast, and care about making a real impact. Whether it's co-founding a SaaS company, launching a new division from scratch, or building financial models that actually drive decisions, I want to be in the room where the work matters.</p>
+      <p>My experience spans startup finance, operations, marketing, and strategy. I don't just plan. I execute, and I hold myself to a high standard in everything I take on.</p>
+    </section>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const toggle = document.getElementById("nav-toggle");
-    const navLinks = document.getElementById("nav-links");
+    <!-- Key Metrics -->
+    <section class="biz-metrics" data-reveal="up">
+      <div class="metrics-grid" data-reveal-stagger>
+        <div class="metric">
+          <span class="metric-number">$500K+</span>
+          <span class="metric-label">In Proposals Written</span>
+        </div>
+        <div class="metric">
+          <span class="metric-number">250+</span>
+          <span class="metric-label">Leads Generated</span>
+        </div>
+        <div class="metric">
+          <span class="metric-number">1</span>
+          <span class="metric-label">Company Co-Founded</span>
+        </div>
+        <div class="metric">
+          <span class="metric-number">1</span>
+          <span class="metric-label">Division Launched</span>
+        </div>
+      </div>
+    </section>
 
-    toggle.addEventListener("click", function () {
-      navLinks.classList.toggle("show");
-    });
-  });
-</script>
+    <!-- Experience -->
+    <section class="biz-experience" data-reveal="up">
+      <h2>Experience</h2>
 
+      <div class="experience-grid">
+        <!-- Client Magnet CRM -->
+        <div class="experience-card" data-reveal="up">
+          <div class="exp-header">
+            <img src="assets/images/clientmagnetcrm_logo.png" alt="Client Magnet CRM Logo" class="exp-logo" width="72" height="72" loading="lazy">
+            <div class="exp-title">
+              <h3>Client Magnet CRM</h3>
+              <p class="exp-role">Co-Founder, Strategy &amp; Finance</p>
+              <p class="exp-meta">Los Angeles, CA (Remote) &middot; May 2025 – Present</p>
+            </div>
+          </div>
+          <p class="exp-desc">I co-founded Client Magnet CRM to help businesses streamline customer relationship management through an intuitive SaaS platform. I lead the financial architecture and growth planning that guide the company's trajectory.</p>
+          <ul class="exp-bullets">
+            <li>Build multi-scenario financial models projecting ARR, FCF, and cost structures to inform pricing and capital allocation.</li>
+            <li>Design tiered growth strategies to optimize customer lifetime value and support the transition toward a scalable SaaS model.</li>
+            <li>Oversee operational infrastructure and system integrations to improve forecasting accuracy and internal reporting.</li>
+            <li>Develop internal planning and tracking systems to support decision-making across finance, operations, and marketing.</li>
+            <li>Evaluate tradeoffs between automation, cost, and execution speed in a fast-moving, resource-constrained environment.</li>
+          </ul>
+          <div class="exp-tags">
+            <span class="exp-tag">SaaS</span>
+            <span class="exp-tag">Financial Modeling</span>
+            <span class="exp-tag">Growth Strategy</span>
+          </div>
+        </div>
 
-<body>
-  <header>
-    <div class="logo">
-      <a href="index.html">
-        <img src="assets/images/logo.png" alt="JP Logo">
-      </a>
-    </div>
-    <div>
-      <h1>Business Portfolio</h1>
-      <p>My Experience in Business and Strategy</p>
-    </div>
-  </header>
+        <!-- EcoWash -->
+        <div class="experience-card" data-reveal="up">
+          <div class="exp-header">
+            <img src="assets/images/ecowash_logo.jpg" alt="EcoWash Logo" class="exp-logo" width="72" height="72" loading="lazy">
+            <div class="exp-title">
+              <h3>EcoWash</h3>
+              <p class="exp-role">Divisional Manager</p>
+              <p class="exp-meta">Chicago, IL &middot; April 2024 – August 2024</p>
+            </div>
+          </div>
+          <p class="exp-desc">As Divisional Manager for EcoWash's North Shore operations, I was given full ownership over launching a new division of the company from scratch — leading every part of the operation: financial management, marketing, recruiting, and project execution.</p>
+          <ul class="exp-bullets">
+            <li>Created and established a new division to expand the business into new regions within the greater Chicago Area; managed all finance and accounting, providing weekly financial reports.</li>
+            <li>Designed and executed a comprehensive marketing strategy, generating over 250 leads, converting 50 clients, and increasing brand visibility through targeted campaigns.</li>
+            <li>Crafted extensive project proposals and estimates totaling $500,000 to high-profile property management firms.</li>
+            <li>Recruited and managed a team of three full-time employees, overseeing operations for over 50 projects.</li>
+          </ul>
+          <div class="exp-tags">
+            <span class="exp-tag">Operations</span>
+            <span class="exp-tag">Marketing</span>
+            <span class="exp-tag">Team Leadership</span>
+          </div>
+        </div>
 
+        <!-- Drew Dorenfest A/V -->
+        <div class="experience-card" data-reveal="up">
+          <div class="exp-header">
+            <img src="assets/images/drew_dorenfest_marketing_logo.png" alt="Drew Dorenfest A/V Logo" class="exp-logo" width="72" height="72" loading="lazy">
+            <div class="exp-title">
+              <h3>Drew Dorenfest A/V</h3>
+              <p class="exp-role">Summer Intern</p>
+              <p class="exp-meta">Los Angeles, CA (Remote) &middot; May 2025 – August 2025</p>
+            </div>
+          </div>
+          <p class="exp-desc">I supported the day-to-day operations of a creative services business, contributing to client-facing work and internal strategy while applying branding and storytelling skills in a professional, fast-paced environment.</p>
+          <ul class="exp-bullets">
+            <li>Supported day-to-day operations by assisting with client materials, research, and internal organization.</li>
+            <li>Conducted SEO, social media, and brand research to inform client marketing strategies and creative direction.</li>
+            <li>Assisted in preparing presentations and written materials that supported client communication and brand storytelling.</li>
+          </ul>
+          <div class="exp-tags">
+            <span class="exp-tag">SEO</span>
+            <span class="exp-tag">Brand Strategy</span>
+            <span class="exp-tag">Content</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-   <nav>
-  <div class="nav-toggle-wrapper">
-    <span class="menu-label">Menu</span>
-    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">☰</button>
-  </div>
-  <ul class="nav-links" id="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="business_portfolio.html">Business Portfolio</a></li>
-    <li><a href="artistic_portfolio.html">Artistic Portfolio</a></li>
-    <li><a href="technical_portfolio.html">Technical Portfolio</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
+    <!-- Case Studies -->
+    <section class="biz-cases" data-reveal="up">
+      <h2>Case Studies</h2>
+      <p class="cases-intro">Detailed analyses showcasing data-driven strategy work on real-world business problems.</p>
 
+      <div class="cases-grid" data-reveal-stagger>
+        <div class="case-card">
+          <div class="case-number">01</div>
+          <h3>PhillyCycle</h3>
+          <p>Analyzed the relationship between weather patterns, time variables, and bike rental trends to optimize fleet distribution, pricing strategies, and service availability for a city-wide bike-sharing service.</p>
+          <div class="case-actions">
+            <a href="assets/documents/phillycycle_case_report.pdf" target="_blank" class="btn btn-primary btn-sm">Read Report</a>
+            <a href="assets/documents/phillycycle_case_dataset.xlsx" class="btn btn-ghost btn-sm" download>Dataset</a>
+          </div>
+        </div>
 
+        <div class="case-card">
+          <div class="case-number">02</div>
+          <h3>IndoCabs</h3>
+          <p>Investigated cancellation patterns and root causes for a digital cab-booking platform, focusing on booking windows, trip durations, and customer behavior to provide targeted recommendations.</p>
+          <div class="case-actions">
+            <a href="assets/documents/indocabs_case_report.pdf" target="_blank" class="btn btn-primary btn-sm">Read Report</a>
+            <a href="assets/documents/indocabs_case_dataset.xlsx" class="btn btn-ghost btn-sm" download>Dataset</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- Resume CTA -->
+    <section class="biz-cta" data-reveal="up">
+      <h2>Want the full picture?</h2>
+      <p>View my complete professional background, education, and qualifications.</p>
+      <div class="cta-buttons">
+        <a href="assets/documents/resume.pdf" target="_blank" class="btn btn-primary">Download Resume</a>
+        <a href="about.html" class="btn btn-ghost">About Me</a>
+      </div>
+    </section>
+  </main>
 
-    <main>
-        <!-- Overview Section -->
-        <section class="overview">
-            <h2>Overview</h2>
-            <p>Welcome to my business portfolio, where I highlight my expertise in data analysis, strategic insights, and operational optimization to drive measurable results. Through a combination of rigorous analytical skills and creative problem-solving, I approach complex business challenges with practical, data-driven solutions designed to enhance efficiency and support growth.</p>
-            <p>In addition to analytical and strategic capabilities, I have real-world experience leading business development initiatives — from launching new divisions and managing operations to creating marketing strategies and building teams. These experiences reflect my ability to think like a founder and execute on opportunities that create lasting impact.</p>
-            <p>Below, you’ll find my professional resume detailing my experience and qualifications, along with detailed case studies that showcase my work on real-world projects. These examples demonstrate my ability to analyze data, develop innovative strategies, implement operational improvements, and drive growth across various industries and business functions.</p>
-        </section>
-    
-        <!-- Projects Section -->
-        <section class="projects">
-            <!-- Featured Section: Resume -->
-            <section id="featured">
-                <h2>Featured: My Resume</h2>
-                <div class="resume-container">
-                    <div class="resume-info">
-                        <p>View my professional experience and accomplishments.</p>
-                    </div>
-                    <img src="assets/images/resume.png" alt="Resume Preview">
-                    <a href="assets/documents/resume.pdf" target="_blank" class="btn">Download Resume</a>
-                </div>
-            </section>
-
-            <!-- Business Development Section -->
-            <section class="business-development overview">
-                <h2>Business Development Experience</h2>
-
-                <h3 class="section-label">EcoWash</h3>
-                <div class="business-content">
-                    <img src="assets/images/ecowash_logo.jpg" alt="EcoWash Logo" class="company-logo">
-                    <div class="business-text">
-                        <p><strong>Divisional Manager | EcoWash</strong></p>
-                        <p><em>Chicago, IL | April 2024 – August 2024</em></p>
-                        <p>As Divisional Manager for EcoWash’s North Shore operations, I was given full ownership over launching a new division of the company. This wasn’t just a summer internship—it was a chance to build a real business in a new market from scratch. I led every part of the operation: financial management, marketing, recruiting, and project execution.</p>
-                        <ul>
-                            <li>Created and established a new division of a home exterior maintenance company to expand the business into new regions within the greater Chicago Area; managed all finance and accounting for the division, providing weekly financial reports.</li>
-                            <li>Designed and executed a comprehensive marketing strategy, generating over 250 leads, converting 50 clients, and increasing brand visibility through targeted digital and offline campaigns.</li>
-                            <li>Crafted extensive project proposals and estimates totaling $500,000 to high-profile property management firms.</li>
-                            <li>Recruited and managed a team of three full-time employees, overseeing operations for over 50 projects, ensuring timely and high-quality execution while maintaining client satisfaction and meeting key performance metrics.</li>
-                        </ul>
-                        <p>This experience taught me how to think like a founder: to stay focused, adapt quickly, and lead with intention. It also reinforced the kind of impact I want to have—building ventures that uplift others, provide value, and are grounded in purpose.</p>
-                    </div>
-                </div>
-
-                <div class="section-divider"></div>
-
-                <h3 class="section-label">Drew Dorenfest Marketing</h3>
-                <div class="business-content">
-                    <img src="assets/images/drew_dorenfest_marketing_logo.png" alt="Drew Dorenfest Marketing Logo" class="company-logo">
-                    <div class="business-text">
-                        <p><strong>Marketing & Strategy Partner | Drew Dorenfest Marketing</strong></p>
-                        <p><em>Remote | May 2025 – Present</em></p>
-                        <p>
-                            Currently, I’m collaborating with Drew Dorenfest on the launch and growth of a digital marketing venture focused on helping brands tell their stories more effectively. While still in its early stages, this initiative is already allowing me to apply my business, branding, and storytelling experience to a creative and entrepreneurial context.
-                        </p>
-                        <p>
-                            I’ve contributed to strategic planning, operations, and web infrastructure, working across multiple client-facing projects while helping shape our brand identity and positioning. The work is fast-paced and rooted in the belief that strong storytelling and intentional design can elevate businesses of all sizes.
-                        </p>
-                        <p>
-                            What I love about this endeavor is that it's not just about marketing—it's about transformation. We're developing creative solutions that help entrepreneurs connect with their audiences in more meaningful ways, and I'm grateful to play a role in building something from the ground up once again.
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Case Studies Section -->
-            <section id="case-studies">
-                <h2>Case Studies</h2>
-
-                <div class="case-study">
-                    <h3>Case Study 1: PhillyCycle</h3>
-                    <p>PhillyCycle operates a bike-sharing service that caters to both casual and registered users across the city. A key factor influencing rental demand is weather, as variations in temperature, humidity, and seasonal changes impact user behavior. This report analyzes the relationship between weather patterns, time variables, and bike rental trends to provide actionable insights for optimizing fleet distribution, pricing strategies, and service availability. Using a comprehensive dataset spanning several years, we identify key differences between casual and registered users, helping PhillyCycle enhance operational efficiency and improve customer satisfaction year-round.</p>
-                    <a href="assets/documents/phillycycle_case_report.pdf" target="_blank" class="btn">Read Report</a>
-                    <a href="assets/documents/phillycycle_case_dataset.xlsx" class="btn download-btn" download>Download Dataset</a>
-                </div>
-
-                <div class="case-study">
-                    <h3>Case Study 2: IndoCabs</h3>
-                    <p>IndoCabs operates a digital platform that facilitates cab bookings for various travel needs. A key challenge for the company has been managing cancellations, which disrupt operations and reduce profitability. This report analyzes cancellation patterns and their root causes, focusing on booking windows, trip durations, and customer behavior. Using a comprehensive dataset, we provide insights into how these factors contribute to cancellations and offer targeted recommendations for minimizing cancellations and improving overall service quality.</p>
-                    <a href="assets/documents/indocabs_case_report.pdf" target="_blank" class="btn">Read Report</a>
-                    <a href="assets/documents/indocabs_case_dataset.xlsx" class="btn download-btn" download>Download Dataset</a>
-                </div>
-            </section>
-        </section>
-    </main>
-
-    <footer>
-        <p>© 2025 Jonathan Pufall | jonathanpufall.com</p>
-    </footer>
+  <script src="shared/shared.js"></script>
 </body>
 </html>

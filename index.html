@@ -1,84 +1,94 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jonathan Pufall</title>
-    <link rel="stylesheet" href="home/home.css">
-    <!-- Link to the favicon -->
-    <link rel="icon" href="assets/images/favicon/favicon.ico" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Jonathan Pufall - Entrepreneur, storyteller, and student. Explore portfolios spanning entertainment, business, and technology.">
+  <meta property="og:title" content="Jonathan Pufall">
+  <meta property="og:description" content="Entrepreneur, storyteller, and student bridging entertainment, tech, and business.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jonathanpufall.com/">
+  <meta property="og:image" content="https://jonathanpufall.com/assets/images/logo.png">
+  <title>Jonathan Pufall</title>
+  <link rel="stylesheet" href="shared/shared.css">
+  <link rel="stylesheet" href="home/home.css">
+  <link rel="icon" href="assets/images/favicon/favicon.ico" type="image/x-icon">
 </head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SF82PDKYSH"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<body class="page-home"
+      data-page-id="home"
+      data-page-title="Jonathan Pufall"
+      data-page-subtitle="Bridging Entertainment, Tech, and Business">
 
-  gtag('config', 'G-SF82PDKYSH');
-</script>
+  <!-- Hero -->
+  <section id="welcome" data-reveal="up">
+    <div class="welcome-container">
+      <div class="hero-text">
+        <h1>Jonathan Pufall</h1>
+        <p class="hero-tagline">Entrepreneur, storyteller, and student building at the intersection of business, entertainment, and technology.</p>
+        <div class="hero-cta">
+          <a href="about.html" class="btn btn-primary">About Me</a>
+          <a href="contact.html" class="btn btn-ghost">Get in Touch</a>
+        </div>
+      </div>
+      <img src="assets/images/headshot.png" alt="Jonathan Pufall" class="hero-headshot" width="300" height="300">
+    </div>
+  </section>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const toggle = document.getElementById("nav-toggle");
-    const navLinks = document.getElementById("nav-links");
-
-    toggle.addEventListener("click", function () {
-      navLinks.classList.toggle("show");
-    });
-  });
-</script>
-
-<body>
-  <header>
-    <div class="logo">
-      <a href="index.html">
-        <img src="assets/images/logo.png" alt="JP Logo">
+  <!-- Portfolio Pillars -->
+  <section id="pillars" data-reveal="up">
+    <h2>What I Do</h2>
+    <div class="pillars-grid" data-reveal-stagger>
+      <a href="business_portfolio.html" class="pillar-card">
+        <div class="pillar-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg>
+        </div>
+        <h3>Business</h3>
+        <p>Strategy, finance, and data-driven problem solving. From launching divisions to co-founding startups.</p>
+        <span class="pillar-arrow">&rarr;</span>
+      </a>
+      <a href="artistic_portfolio.html" class="pillar-card">
+        <div class="pillar-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+        </div>
+        <h3>Artistic</h3>
+        <p>Lead stage roles, original music, and performances built to give people an experience they remember.</p>
+        <span class="pillar-arrow">&rarr;</span>
+      </a>
+      <a href="technical_portfolio.html" class="pillar-card">
+        <div class="pillar-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+        </div>
+        <h3>Technical</h3>
+        <p>Web development, 3D environments, and exploring AI's role in entertainment and business.</p>
+        <span class="pillar-arrow">&rarr;</span>
       </a>
     </div>
-    <div>
-      <h1>Jonathan Pufall</h1>
-      <p>Bridging Entertainment, Tech, and Business</p>
-    </div>
-  </header>
+  </section>
 
-
-
-    <nav>
-  <div class="nav-toggle-wrapper">
-    <span class="menu-label">Menu</span>
-    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">☰</button>
-  </div>
-  <ul class="nav-links" id="nav-links">
-    <li><a href="about.html">About</a></li>
-    <li><a href="business_portfolio.html">Business Portfolio</a></li>
-    <li><a href="artistic_portfolio.html">Artistic Portfolio</a></li>
-    <li><a href="technical_portfolio.html">Technical Portfolio</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
-
-    <section id="welcome">
-        <div class="welcome-container">
-            <h1>Welcome to My Website</h1>
-            <p>This site showcases my work across acting, business, and technology—all driven by a passion for storytelling and a curiosity for what’s next. I’m constantly exploring how creativity and strategy can work together to bring bold ideas to life.</p>
-            <p>Feel free to browse my portfolios, explore recent projects, and reach out via email or social media. I’m always open to connecting and collaborating.</p>
-            <p><em>This website is currently in development—some sections may be incomplete, but updates are happening regularly!</em></p>
-        </div>
-    </section>
-
-    <section id="projects">
+  <!-- Featured Project -->
+  <section id="projects" data-reveal="up">
     <h2>Featured Project</h2>
     <div class="featured-project">
-        <img src="assets/images/spring_awakening_cover.jpg" alt="Spring Awakening Poster">
-        <p class="title"><strong>Lead Role in UW-Madison’s 2025 Mainstage Production of <em>Spring Awakening</em></strong></p>
-        <p>This spring, I had the incredible opportunity to portray Melchior in <em>Spring Awakening</em>, UW-Madison’s 2025 mainstage musical. A powerful coming-of-age story set against the backdrop of a repressive society, this Tony Award-winning production challenged me both emotionally and artistically—and remains one of my most meaningful experiences on stage.</p>
-        <p class="note"><em>The show ran April 17–27, 2025 at the Mitchell Theatre in Madison, WI.</em></p>
+      <div class="featured-layout">
+        <div class="featured-logo-wrap">
+          <img src="assets/images/clientmagnetcrm_logo.png" alt="Client Magnet CRM Logo" class="featured-logo" width="200" height="200" loading="lazy">
+        </div>
+        <div class="featured-info">
+          <p class="title"><strong>Co-Founder, Strategy &amp; Finance</strong></p>
+          <p class="subtitle">Client Magnet CRM</p>
+          <p>Building an intuitive SaaS platform that helps businesses streamline customer relationship management. I lead financial modeling, growth strategy, and operational infrastructure.</p>
+          <div class="featured-tags">
+            <span class="tag">SaaS</span>
+            <span class="tag">Financial Modeling</span>
+            <span class="tag">Growth Strategy</span>
+            <span class="tag">Operations</span>
+          </div>
+          <a href="business_portfolio.html" class="btn btn-primary btn-sm">View Business Portfolio</a>
+        </div>
+      </div>
     </div>
-</section>
+  </section>
 
-    <footer>
-        <p>© 2025 Jonathan Pufall | jonathanpufall.com</p>
-    </footer>
+  <script src="shared/shared.js"></script>
 </body>
 </html>

@@ -1,310 +1,196 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Jonathan Pufall's artistic portfolio - stage credits, music, and performance highlights including lead roles in Spring Awakening and Grease.">
+  <meta property="og:title" content="Artistic Portfolio - Jonathan Pufall">
+  <meta property="og:description" content="Acting credits, music production, and performance highlights.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jonathanpufall.com/artistic_portfolio.html">
+  <meta property="og:image" content="https://jonathanpufall.com/assets/images/spring_awakening_cover.jpg">
   <title>Artistic Portfolio - Jonathan Pufall</title>
 
-  <!-- Performance: Preload hero -->
-  <link rel="preload" as="image" href="assets/images/slideshow/spring_awakening_1.jpg"/>
+  <link rel="preload" as="image" href="assets/images/slideshow/spring_awakening_1.jpg">
 
-  <link rel="stylesheet" href="artistic_portfolio/artistic_portfolio.css"/>
-  <link rel="icon" href="assets/images/favicon/favicon.ico" type="image/x-icon"/>
+  <link rel="stylesheet" href="shared/shared.css">
+  <link rel="stylesheet" href="artistic_portfolio/artistic_portfolio.css">
+  <link rel="icon" href="assets/images/favicon/favicon.ico" type="image/x-icon">
 </head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SF82PDKYSH"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-SF82PDKYSH');
-</script>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const toggle = document.getElementById("nav-toggle");
-    const navLinks = document.getElementById("nav-links");
-
-    toggle.addEventListener("click", function () {
-      navLinks.classList.toggle("show");
-    });
-  });
-</script>
-
-<body>
-  <header>
-    <div class="logo">
-      <a href="index.html">
-        <img src="assets/images/logo.png" alt="JP Logo">
-      </a>
-    </div>
-    <div>
-      <h1>Artistic Portfolio</h1>
-      <p>A Collection of my Work in Acting and Music</p>
-    </div>
-  </header>
-
-
-  <nav>
-  <div class="nav-toggle-wrapper">
-    <span class="menu-label">Menu</span>
-    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">☰</button>
-  </div>
-  <ul class="nav-links" id="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="business_portfolio.html">Business Portfolio</a></li>
-    <li><a href="artistic_portfolio.html">Artistic Portfolio</a></li>
-    <li><a href="technical_portfolio.html">Technical Portfolio</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
+<body class="page-artistic"
+      data-page-id="artistic"
+      data-page-title="Artistic Portfolio"
+      data-page-subtitle="A Collection of my Work in Acting and Music">
 
   <main>
-    <!-- 1) FULL‑BLEED HERO -->
+    <!-- Hero -->
     <section class="hero-banner full-bleed" aria-label="Featured stage photo">
       <div class="hero-image" role="img" aria-label="Jonathan performing on stage"></div>
       <div class="hero-overlay">
-        <h2>Truthful performance. Lasting connection.</h2>
-        <p>Actor & creator dedicated to realism, authenticity, and meaningful collaboration.</p>
+        <h2>Stories that stay with people.</h2>
+        <p>I want to create experiences that connect people to something bigger than themselves.</p>
         <div class="overlay-cta">
-          <a class="btn btn-primary" href="#resume">View Resume</a>
-          <a class="btn btn-ghost" href="#stage-life">See Work</a>
+          <a class="btn btn-primary" href="#credits">See Work</a>
+          <a class="btn btn-ghost" href="#music">Music</a>
         </div>
       </div>
     </section>
 
-<!-- Overview Section -->
-        <section class="overview">
-            <h2>Overview</h2>
-            <p>I’m an actor and musician with a focus on realistic, emotionally honest work on stage and behind the scenes. Whether I’m performing, writing, or producing, I care most about connecting with people in a way that feels genuine.</p>
-            <p>My background in business gives me a unique perspective on how entertainment can do more than entertain. It can inspire, influence, and scale. I want to help shape stories that are both creatively powerful and strategically impactful. This portfolio highlights the projects that have shaped my voice as a performer, and where I’m headed next.</p>
-        </section>
+    <!-- Overview -->
+    <section class="art-overview" data-reveal="up">
+      <h2>Overview</h2>
+      <p>Entertainment has the power to bring people together in a way nothing else can. I got into performing because I believe that. Whether I'm on stage, writing music, or collaborating with a team, the goal is always the same: give people something real that they carry with them.</p>
+      <p>This portfolio is a look at the roles, music, and projects that have shaped me as a performer and creator.</p>
+    </section>
 
-    <!-- 2) RESUME (lean stats + preview image) -->
-    <section id="resume" class="resume-block reveal" data-reveal="up">
-      <h2>Artistic Resume</h2>
-
-      <div class="resume-layout">
-        <!-- Left: lean stats only (no skills here to avoid duplication) -->
-        <div class="resume-stats">
-          <div class="stat-grid">
-            <div class="stat-card hover">
-              <h3>Physical</h3>
-              <ul class="left compact">
-                <li>Height: 5'10"</li>
-                <li>Weight: 185 lbs</li>
-                <li>Hair: Brown</li>
-                <li>Eyes: Blue</li>
-              </ul>
-            </div>
-            <div class="stat-card hover">
-              <h3>Vocal Range</h3>
-              <p>F2–C5 (Tenor)</p>
-            </div>
-          </div>
-
-          <div class="quick-cta">
-            <a class="btn btn-primary" href="assets/documents/artistic_resume.pdf" target="_blank" rel="noopener noreferrer">Download Resume (PDF)</a>
-            <a class="btn btn-ghost" href="contact.html">Contact</a>
-          </div>
+    <!-- Quick Stats -->
+    <section class="art-stats" data-reveal="up">
+      <div class="stats-grid" data-reveal-stagger>
+        <div class="stat">
+          <span class="stat-number">5</span>
+          <span class="stat-label">Stage Credits</span>
         </div>
-
-        <!-- Right: visual preview (not full PDF) -->
-        <figure class="resume-preview hover">
-          <img
-            src="assets/images/artistic_resume.png"
-            alt="Preview of Jonathan Pufall’s artistic resume">
-          <figcaption>Preview image — open the PDF for full details.</figcaption>
-        </figure>
+        <div class="stat">
+          <span class="stat-number">4</span>
+          <span class="stat-label">Lead Roles</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">F2–C5</span>
+          <span class="stat-label">Vocal Range (Tenor)</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">5</span>
+          <span class="stat-label">EP Tracks</span>
+        </div>
       </div>
     </section>
 
-    <!-- 3) FULL-BLEED EDUCATION, TRAINING & SKILLS (single source of truth) -->
-<section class="edu-bar full-bleed" aria-label="Education, Training & Skills">
-  <div class="edu-inner">
+    <!-- Training & Skills -->
+    <section class="art-training" data-reveal="up">
+      <h2>Training &amp; Skills</h2>
+      <div class="training-grid" data-reveal-stagger>
+        <div class="training-card">
+          <h3>Acting</h3>
+          <p>Coached by Dr. Baron Kelly at UW-Madison. Focused on realism, emotional depth, and character authenticity. Trained in stage combat, choreography, and consent-forward stage intimacy.</p>
+        </div>
+        <div class="training-card">
+          <h3>Voice &amp; Instruments</h3>
+          <p>Tenor with classical and musical theater training. Cello (advanced), Piano (intermediate), Guitar (beginner).</p>
+        </div>
+        <div class="training-card">
+          <h3>Music Production</h3>
+          <p>Writing, recording, and producing original music with Ableton Live, Native Instruments, and Soundtrap.</p>
+        </div>
+      </div>
+    </section>
 
-    <!-- Education -->
-    <div class="edu-card hover">
-      <h3>Education</h3>
+    <!-- Stage Credits -->
+    <section id="credits" class="art-credits" data-reveal="up">
+      <h2>Stage Credits</h2>
+      <p class="credits-intro">Credits and moments that shaped my craft.</p>
 
-      <h4><strong>Institution:</strong></h4>
-      <ul class="left compact">
-        <li><strong>University of Wisconsin–Madison</strong> (’27)
-          <ul class="degrees">
-            <li>Certificate in Theatre &amp; Drama</li>
-            <li>BBA in Finance, Investment &amp; Banking</li>
-          </ul>
-        </li>
-      </ul>
+      <div class="credits-grid" data-reveal-stagger>
+        <article class="credit-card">
+          <img src="assets/images/spring_awakening_cover.jpg" alt="Spring Awakening (2025)" loading="lazy" width="400" height="220">
+          <div class="credit-info">
+            <h3>Spring Awakening</h3>
+            <p class="credit-role">Melchior (Lead)</p>
+            <p class="credit-company">University Theater, Madison, WI &middot; Spring 2025</p>
+            <a class="btn btn-primary btn-sm" href="https://www.youtube.com/playlist?list=PL8ZRUvsBTkSwWdLuetUNsAdp-J55kJTuy" target="_blank" rel="noopener noreferrer">Watch</a>
+          </div>
+        </article>
 
-      <h4><strong>Coursework:</strong></h4>
-      <ul class="left compact">
-        <li>Acting I, II, III</li>
-        <li>Dramatic Literature</li>
-        <li>Vocal Performance</li>
-      </ul>
-    </div>
+        <article class="credit-card">
+          <img src="assets/images/grease_cover.jpg" alt="Grease (2023)" loading="lazy" width="400" height="220">
+          <div class="credit-info">
+            <h3>Grease</h3>
+            <p class="credit-role">Danny Zuko (Lead)</p>
+            <p class="credit-company">Bay Port High School, Green Bay, WI &middot; Spring 2023</p>
+          </div>
+        </article>
 
-    <!-- Acting & Performance -->
-    <div class="edu-card hover">
-      <h3>Acting &amp; Performance</h3>
+        <article class="credit-card">
+          <img src="assets/images/beauty_and_the_beast_cover.png" alt="Beauty and the Beast (2022)" loading="lazy" width="400" height="220">
+          <div class="credit-info">
+            <h3>Beauty and the Beast</h3>
+            <p class="credit-role">Beast (Lead)</p>
+            <p class="credit-company">Bay Port High School, Green Bay, WI &middot; Spring 2022</p>
+          </div>
+        </article>
 
-      <h4><strong>Coaching:</strong></h4>
-      <ul class="left compact">
-        <li>Coached by Dr. Baron Kelly (UW–Madison)</li>
-        <li>Realism | Emotional depth | Character authenticity</li>
-      </ul>
+        <article class="credit-card">
+          <img src="assets/images/little_shop_of_horrors_cover.jpg" alt="Little Shop of Horrors (2021)" loading="lazy" width="400" height="220">
+          <div class="credit-info">
+            <h3>Little Shop of Horrors</h3>
+            <p class="credit-role">Seymour (Lead)</p>
+            <p class="credit-company">Bay Port High School, Green Bay, WI &middot; Spring 2021</p>
+          </div>
+        </article>
 
-      <h4><strong>Movement:</strong></h4>
-      <ul class="left compact">
-        <li>Choreography — physically strong, highly coachable</li>
-        <li>Stage Combat — basic contact, safe storytelling</li>
-        <li>Stage Intimacy — consent-forward partner work</li>
-      </ul>
-    </div>
+        <article class="credit-card">
+          <img src="assets/images/wizard_of_oz_cover.jpg" alt="The Wizard of Oz (2020)" loading="lazy" width="400" height="220">
+          <div class="credit-info">
+            <h3>The Wizard of Oz</h3>
+            <p class="credit-role">Oz Guard (Supporting)</p>
+            <p class="credit-company">Bay Port High School, Green Bay, WI &middot; Spring 2020</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Photo Gallery -->
+    <section id="gallery-carousel" class="art-gallery" data-reveal="up">
+      <h2>Gallery</h2>
+      <div class="carousel" tabindex="0" aria-roledescription="carousel">
+        <div class="carousel-track">
+          <div class="carousel-slide"><img src="assets/images/slideshow/singing_1.JPG" alt="Jonathan Singing 1" loading="lazy"></div>
+          <div class="carousel-slide"><img src="assets/images/slideshow/spring_awakening_1.jpg" alt="Jonathan Performing 1"></div>
+          <div class="carousel-slide"><img src="assets/images/slideshow/spring_awakening_2.jpg" alt="Jonathan Performing 2" loading="lazy"></div>
+          <div class="carousel-slide"><img src="assets/images/slideshow/spring_awakening_3.jpg" alt="Jonathan Performing 3" loading="lazy"></div>
+          <div class="carousel-slide"><img src="assets/images/slideshow/grease_1.JPG" alt="Jonathan in Grease 1" loading="lazy"></div>
+          <div class="carousel-slide"><img src="assets/images/slideshow/grease_2.JPG" alt="Jonathan in Grease 2" loading="lazy"></div>
+          <div class="carousel-slide"><img src="assets/images/slideshow/grease_3.JPG" alt="Jonathan in Grease 3" loading="lazy"></div>
+        </div>
+        <button class="carousel-btn prev" type="button" aria-label="Previous slide">&#8249;</button>
+        <button class="carousel-btn next" type="button" aria-label="Next slide">&#8250;</button>
+        <div class="carousel-dots" role="tablist" aria-label="Carousel pagination"></div>
+      </div>
+    </section>
 
     <!-- Music -->
-    <div class="edu-card hover">
-      <h3>Music</h3>
+    <section id="music" class="art-music" data-reveal="up">
+      <h2>Bridges (Upcoming EP)</h2>
+      <p class="music-intro">A collection of songs that reflect on connection, growth, and the moments that bring people together. From the quiet reflection of childhood to the chaos of the modern world.</p>
 
-      <h4><strong>Instruments:</strong></h4>
-      <ul class="left compact">
-        <li>Voice: Tenor (classical and musical theater training)</li>
-        <li>Other: Cello (adv), Piano (int), Guitar (beg)</li>
-      </ul>
-
-      <h4><strong>Music Production:</strong></h4>
-      <ul class="left compact">
-        <li>Ableton Live</li>
-        <li>Native Instruments</li>
-        <li>Soundtrap</li>
-      </ul>
-    </div>
-
-  </div>
-</section>
-
-
-    <!-- 4) STAGE LIFE: unified container (credits + moments) -->
-    <section id="stage-life" class="stage-life reveal" data-reveal="up" aria-label="Stage Life">
-      <div class="stage-head">
-        <h2>Stage Life</h2>
-        <p>Credits and moments that shaped my craft.</p>
-      </div>
-
-      <!-- Credits -->
-      <div class="theatrical-experience">
-        <div class="subhead">
-          <h3>Theatrical Experience</h3>
-        </div>
-        <div class="showcase-grid">
-          <article class="show-item hover">
-            <img src="assets/images/spring_awakening_cover.jpg" alt="Spring Awakening (2025)">
-            <div class="show-meta">
-              <h4>Spring Awakening</h4>
-              <p><strong>Role:</strong> Melchior (Lead)</p>
-              <p><strong>Company:</strong> University Theater, Madison, WI — Spring 2025</p>
-              <a class="watch-button" href="https://www.youtube.com/playlist?list=PL8ZRUvsBTkSwWdLuetUNsAdp-J55kJTuy" target="_blank" rel="noopener noreferrer">Watch Performances</a>
-            </div>
-          </article>
-
-          <article class="show-item hover">
-            <img src="assets/images/grease_cover.jpg" alt="Grease (2023)">
-            <div class="show-meta">
-              <h4>Grease</h4>
-              <p><strong>Role:</strong> Danny Zuko (Lead)</p>
-              <p><strong>Company:</strong> Bay Port High School, Green Bay, WI — Spring 2023</p>
-            </div>
-          </article>
-
-          <article class="show-item hover">
-            <img src="assets/images/beauty_and_the_beast_cover.png" alt="Beauty and the Beast (2022)">
-            <div class="show-meta">
-              <h4>Beauty and the Beast</h4>
-              <p><strong>Role:</strong> Beast (Lead)</p>
-              <p><strong>Company:</strong> Bay Port High School, Green Bay, WI — Spring 2022</p>
-            </div>
-          </article>
-
-          <article class="show-item hover">
-            <img src="assets/images/little_shop_of_horrors_cover.jpg" alt="Little Shop of Horrors (2021)">
-            <div class="show-meta">
-              <h4>Little Shop of Horrors</h4>
-              <p><strong>Role:</strong> Seymour (Lead)</p>
-              <p><strong>Company:</strong> Bay Port High School, Green Bay, WI — Spring 2021</p>
-            </div>
-          </article>
-
-          <article class="show-item hover">
-            <img src="assets/images/wizard_of_oz_cover.jpg" alt="The Wizard of Oz (2020)">
-            <div class="show-meta">
-              <h4>The Wizard of Oz</h4>
-              <p><strong>Role:</strong> Oz Guard (Supporting)</p>
-              <p><strong>Company:</strong> Bay Port High School, Green Bay, WI — Spring 2020</p>
-            </div>
-          </article>
+      <div class="album-details">
+        <h3>Tracklist</h3>
+        <ol class="tracklist">
+          <li>When I Was 9</li>
+          <li>Footprints</li>
+          <li>Dancing in the Kitchen</li>
+          <li>Breaking News</li>
+          <li>Bridges</li>
+        </ol>
+        <div class="album-tags">
+          <span class="art-tag">Ableton Live</span>
+          <span class="art-tag">Native Instruments</span>
+          <span class="art-tag">Original</span>
         </div>
       </div>
-
-      <!-- Subtle divider to tie credits + moments -->
-<div class="divider" role="separator" aria-hidden="true"></div>
-
-<section id="gallery-carousel" class="photo-carousel" aria-label="Stage photos">
-  <h2 class="sr-only">Spotlight Gallery</h2>
-  <div class="carousel" tabindex="0" aria-roledescription="carousel">
-    <div class="carousel-track">
-      <div class="carousel-slide"><img src="assets/images/slideshow/singing_1.JPG" alt="Jonathan Singing 1"></div>
-      <div class="carousel-slide"><img src="assets/images/slideshow/spring_awakening_1.jpg" alt="Jonathan Performing 1"></div>
-      <div class="carousel-slide"><img src="assets/images/slideshow/spring_awakening_2.jpg" alt="Jonathan Performing 2"></div>
-      <div class="carousel-slide"><img src="assets/images/slideshow/spring_awakening_3.jpg" alt="Jonathan Performing 3"></div>
-      <div class="carousel-slide"><img src="assets/images/slideshow/grease_1.JPG" alt="Jonathan in Grease 1"></div>
-      <div class="carousel-slide"><img src="assets/images/slideshow/grease_2.JPG" alt="Jonathan in Grease 2"></div>
-      <div class="carousel-slide"><img src="assets/images/slideshow/grease_3.JPG" alt="Jonathan in Grease 3"></div>
-    </div>
-    <button class="carousel-btn prev" type="button" aria-label="Previous slide">‹</button>
-    <button class="carousel-btn next" type="button" aria-label="Next slide">›</button>
-    <div class="carousel-dots" role="tablist" aria-label="Carousel pagination"></div>
-  </div>
-</section>
     </section>
 
-    <!-- 5) MUSIC — Bridges (full description) -->
-    <section class="album reveal" data-reveal="up">
-      <h2><strong>Bridges</strong> (Upcoming EP)</h2>
-      <div class="album-content">
-        <div class="album-info">
-          <p><strong>Bridges</strong> is a collection of songs that reflect on connection, growth, and the moments that bring people together. Each track captures a stage of life from the quiet reflection of childhood to the chaos of the modern world—tied together by an underlying sense of hope and unity.</p>
-          <p>The EP opens with <em>When I Was 9</em>, a nostalgic introduction built around a heartbeat pulse that echoes the innocence of youth. <em>Footprints</em> follows, bright and energetic, celebrating discovery and the wonder of seeing the world with fresh eyes. <em>Dancing in the Kitchen</em> offers a more intimate moment—an honest portrayal of love, comfort, and connection found in the simplest places.</p>
-          <p><em>Breaking News</em> shifts the tone, blending modern production with lyrical urgency as it explores the noise and confusion of today’s world. It closes with <em>Bridges</em>, an uplifting anthem about unity and shared humanity—a reminder that we’re stronger when we build toward one another.</p>
-          <p><em>Bridges</em> captures the essence of finding light through change. Each song stands as a bridge—linking people, memories, and moments into something timeless.</p>
-
-          <div class="album-details">
-            <img src="assets/images/album_cover.jpg" alt="Bridges Album Cover (Coming Soon)" class="album-art">
-            <div class="album-tracklist">
-              <h3>Tracklist (Preview)</h3>
-              <ul class="left">
-                <ol class="tracklist">
-                <li>When I Was 9</li>
-                <li>Footprints</li>
-                <li>Dancing in the Kitchen</li>
-                <li>Breaking News</li>
-                <li>Bridges</li>
-                </ol>
-              </ul>
-            </div>
-          </div>
-        </div>
+    <!-- Resume CTA -->
+    <section class="art-cta" data-reveal="up">
+      <h2>Want more details?</h2>
+      <p>Download my full artistic resume for a complete list of credits, training, and skills.</p>
+      <div class="cta-buttons">
+        <a href="assets/documents/artistic_resume.pdf" target="_blank" class="btn btn-primary">Download Artistic Resume</a>
+        <a href="contact.html" class="btn btn-ghost">Contact Me</a>
       </div>
     </section>
   </main>
 
-  <!-- Footer (unchanged content) -->
-  <footer>
-    <p>© 2025 Jonathan Pufall | jonathanpufall.com</p>
-  </footer>
-
+  <script src="shared/shared.js"></script>
   <script src="artistic_portfolio/artistic_portfolio.js"></script>
 </body>
 </html>

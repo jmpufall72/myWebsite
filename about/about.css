@@ -360,6 +360,7 @@
 .resume-container img {
   width: 92%;
   max-width: 740px;
+  height: auto;
   display: block;
   margin: 0 auto 24px;
   border-radius: var(--radius-md);

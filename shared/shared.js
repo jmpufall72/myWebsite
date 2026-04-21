@@ -7,12 +7,12 @@
 
   // ---- Navigation Config ----
   var NAV_ITEMS = [
-    { label: 'Home',               href: 'index.html',               id: 'home' },
-    { label: 'About',              href: 'about.html',               id: 'about' },
-    { label: 'Business Portfolio',  href: 'business_portfolio.html',  id: 'business' },
-    { label: 'Artistic Portfolio',  href: 'artistic_portfolio.html',  id: 'artistic' },
-    { label: 'Technical Portfolio', href: 'technical_portfolio.html', id: 'technical' },
-    { label: 'Contact',            href: 'contact.html',             id: 'contact' }
+    { label: 'Home',               href: '/home',               id: 'home' },
+    { label: 'About',              href: '/about',              id: 'about' },
+    { label: 'Business Portfolio',  href: '/business_portfolio', id: 'business' },
+    { label: 'Artistic Portfolio',  href: '/artistic_portfolio', id: 'artistic' },
+    { label: 'Technical Portfolio', href: '/technical_portfolio', id: 'technical' },
+    { label: 'Contact',            href: '/contact',            id: 'contact' }
   ];
 
   var CURRENT_YEAR = new Date().getFullYear();
@@ -28,8 +28,8 @@
     var header = document.createElement('header');
     header.innerHTML =
       '<div class="logo">' +
-        '<a href="index.html">' +
-          '<img src="assets/images/logo.png" alt="JP Logo">' +
+        '<a href="/home">' +
+          '<img src="/assets/images/logo.png" alt="JP Logo">' +
         '</a>' +
       '</div>' +
       '<div>' +

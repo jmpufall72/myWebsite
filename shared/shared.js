@@ -116,7 +116,20 @@
       overlay.classList.remove('entering');
     });
 
+    // Clear the overlay when the page is restored from the back/forward cache
+    window.addEventListener('pageshow', function (e) {
+      if (e.persisted) {
+        overlay.classList.remove('fade-in', 'entering');
+      }
+    });
+
     document.addEventListener('click', function (e) {
+      // Let the browser handle new-tab/new-window clicks
+      if (e.defaultPrevented || e.button !== 0 ||
+          e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) {
+        return;
+      }
+
       var link = e.target.closest ? e.target.closest('a[href]') : null;
       if (!link) return;
 

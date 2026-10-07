@@ -155,7 +155,8 @@ header div {
   flex-grow: 1;
 }
 
-header h1 {
+header h1,
+header .header-title {
   margin: 0;
   font-size: 1.8em;
   font-weight: 600;
@@ -190,7 +191,8 @@ header p {
     padding: 0 20px;
   }
 
-  header h1 {
+  header h1,
+  header .header-title {
     margin: 8px 0 0;
     font-size: 1.6em;
   }

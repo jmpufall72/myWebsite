@@ -7,17 +7,45 @@
   <meta property="og:title" content="Business Portfolio - Jonathan Pufall">
   <meta property="og:description" content="Case studies, business development experience, and data-driven strategy work.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://jonathanpufall.com/business_portfolio">
-  <meta property="og:image" content="https://jonathanpufall.com/assets/images/logo.png">
+  <meta property="og:url" content="https://www.jonathanpufall.com/business_portfolio/">
+  <meta property="og:image" content="https://www.jonathanpufall.com/assets/images/og/logo.png">
   <title>Business Portfolio - Jonathan Pufall</title>
   <link rel="stylesheet" href="/shared/shared.css">
-  <link rel="stylesheet" href="business_portfolio.css">
-  <link rel="icon" href="/assets/images/favicon/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/business_portfolio/business_portfolio.css">
+  <link rel="canonical" href="https://www.jonathanpufall.com/business_portfolio/">
+  <link rel="icon" href="/assets/images/favicon/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/assets/images/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/assets/images/favicon/site.webmanifest">
+  <meta name="theme-color" content="#000000">
 </head>
-<body class="page-business"
-      data-page-id="business"
-      data-page-title="Business Portfolio"
-      data-page-subtitle="My Experience in Business and Strategy">
+<body class="page-business">
+
+  <header>
+    <div class="logo">
+      <a href="/home/"><img src="/assets/images/logo.webp" alt="JP Logo" width="52" height="52"></a>
+    </div>
+    <div>
+      <h1>Business Portfolio</h1>
+      <p>My Experience in Business and Strategy</p>
+    </div>
+  </header>
+
+  <nav>
+    <div class="nav-toggle-wrapper">
+      <span class="menu-label">Menu</span>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">&#9776;</button>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="/home/">Home</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/business_portfolio/" class="active" aria-current="page">Business Portfolio</a></li>
+      <li><a href="/artistic_portfolio/">Artistic Portfolio</a></li>
+      <li><a href="/technical_portfolio/">Technical Portfolio</a></li>
+      <li><a href="/contact/">Contact</a></li>
+    </ul>
+  </nav>
 
   <main>
     <!-- Overview -->
@@ -57,7 +85,7 @@
         <!-- Client Magnet CRM -->
         <div class="experience-card" data-reveal="up">
           <div class="exp-header">
-            <img src="/assets/images/clientmagnetcrm_logo.png" alt="Client Magnet CRM Logo" class="exp-logo" width="72" height="72" loading="lazy">
+            <img src="/assets/images/clientmagnetcrm_logo.webp" alt="Client Magnet CRM Logo" class="exp-logo" width="72" height="72" loading="lazy">
             <div class="exp-title">
               <h3>Client Magnet CRM</h3>
               <p class="exp-role">Co-Founder, Strategy &amp; Finance</p>
@@ -82,7 +110,7 @@
         <!-- Drew Dorenfest A/V -->
         <div class="experience-card" data-reveal="up">
           <div class="exp-header">
-            <img src="/assets/images/drew_dorenfest_marketing_logo.png" alt="Drew Dorenfest A/V Logo" class="exp-logo" width="72" height="72" loading="lazy">
+            <img src="/assets/images/drew_dorenfest_marketing_logo.webp" alt="Drew Dorenfest A/V Logo" class="exp-logo" width="72" height="72" loading="lazy">
             <div class="exp-title">
               <h3>Drew Dorenfest A/V</h3>
               <p class="exp-role">Summer Intern</p>
@@ -139,7 +167,7 @@
           <h3>PhillyCycle</h3>
           <p>Analyzed the relationship between weather patterns, time variables, and bike rental trends to optimize fleet distribution, pricing strategies, and service availability for a city-wide bike-sharing service.</p>
           <div class="case-actions">
-            <a href="/assets/documents/phillycycle_case_report.pdf" target="_blank" class="btn btn-primary btn-sm">Read Report</a>
+            <a href="/assets/documents/phillycycle_case_report.pdf" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Read Report (PDF)</a>
             <a href="/assets/documents/phillycycle_case_dataset.xlsx" class="btn btn-ghost btn-sm" download>Dataset</a>
           </div>
         </div>
@@ -149,7 +177,7 @@
           <h3>IndoCabs</h3>
           <p>Investigated cancellation patterns and root causes for a digital cab-booking platform, focusing on booking windows, trip durations, and customer behavior to provide targeted recommendations.</p>
           <div class="case-actions">
-            <a href="/assets/documents/indocabs_case_report.pdf" target="_blank" class="btn btn-primary btn-sm">Read Report</a>
+            <a href="/assets/documents/indocabs_case_report.pdf" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Read Report (PDF)</a>
             <a href="/assets/documents/indocabs_case_dataset.xlsx" class="btn btn-ghost btn-sm" download>Dataset</a>
           </div>
         </div>
@@ -162,10 +190,14 @@
       <p>View my complete professional background, education, and qualifications.</p>
       <div class="cta-buttons">
         <a href="/assets/documents/resume.pdf" target="_blank" class="btn btn-primary">Download Resume</a>
-        <a href="/about" class="btn btn-ghost">About Me</a>
+        <a href="/about/" class="btn btn-ghost">About Me</a>
       </div>
     </section>
   </main>
+
+  <footer>
+    <p>&copy; <span id="footer-year">2026</span> Jonathan Pufall | jonathanpufall.com</p>
+  </footer>
 
   <script src="/shared/shared.js"></script>
 </body>

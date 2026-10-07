@@ -7,20 +7,48 @@
   <meta property="og:title" content="Artistic Portfolio - Jonathan Pufall">
   <meta property="og:description" content="Acting credits, music production, and performance highlights.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://jonathanpufall.com/artistic_portfolio">
-  <meta property="og:image" content="https://jonathanpufall.com/assets/images/spring_awakening_cover.jpg">
+  <meta property="og:url" content="https://www.jonathanpufall.com/artistic_portfolio/">
+  <meta property="og:image" content="https://www.jonathanpufall.com/assets/images/spring_awakening_cover.jpg">
   <title>Artistic Portfolio - Jonathan Pufall</title>
 
-  <link rel="preload" as="image" href="/assets/images/slideshow/spring_awakening_1.jpg">
+  <link rel="preload" as="image" href="/assets/images/slideshow/spring_awakening_1.webp">
 
   <link rel="stylesheet" href="/shared/shared.css">
-  <link rel="stylesheet" href="artistic_portfolio.css">
-  <link rel="icon" href="/assets/images/favicon/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/artistic_portfolio/artistic_portfolio.css">
+  <link rel="canonical" href="https://www.jonathanpufall.com/artistic_portfolio/">
+  <link rel="icon" href="/assets/images/favicon/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/assets/images/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/assets/images/favicon/site.webmanifest">
+  <meta name="theme-color" content="#000000">
 </head>
-<body class="page-artistic"
-      data-page-id="artistic"
-      data-page-title="Artistic Portfolio"
-      data-page-subtitle="A Collection of my Work in Acting and Music">
+<body class="page-artistic">
+
+  <header>
+    <div class="logo">
+      <a href="/home/"><img src="/assets/images/logo.webp" alt="JP Logo" width="52" height="52"></a>
+    </div>
+    <div>
+      <h1>Artistic Portfolio</h1>
+      <p>A Collection of my Work in Acting and Music</p>
+    </div>
+  </header>
+
+  <nav>
+    <div class="nav-toggle-wrapper">
+      <span class="menu-label">Menu</span>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">&#9776;</button>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="/home/">Home</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/business_portfolio/">Business Portfolio</a></li>
+      <li><a href="/artistic_portfolio/" class="active" aria-current="page">Artistic Portfolio</a></li>
+      <li><a href="/technical_portfolio/">Technical Portfolio</a></li>
+      <li><a href="/contact/">Contact</a></li>
+    </ul>
+  </nav>
 
   <main>
     <!-- Hero -->
@@ -110,7 +138,7 @@
         </article>
 
         <article class="credit-card">
-          <img src="/assets/images/beauty_and_the_beast_cover.png" alt="Beauty and the Beast (2022)" loading="lazy" width="400" height="220">
+          <img src="/assets/images/beauty_and_the_beast_cover.webp" alt="Beauty and the Beast (2022)" loading="lazy" width="400" height="220">
           <div class="credit-info">
             <h3>Beauty and the Beast</h3>
             <p class="credit-role">Beast (Lead)</p>
@@ -143,13 +171,13 @@
       <h2>Gallery</h2>
       <div class="carousel" tabindex="0" aria-roledescription="carousel">
         <div class="carousel-track">
-          <div class="carousel-slide"><img src="/assets/images/slideshow/singing_1.JPG" alt="Jonathan Singing 1" loading="lazy"></div>
-          <div class="carousel-slide"><img src="/assets/images/slideshow/spring_awakening_1.jpg" alt="Jonathan Performing 1"></div>
-          <div class="carousel-slide"><img src="/assets/images/slideshow/spring_awakening_2.jpg" alt="Jonathan Performing 2" loading="lazy"></div>
-          <div class="carousel-slide"><img src="/assets/images/slideshow/spring_awakening_3.jpg" alt="Jonathan Performing 3" loading="lazy"></div>
-          <div class="carousel-slide"><img src="/assets/images/slideshow/grease_1.JPG" alt="Jonathan in Grease 1" loading="lazy"></div>
-          <div class="carousel-slide"><img src="/assets/images/slideshow/grease_2.JPG" alt="Jonathan in Grease 2" loading="lazy"></div>
-          <div class="carousel-slide"><img src="/assets/images/slideshow/grease_3.JPG" alt="Jonathan in Grease 3" loading="lazy"></div>
+          <div class="carousel-slide"><img src="/assets/images/slideshow/singing_1.webp" alt="Jonathan Singing 1" loading="lazy"></div>
+          <div class="carousel-slide"><img src="/assets/images/slideshow/spring_awakening_1.webp" alt="Jonathan Performing 1"></div>
+          <div class="carousel-slide"><img src="/assets/images/slideshow/spring_awakening_2.webp" alt="Jonathan Performing 2" loading="lazy"></div>
+          <div class="carousel-slide"><img src="/assets/images/slideshow/spring_awakening_3.webp" alt="Jonathan Performing 3" loading="lazy"></div>
+          <div class="carousel-slide"><img src="/assets/images/slideshow/grease_1.webp" alt="Jonathan in Grease 1" loading="lazy"></div>
+          <div class="carousel-slide"><img src="/assets/images/slideshow/grease_2.webp" alt="Jonathan in Grease 2" loading="lazy"></div>
+          <div class="carousel-slide"><img src="/assets/images/slideshow/grease_3.webp" alt="Jonathan in Grease 3" loading="lazy"></div>
         </div>
         <button class="carousel-btn prev" type="button" aria-label="Previous slide">&#8249;</button>
         <button class="carousel-btn next" type="button" aria-label="Next slide">&#8250;</button>
@@ -185,12 +213,16 @@
       <p>Download my full artistic resume for a complete list of credits, training, and skills.</p>
       <div class="cta-buttons">
         <a href="/assets/documents/artistic_resume.pdf" target="_blank" class="btn btn-primary">Download Artistic Resume</a>
-        <a href="/contact" class="btn btn-ghost">Contact Me</a>
+        <a href="/contact/" class="btn btn-ghost">Contact Me</a>
       </div>
     </section>
   </main>
 
+  <footer>
+    <p>&copy; <span id="footer-year">2026</span> Jonathan Pufall | jonathanpufall.com</p>
+  </footer>
+
   <script src="/shared/shared.js"></script>
-  <script src="artistic_portfolio.js"></script>
+  <script src="/artistic_portfolio/artistic_portfolio.js"></script>
 </body>
 </html>

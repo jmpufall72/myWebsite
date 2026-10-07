@@ -7,17 +7,45 @@
   <meta property="og:title" content="Contact - Jonathan Pufall">
   <meta property="og:description" content="Reach out to Jonathan Pufall for collaborations, opportunities, and conversations.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://jonathanpufall.com/contact">
-  <meta property="og:image" content="https://jonathanpufall.com/assets/images/logo.png">
+  <meta property="og:url" content="https://www.jonathanpufall.com/contact/">
+  <meta property="og:image" content="https://www.jonathanpufall.com/assets/images/og/logo.png">
   <title>Contact - Jonathan Pufall</title>
   <link rel="stylesheet" href="/shared/shared.css">
-  <link rel="stylesheet" href="contact.css">
-  <link rel="icon" href="/assets/images/favicon/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/contact/contact.css">
+  <link rel="canonical" href="https://www.jonathanpufall.com/contact/">
+  <link rel="icon" href="/assets/images/favicon/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/assets/images/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/assets/images/favicon/site.webmanifest">
+  <meta name="theme-color" content="#000000">
 </head>
-<body class="page-contact"
-      data-page-id="contact"
-      data-page-title="Contact"
-      data-page-subtitle="Let's Connect! Reach Out via Email or Social Media">
+<body class="page-contact">
+
+  <header>
+    <div class="logo">
+      <a href="/home/"><img src="/assets/images/logo.webp" alt="JP Logo" width="52" height="52"></a>
+    </div>
+    <div>
+      <h1>Contact</h1>
+      <p>Let's Connect! Reach Out via Email or Social Media</p>
+    </div>
+  </header>
+
+  <nav>
+    <div class="nav-toggle-wrapper">
+      <span class="menu-label">Menu</span>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">&#9776;</button>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="/home/">Home</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/business_portfolio/">Business Portfolio</a></li>
+      <li><a href="/artistic_portfolio/">Artistic Portfolio</a></li>
+      <li><a href="/technical_portfolio/">Technical Portfolio</a></li>
+      <li><a href="/contact/" class="active" aria-current="page">Contact</a></li>
+    </ul>
+  </nav>
 
   <main>
     <section class="contact-hero" data-reveal="up">
@@ -71,6 +99,10 @@
       </div>
     </section>
   </main>
+
+  <footer>
+    <p>&copy; <span id="footer-year">2026</span> Jonathan Pufall | jonathanpufall.com</p>
+  </footer>
 
   <script src="/shared/shared.js"></script>
 </body>

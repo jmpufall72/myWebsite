@@ -7,17 +7,45 @@
   <meta property="og:title" content="Jonathan Pufall">
   <meta property="og:description" content="Entrepreneur, storyteller, and student bridging entertainment, tech, and business.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://jonathanpufall.com/home">
-  <meta property="og:image" content="https://jonathanpufall.com/assets/images/logo.png">
+  <meta property="og:url" content="https://www.jonathanpufall.com/home/">
+  <meta property="og:image" content="https://www.jonathanpufall.com/assets/images/og/logo.png">
   <title>Jonathan Pufall</title>
   <link rel="stylesheet" href="/shared/shared.css">
-  <link rel="stylesheet" href="home.css">
-  <link rel="icon" href="/assets/images/favicon/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/home/home.css">
+  <link rel="canonical" href="https://www.jonathanpufall.com/home/">
+  <link rel="icon" href="/assets/images/favicon/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/assets/images/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/assets/images/favicon/site.webmanifest">
+  <meta name="theme-color" content="#000000">
 </head>
-<body class="page-home"
-      data-page-id="home"
-      data-page-title="Jonathan Pufall"
-      data-page-subtitle="Bridging Entertainment, Tech, and Business">
+<body class="page-home">
+
+  <header>
+    <div class="logo">
+      <a href="/home/"><img src="/assets/images/logo.webp" alt="JP Logo" width="52" height="52"></a>
+    </div>
+    <div>
+      <p class="header-title">Jonathan Pufall</p>
+      <p>Bridging Entertainment, Tech, and Business</p>
+    </div>
+  </header>
+
+  <nav>
+    <div class="nav-toggle-wrapper">
+      <span class="menu-label">Menu</span>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">&#9776;</button>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="/home/" class="active" aria-current="page">Home</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/business_portfolio/">Business Portfolio</a></li>
+      <li><a href="/artistic_portfolio/">Artistic Portfolio</a></li>
+      <li><a href="/technical_portfolio/">Technical Portfolio</a></li>
+      <li><a href="/contact/">Contact</a></li>
+    </ul>
+  </nav>
 
   <!-- Hero -->
   <section id="welcome" data-reveal="up">
@@ -26,11 +54,11 @@
         <h1>Jonathan Pufall</h1>
         <p class="hero-tagline">Entrepreneur, storyteller, and student building at the intersection of business, entertainment, and technology.</p>
         <div class="hero-cta">
-          <a href="/about" class="btn btn-primary">About Me</a>
-          <a href="/contact" class="btn btn-ghost">Get in Touch</a>
+          <a href="/about/" class="btn btn-primary">About Me</a>
+          <a href="/contact/" class="btn btn-ghost">Get in Touch</a>
         </div>
       </div>
-      <img src="/assets/images/headshot.png" alt="Jonathan Pufall" class="hero-headshot" width="300" height="300">
+      <img src="/assets/images/headshot.webp" alt="Jonathan Pufall" class="hero-headshot" width="300" height="300">
     </div>
   </section>
 
@@ -38,7 +66,7 @@
   <section id="pillars" data-reveal="up">
     <h2>What I Do</h2>
     <div class="pillars-grid" data-reveal-stagger>
-      <a href="/business_portfolio" class="pillar-card">
+      <a href="/business_portfolio/" class="pillar-card">
         <div class="pillar-icon">
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg>
         </div>
@@ -46,7 +74,7 @@
         <p>Strategy, finance, and data-driven problem solving. From launching divisions to co-founding startups.</p>
         <span class="pillar-arrow">&rarr;</span>
       </a>
-      <a href="/artistic_portfolio" class="pillar-card">
+      <a href="/artistic_portfolio/" class="pillar-card">
         <div class="pillar-icon">
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
         </div>
@@ -54,7 +82,7 @@
         <p>Lead stage roles, original music, and performances built to give people an experience they remember.</p>
         <span class="pillar-arrow">&rarr;</span>
       </a>
-      <a href="/technical_portfolio" class="pillar-card">
+      <a href="/technical_portfolio/" class="pillar-card">
         <div class="pillar-icon">
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
         </div>
@@ -71,7 +99,7 @@
     <div class="featured-project">
       <div class="featured-layout">
         <div class="featured-logo-wrap">
-          <img src="/assets/images/clientmagnetcrm_logo.png" alt="Client Magnet CRM Logo" class="featured-logo" width="200" height="200" loading="lazy">
+          <img src="/assets/images/clientmagnetcrm_logo.webp" alt="Client Magnet CRM Logo" class="featured-logo" width="200" height="200" loading="lazy">
         </div>
         <div class="featured-info">
           <p class="title"><strong>Co-Founder, Strategy &amp; Finance</strong></p>
@@ -83,11 +111,15 @@
             <span class="tag">Growth Strategy</span>
             <span class="tag">Operations</span>
           </div>
-          <a href="/business_portfolio" class="btn btn-primary btn-sm">View Business Portfolio</a>
+          <a href="/business_portfolio/" class="btn btn-primary btn-sm">View Business Portfolio</a>
         </div>
       </div>
     </div>
   </section>
+
+  <footer>
+    <p>&copy; <span id="footer-year">2026</span> Jonathan Pufall | jonathanpufall.com</p>
+  </footer>
 
   <script src="/shared/shared.js"></script>
 </body>

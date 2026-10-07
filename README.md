@@ -1,24 +1,34 @@
-# Jonathan Pufall - Personal Website  
+# Jonathan Pufall - Personal Website
 
-## Overview  
-This is my personal website, showcasing my journey in entertainment, technology, and business. It serves as a portfolio for my creative and technical work, as well as a platform to connect with others.  
+## Overview
+This is my personal website, showcasing my journey in entertainment, technology, and business. It serves as a portfolio for my creative and technical work, as well as a platform to connect with others.
 
-## Structure  
-- **Homepage:** Introduction and navigation to key sections.  
-- **About Me:** Background, interests, and professional goals.  
-- **Resume:** Downloadable resume and career timeline.   
-- **Technical Portfolio:** Showcasing coding and tech projects.  
-- **Artistic Portfolio:** Music, acting, and other creative work.
-- **Contact** Find my email or social media profiles.
+## Structure
+- **Home** (`/home/`): Introduction and navigation to key sections.
+- **About** (`/about/`): Background, education, and downloadable resume.
+- **Business Portfolio** (`/business_portfolio/`): Experience and case studies.
+- **Artistic Portfolio** (`/artistic_portfolio/`): Stage credits, gallery, and music.
+- **Technical Portfolio** (`/technical_portfolio/`): Coding, 3D, and engineering projects.
+- **Contact** (`/contact/`): Email and social media links.
 
-## Technologies Used  
-- HTML, CSS, JavaScript  
-- GitHub Pages for hosting  
-- VS Code for development  
+Each page lives in its own folder (`index.html` plus a page stylesheet). Shared styles and behavior are in `shared/`, and images, documents, and code samples are in `assets/`.
 
-## Deployment  
-This website is live at: **[jonathanpufall.com](https://jonathanpufall.com)**  
-To update the site, commit changes to the **main** branch and push them to GitHub.  
+## Technologies Used
+- HTML, CSS, JavaScript (no build step)
+- Vercel for hosting
+- VS Code for development
 
-## Contact  
-Feel free to connect with me via [LinkedIn](www.linkedin.com/in/jonathan-pufall) or email at **jmpufall@gmail.com**.  
+## Running Locally
+From the project folder, run:
+
+```
+npx http-server -c-1
+```
+
+Then open http://localhost:8080.
+
+## Deployment
+The site is live at **[jonathanpufall.com](https://www.jonathanpufall.com)** and is hosted on Vercel. Pushing to the **main** branch on GitHub deploys automatically.
+
+## Contact
+Feel free to connect with me via [LinkedIn](https://www.linkedin.com/in/jonathan-pufall) or email at **jmpufall@gmail.com**.

@@ -1,96 +1,38 @@
 /* ========================================
-   shared.js - Dynamic components for jonathanpufall.com
+   shared.js - Shared behavior for jonathanpufall.com
+   (header, nav and footer markup live in each page's HTML)
    ======================================== */
 
 (function () {
   'use strict';
 
-  // ---- Navigation Config ----
-  var NAV_ITEMS = [
-    { label: 'Home',               href: '/home',               id: 'home' },
-    { label: 'About',              href: '/about',              id: 'about' },
-    { label: 'Business Portfolio',  href: '/business_portfolio', id: 'business' },
-    { label: 'Artistic Portfolio',  href: '/artistic_portfolio', id: 'artistic' },
-    { label: 'Technical Portfolio', href: '/technical_portfolio', id: 'technical' },
-    { label: 'Contact',            href: '/contact',            id: 'contact' }
-  ];
+  var body = document.body;
 
-  var CURRENT_YEAR = new Date().getFullYear();
-
-  // ---- Read page config from <body> data attributes ----
-  var body      = document.body;
-  var pageId    = body.dataset.pageId || '';
-  var pageTitle = body.dataset.pageTitle || 'Jonathan Pufall';
-  var pageSub   = body.dataset.pageSubtitle || '';
-
-  // ---- Build Header ----
-  function buildHeader() {
-    var header = document.createElement('header');
-    header.innerHTML =
-      '<div class="logo">' +
-        '<a href="/home">' +
-          '<img src="/assets/images/logo.png" alt="JP Logo">' +
-        '</a>' +
-      '</div>' +
-      '<div>' +
-        '<h1>' + pageTitle + '</h1>' +
-        (pageSub ? '<p>' + pageSub + '</p>' : '') +
-      '</div>';
-    return header;
+  // ---- Footer Year ----
+  var yearEl = document.getElementById('footer-year');
+  if (yearEl) {
+    yearEl.textContent = new Date().getFullYear();
   }
-
-  // ---- Build Nav ----
-  function buildNav() {
-    var nav = document.createElement('nav');
-    var items = '';
-
-    for (var i = 0; i < NAV_ITEMS.length; i++) {
-      var item = NAV_ITEMS[i];
-      var activeClass = item.id === pageId ? ' class="active"' : '';
-      items += '<li><a href="' + item.href + '"' + activeClass + '>' + item.label + '</a></li>\n';
-    }
-
-    nav.innerHTML =
-      '<div class="nav-toggle-wrapper">' +
-        '<span class="menu-label">Menu</span>' +
-        '<button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">\u2630</button>' +
-      '</div>' +
-      '<ul class="nav-links" id="nav-links">' +
-        items +
-      '</ul>';
-    return nav;
-  }
-
-  // ---- Build Footer ----
-  function buildFooter() {
-    var footer = document.createElement('footer');
-    footer.innerHTML = '<p>&copy; ' + CURRENT_YEAR + ' Jonathan Pufall | jonathanpufall.com</p>';
-    return footer;
-  }
-
-  // ---- Inject Components ----
-  var firstChild = body.firstElementChild || body.firstChild;
-  var header = buildHeader();
-  var nav = buildNav();
-
-  body.insertBefore(nav, firstChild);
-  body.insertBefore(header, nav);
-  body.appendChild(buildFooter());
 
   // ---- Nav Toggle (mobile hamburger) ----
   var toggle = document.getElementById('nav-toggle');
   var navLinks = document.getElementById('nav-links');
 
   if (toggle && navLinks) {
+    var setOpen = function (open) {
+      navLinks.classList.toggle('show', open);
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    };
+
     toggle.addEventListener('click', function () {
-      navLinks.classList.toggle('show');
+      setOpen(!navLinks.classList.contains('show'));
     });
 
     // Close nav when a link is clicked (mobile UX)
     var links = navLinks.querySelectorAll('a');
     for (var j = 0; j < links.length; j++) {
       links[j].addEventListener('click', function () {
-        navLinks.classList.remove('show');
+        setOpen(false);
       });
     }
   }

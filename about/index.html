@@ -7,23 +7,51 @@
   <meta property="og:title" content="About - Jonathan Pufall">
   <meta property="og:description" content="Actor, business strategist, and technologist at UW-Madison.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://jonathanpufall.com/about">
-  <meta property="og:image" content="https://jonathanpufall.com/assets/images/jonathan.jpg">
+  <meta property="og:url" content="https://www.jonathanpufall.com/about/">
+  <meta property="og:image" content="https://www.jonathanpufall.com/assets/images/og/headshot.jpg">
   <title>About - Jonathan Pufall</title>
   <link rel="stylesheet" href="/shared/shared.css">
-  <link rel="stylesheet" href="about.css">
-  <link rel="icon" href="/assets/images/favicon/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/about/about.css">
+  <link rel="canonical" href="https://www.jonathanpufall.com/about/">
+  <link rel="icon" href="/assets/images/favicon/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/assets/images/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/assets/images/favicon/site.webmanifest">
+  <meta name="theme-color" content="#000000">
 </head>
-<body class="page-about"
-      data-page-id="about"
-      data-page-title="About"
-      data-page-subtitle="Learn More About Me">
+<body class="page-about">
+
+  <header>
+    <div class="logo">
+      <a href="/home/"><img src="/assets/images/logo.webp" alt="JP Logo" width="52" height="52"></a>
+    </div>
+    <div>
+      <h1>About</h1>
+      <p>Learn More About Me</p>
+    </div>
+  </header>
+
+  <nav>
+    <div class="nav-toggle-wrapper">
+      <span class="menu-label">Menu</span>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">&#9776;</button>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="/home/">Home</a></li>
+      <li><a href="/about/" class="active" aria-current="page">About</a></li>
+      <li><a href="/business_portfolio/">Business Portfolio</a></li>
+      <li><a href="/artistic_portfolio/">Artistic Portfolio</a></li>
+      <li><a href="/technical_portfolio/">Technical Portfolio</a></li>
+      <li><a href="/contact/">Contact</a></li>
+    </ul>
+  </nav>
 
   <main>
     <!-- Hero / Bio -->
     <section class="about-hero" data-reveal="up">
       <div class="about-container">
-        <img src="/assets/images/headshot.png" alt="Jonathan Pufall" class="profile-picture" width="280" height="280">
+        <img src="/assets/images/headshot.webp" alt="Jonathan Pufall" class="profile-picture" width="280" height="280">
         <div class="bio">
           <h2>About Me</h2>
           <p>Originally from Green Bay, Wisconsin, I grew up performing on stage and figuring out how to turn ideas into something real. Today I'm a student at the University of Wisconsin-Madison studying Finance, Investment, and Banking with a Certificate in Theater and Drama.</p>
@@ -161,11 +189,15 @@
       <h2>Resume</h2>
       <div class="resume-container">
         <p class="resume-tagline">View my professional experience and accomplishments.</p>
-        <img src="/assets/images/resume.png" alt="Resume Preview" width="740" height="960" loading="lazy">
+        <img src="/assets/images/resume.webp" alt="Resume Preview" width="740" height="960" loading="lazy">
         <a href="/assets/documents/resume.pdf" target="_blank" class="btn btn-primary">Download Resume</a>
       </div>
     </section>
   </main>
+
+  <footer>
+    <p>&copy; <span id="footer-year">2026</span> Jonathan Pufall | jonathanpufall.com</p>
+  </footer>
 
   <script src="/shared/shared.js"></script>
 </body>

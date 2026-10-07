@@ -43,11 +43,20 @@ document.addEventListener("DOMContentLoaded", () => {
   prevBtn.addEventListener("click", prev, { passive: true });
   nextBtn.addEventListener("click", next, { passive: true });
 
-  // pause on hover
-  function startAuto() { stopAuto(); auto = setInterval(next, AUTO_MS); }
+  // keyboard: arrow keys when the carousel has focus
+  carousel.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowLeft")  { e.preventDefault(); prev(); }
+    if (e.key === "ArrowRight") { e.preventDefault(); next(); }
+  });
+
+  // autoplay, paused on hover/focus and off entirely for reduced motion
+  const reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  function startAuto() { stopAuto(); if (!reduceMotion) auto = setInterval(next, AUTO_MS); }
   function stopAuto()  { if (auto) { clearInterval(auto); auto = null; } }
   carousel.addEventListener("mouseenter", stopAuto);
-  carousel.addEventListener("mouseleave", startAuto);
+  carousel.addEventListener("mouseleave", () => { if (!carousel.contains(document.activeElement)) startAuto(); });
+  carousel.addEventListener("focusin", stopAuto);
+  carousel.addEventListener("focusout", (e) => { if (!carousel.contains(e.relatedTarget)) startAuto(); });
 
   // init
   updateUI();

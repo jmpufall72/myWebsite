@@ -7,17 +7,46 @@
   <meta property="og:title" content="Technical Portfolio - Jonathan Pufall">
   <meta property="og:description" content="Coding projects, 3D environments, and engineering design.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://jonathanpufall.com/technical_portfolio">
+  <meta property="og:url" content="https://www.jonathanpufall.com/technical_portfolio/">
+  <meta property="og:image" content="https://www.jonathanpufall.com/assets/images/og/rocky_desert.jpg">
   <title>Technical Portfolio - Jonathan Pufall</title>
 
   <link rel="stylesheet" href="/shared/shared.css">
-  <link rel="stylesheet" href="technical_portfolio.css">
-  <link rel="icon" href="/assets/images/favicon/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/technical_portfolio/technical_portfolio.css">
+  <link rel="canonical" href="https://www.jonathanpufall.com/technical_portfolio/">
+  <link rel="icon" href="/assets/images/favicon/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/assets/images/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/assets/images/favicon/site.webmanifest">
+  <meta name="theme-color" content="#000000">
 </head>
-<body class="page-technical"
-      data-page-id="technical"
-      data-page-title="Technical Portfolio"
-      data-page-subtitle="A Showcase of my Coding Projects and Technical Skills">
+<body class="page-technical">
+
+  <header>
+    <div class="logo">
+      <a href="/home/"><img src="/assets/images/logo.webp" alt="JP Logo" width="52" height="52"></a>
+    </div>
+    <div>
+      <h1>Technical Portfolio</h1>
+      <p>A Showcase of my Coding Projects and Technical Skills</p>
+    </div>
+  </header>
+
+  <nav>
+    <div class="nav-toggle-wrapper">
+      <span class="menu-label">Menu</span>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">&#9776;</button>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="/home/">Home</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/business_portfolio/">Business Portfolio</a></li>
+      <li><a href="/artistic_portfolio/">Artistic Portfolio</a></li>
+      <li><a href="/technical_portfolio/" class="active" aria-current="page">Technical Portfolio</a></li>
+      <li><a href="/contact/">Contact</a></li>
+    </ul>
+  </nav>
 
   <main>
     <!-- Overview -->
@@ -74,9 +103,9 @@
         </div>
         <p class="showcase-desc">A detailed environment simulation featuring rocky desert terrain with dynamic lighting and weather effects. Built as an exploration of cinematic-quality real-time rendering.</p>
         <div class="showcase-gallery">
-          <img src="/assets/images/unreal_engine/rocky_desert_1.png" alt="Rocky Desert: wide landscape view" loading="lazy" width="400" height="260">
-          <img src="/assets/images/unreal_engine/rocky_desert_2.png" alt="Rocky Desert: lighting detail" loading="lazy" width="400" height="260">
-          <img src="/assets/images/unreal_engine/rocky_desert_3.png" alt="Rocky Desert: terrain close-up" loading="lazy" width="400" height="260">
+          <img src="/assets/images/unreal_engine/rocky_desert_1.webp" alt="Rocky Desert: wide landscape view" loading="lazy" width="400" height="260">
+          <img src="/assets/images/unreal_engine/rocky_desert_2.webp" alt="Rocky Desert: lighting detail" loading="lazy" width="400" height="260">
+          <img src="/assets/images/unreal_engine/rocky_desert_3.webp" alt="Rocky Desert: terrain close-up" loading="lazy" width="400" height="260">
         </div>
         <div class="showcase-tags">
           <span class="tech-tag">Unreal Engine 5</span>
@@ -93,10 +122,10 @@
         </div>
         <p class="showcase-desc">A complex V-12 engine model focused on advanced mechanical engineering principles. Detailed modeling of each component: connecting rod assembly, engine block, and piston, with functional simulation and visualization.</p>
         <div class="showcase-gallery">
-          <img src="/assets/images/solidworks/connecting_rod_assembly.JPG" alt="V-12 Engine: connecting rod assembly" loading="lazy" width="400" height="260">
-          <img src="/assets/images/solidworks/engine_block.JPG" alt="V-12 Engine: engine block" loading="lazy" width="400" height="260">
-          <img src="/assets/images/solidworks/piston.JPG" alt="V-12 Engine: piston detail" loading="lazy" width="400" height="260">
-          <img src="/assets/images/solidworks/engine_block_2.JPG" alt="V-12 Engine: engine block alternate view" loading="lazy" width="400" height="260">
+          <img src="/assets/images/solidworks/connecting_rod_assembly.webp" alt="V-12 Engine: connecting rod assembly" loading="lazy" width="400" height="260">
+          <img src="/assets/images/solidworks/engine_block.webp" alt="V-12 Engine: engine block" loading="lazy" width="400" height="260">
+          <img src="/assets/images/solidworks/piston.webp" alt="V-12 Engine: piston detail" loading="lazy" width="400" height="260">
+          <img src="/assets/images/solidworks/engine_block_2.webp" alt="V-12 Engine: engine block alternate view" loading="lazy" width="400" height="260">
         </div>
         <div class="showcase-tags">
           <span class="tech-tag">SolidWorks</span>
@@ -127,28 +156,28 @@
       <p class="code-intro">Smaller Java projects that showcase practical applications and problem-solving.</p>
 
       <div class="code-grid" data-reveal-stagger>
-        <a href="/assets/code/HardyWeinbergEquilibrium.java" class="code-card" download>
+        <a href="https://github.com/jmpufall72/myWebsite/blob/main/assets/code/HardyWeinbergEquilibrium.java" class="code-card" target="_blank" rel="noopener noreferrer">
           <h3>Hardy-Weinberg Equilibrium</h3>
           <p>Solves the Hardy-Weinberg equation to calculate allele frequencies in a population.</p>
-          <span class="code-lang">Java</span>
+          <span class="code-lang">Java &middot; View on GitHub</span>
         </a>
 
-        <a href="/assets/code/PasswordStrength.java" class="code-card" download>
+        <a href="https://github.com/jmpufall72/myWebsite/blob/main/assets/code/PasswordStrength.java" class="code-card" target="_blank" rel="noopener noreferrer">
           <h3>Password Strength</h3>
           <p>Evaluates password strength based on length, complexity, and character variety.</p>
-          <span class="code-lang">Java</span>
+          <span class="code-lang">Java &middot; View on GitHub</span>
         </a>
 
-        <a href="/assets/code/PlaylistCreation.java" class="code-card" download>
+        <a href="https://github.com/jmpufall72/myWebsite/blob/main/assets/code/PlaylistCreation.java" class="code-card" target="_blank" rel="noopener noreferrer">
           <h3>Playlist Creation</h3>
           <p>Select your top 5 songs from a list and the program automatically shuffles your playlist.</p>
-          <span class="code-lang">Java</span>
+          <span class="code-lang">Java &middot; View on GitHub</span>
         </a>
 
-        <a href="/assets/code/RewrittenRomeoAndJuliet.java" class="code-card" download>
+        <a href="https://github.com/jmpufall72/myWebsite/blob/main/assets/code/RewrittenRomeoAndJuliet.java" class="code-card" target="_blank" rel="noopener noreferrer">
           <h3>Read &amp; Write</h3>
           <p>Input new character names for Romeo &amp; Juliet and generate a rewritten script file.</p>
-          <span class="code-lang">Java</span>
+          <span class="code-lang">Java &middot; View on GitHub</span>
         </a>
       </div>
     </section>
@@ -159,10 +188,14 @@
       <p>Check out my GitHub for more projects, or get in touch to collaborate.</p>
       <div class="cta-buttons">
         <a href="https://github.com/jmpufall72" target="_blank" rel="noopener noreferrer" class="btn btn-primary">GitHub</a>
-        <a href="/contact" class="btn btn-ghost">Contact Me</a>
+        <a href="/contact/" class="btn btn-ghost">Contact Me</a>
       </div>
     </section>
   </main>
+
+  <footer>
+    <p>&copy; <span id="footer-year">2026</span> Jonathan Pufall | jonathanpufall.com</p>
+  </footer>
 
   <script src="/shared/shared.js"></script>
 </body>

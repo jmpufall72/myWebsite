@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>Page Not Found - Jonathan Pufall</title>
+  <link rel="stylesheet" href="/shared/shared.css">
+  <link rel="icon" href="/assets/images/favicon/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/assets/images/favicon/apple-touch-icon.png">
+  <meta name="theme-color" content="#000000">
+  <style>
+    .not-found { max-width: 560px; margin: 0 auto; padding: 100px 24px 40px; }
+    .not-found .code { font-size: clamp(4em, 14vw, 7em); font-weight: 700; margin: 0; letter-spacing: -0.05em; }
+    .not-found p { color: var(--color-text-secondary); line-height: 1.7; margin: 8px 0 32px; }
+    .not-found .actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  </style>
+</head>
+<body class="page-home">
+
+  <header>
+    <div class="logo">
+      <a href="/home/"><img src="/assets/images/logo.webp" alt="JP Logo" width="52" height="52"></a>
+    </div>
+    <div>
+      <h1>Page Not Found</h1>
+      <p>Sorry, that page doesn&#39;t exist</p>
+    </div>
+  </header>
+
+  <nav>
+    <div class="nav-toggle-wrapper">
+      <span class="menu-label">Menu</span>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">&#9776;</button>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="/home/">Home</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/business_portfolio/">Business Portfolio</a></li>
+      <li><a href="/artistic_portfolio/">Artistic Portfolio</a></li>
+      <li><a href="/technical_portfolio/">Technical Portfolio</a></li>
+      <li><a href="/contact/">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main class="not-found">
+    <p class="code section-heading">404</p>
+    <p>The page you're looking for has moved or doesn't exist. Try one of these instead.</p>
+    <div class="actions">
+      <a href="/home/" class="btn btn-primary">Go Home</a>
+      <a href="/contact/" class="btn btn-ghost">Contact Me</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="footer-year">2026</span> Jonathan Pufall | jonathanpufall.com</p>
+  </footer>
+
+  <script src="/shared/shared.js"></script>
+</body>
+</html>

@@ -3,7 +3,7 @@
    ======================================== */
 
 /* ---------- Google Fonts ---------- */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
 
 /* ---------- CSS Custom Properties ---------- */
 :root {
@@ -28,7 +28,7 @@
 
   /* Neutral surfaces */
   --color-header-bg: rgba(17, 17, 17, 0.92);
-  --color-nav-bg: rgba(17, 17, 17, 0.72);
+  --color-nav-bg: rgba(0, 0, 0, 0.72);
   --color-footer-bg: #0a0a0a;
 
   /* Elevation — clean, no inset glow */
@@ -40,6 +40,8 @@
 
   /* Typography */
   --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --tracking-display: 0;
 
   /* Transitions — Apple-style easing */
   --transition-fast: 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
@@ -116,6 +118,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* ---------- Display Typography (titles & headings) ---------- */
+h1, h2, h3,
+.header-title,
+.section-heading {
+  font-family: var(--font-display);
+}
+
 /* ---------- Header ---------- */
 header {
   background: var(--color-header-bg);
@@ -128,7 +137,6 @@ header {
   align-items: center;
   height: 100px;
   position: relative;
-  border-bottom: 1px solid var(--color-border);
 }
 
 header .logo {
@@ -160,7 +168,7 @@ header .header-title {
   margin: 0;
   font-size: 1.8em;
   font-weight: 600;
-  letter-spacing: -0.03em;
+  letter-spacing: var(--tracking-display);
   color: var(--color-text-primary);
 }
 
@@ -204,19 +212,31 @@ header p {
   }
 }
 
-/* ---------- Navigation — frosted glass ---------- */
+/* ---------- Navigation — frosted glass, accent line + outlined pill ---------- */
 nav {
   display: flex;
   justify-content: center;
   background-color: var(--color-nav-bg);
   -webkit-backdrop-filter: saturate(180%) blur(20px);
   backdrop-filter: saturate(180%) blur(20px);
-  padding: 14px 0;
+  padding: 12px 0;
   box-shadow: none;
   border-bottom: 1px solid var(--color-border);
   position: sticky;
   top: 0;
   z-index: 100;
+}
+
+/* Accent line between header and nav, in each page's color */
+nav::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--color-page-accent) 30%, var(--color-page-accent-light) 70%, transparent);
+  pointer-events: none;
 }
 
 .nav-toggle {
@@ -263,6 +283,16 @@ nav {
 .nav-links li a.active {
   color: var(--color-text-primary);
   background: rgba(255, 255, 255, 0.1);
+}
+
+/* Desktop: links sit inside an outlined pill */
+@media screen and (min-width: 1101px) {
+  .nav-links {
+    padding: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 980px;
+    background: rgba(28, 28, 31, 0.8);
+  }
 }
 
 @media screen and (max-width: 1100px) {
@@ -312,9 +342,8 @@ nav {
     top: 100%;
     left: 0;
     width: 100%;
-    background-color: var(--color-nav-bg);
-    -webkit-backdrop-filter: saturate(180%) blur(20px);
-    backdrop-filter: saturate(180%) blur(20px);
+    /* Near-solid: blur can't apply here because the parent nav already uses backdrop-filter */
+    background-color: #08080a;
     overflow: hidden;
     max-height: 0;
     transition: max-height 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
@@ -327,6 +356,7 @@ nav {
 
   .nav-links.show {
     max-height: 500px;
+    padding: 6px 0 12px;
   }
 
   .nav-links li {
@@ -336,9 +366,9 @@ nav {
   .nav-links li a {
     width: 100%;
     font-size: 1rem;
-    padding: 10px 16px;
+    padding: 8px 22px;
     text-align: center;
-    border-radius: var(--radius-sm);
+    border-radius: 980px;
   }
 }
 
@@ -377,11 +407,6 @@ footer a:hover {
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(16px); }
   to   { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes pageReveal {
-  from { opacity: 1; }
-  to   { opacity: 0; }
 }
 
 @keyframes gradientFlow {
@@ -426,24 +451,41 @@ footer a:hover {
 [data-reveal-stagger].revealed > *:nth-child(5) { transition-delay: 0.30s; }
 [data-reveal-stagger].revealed > *:nth-child(6) { transition-delay: 0.36s; }
 
-/* ---------- Page Transition Overlay ---------- */
-.page-transition-overlay {
-  position: fixed;
-  inset: 0;
-  z-index: 9999;
-  background: var(--color-bg-primary);
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+/* ---------- Page Transitions (cross-document View Transitions) ----------
+   Header and nav stay in place while the page content cross-fades.
+   Browsers without support simply navigate normally. */
+@view-transition {
+  navigation: auto;
 }
 
-.page-transition-overlay.fade-in {
-  opacity: 1;
+header {
+  view-transition-name: site-header;
 }
 
-.page-transition-overlay.entering {
-  opacity: 1;
-  animation: pageReveal 0.4s cubic-bezier(0.25, 0.1, 0.25, 1) 0.05s forwards;
+nav {
+  view-transition-name: site-nav;
+}
+
+::view-transition-group(*) {
+  animation-duration: 0.35s;
+  animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+::view-transition-old(root) {
+  animation: vtFadeOut 0.2s cubic-bezier(0.25, 0.1, 0.25, 1) both;
+}
+
+::view-transition-new(root) {
+  animation: vtFadeIn 0.35s cubic-bezier(0.25, 0.1, 0.25, 1) 0.05s both;
+}
+
+@keyframes vtFadeOut {
+  to { opacity: 0; }
+}
+
+@keyframes vtFadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 /* ---------- Shared Overview Section ---------- */
@@ -471,7 +513,7 @@ footer a:hover {
   font-weight: 600;
   margin-bottom: 20px;
   text-align: center;
-  letter-spacing: -0.03em;
+  letter-spacing: var(--tracking-display);
   background: linear-gradient(90deg, var(--color-page-accent), var(--color-page-accent-light));
   -webkit-background-clip: text;
   background-clip: text;
@@ -534,7 +576,7 @@ footer a:hover {
   font-weight: 600;
   text-align: center;
   margin-bottom: 12px;
-  letter-spacing: -0.03em;
+  letter-spacing: var(--tracking-display);
   background: linear-gradient(90deg, var(--color-page-accent), var(--color-page-accent-light));
   -webkit-background-clip: text;
   background-clip: text;
@@ -543,6 +585,10 @@ footer a:hover {
 
 /* ---------- Reduced Motion ---------- */
 @media (prefers-reduced-motion: reduce) {
+  @view-transition {
+    navigation: none;
+  }
+
   *,
   *::before,
   *::after {
@@ -559,10 +605,6 @@ footer a:hover {
   [data-reveal-stagger] > * {
     opacity: 1;
     transform: none;
-  }
-
-  .page-transition-overlay {
-    display: none;
   }
 }
 

@@ -10,7 +10,7 @@
   font-size: 2em;
   font-weight: 600;
   text-align: center;
-  letter-spacing: -0.03em;
+  letter-spacing: var(--tracking-display);
   background: linear-gradient(90deg, var(--color-page-accent), var(--color-page-accent-light));
   -webkit-background-clip: text;
   background-clip: text;
@@ -94,7 +94,7 @@
   font-weight: 600;
   color: var(--color-text-primary);
   margin: 0 0 4px;
-  letter-spacing: -0.02em;
+  letter-spacing: var(--tracking-display);
 }
 
 .exp-role {
@@ -203,7 +203,7 @@
   font-weight: 600;
   color: var(--color-text-primary);
   margin: 0 0 12px;
-  letter-spacing: -0.02em;
+  letter-spacing: var(--tracking-display);
 }
 
 .case-card p {

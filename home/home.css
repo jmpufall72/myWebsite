@@ -28,7 +28,7 @@
   font-size: clamp(2.4em, 5vw, 3.4em);
   font-weight: 700;
   margin-bottom: 16px;
-  letter-spacing: -0.04em;
+  letter-spacing: var(--tracking-display);
   line-height: 1.08;
   background: linear-gradient(90deg, var(--color-page-accent), var(--color-page-accent-light));
   -webkit-background-clip: text;
@@ -85,7 +85,7 @@
   font-size: 2em;
   font-weight: 600;
   margin-bottom: 40px;
-  letter-spacing: -0.03em;
+  letter-spacing: var(--tracking-display);
   background: linear-gradient(90deg, var(--color-page-accent), var(--color-page-accent-light));
   -webkit-background-clip: text;
   background-clip: text;
@@ -128,7 +128,7 @@
   font-weight: 600;
   color: var(--color-text-primary);
   margin: 0 0 10px;
-  letter-spacing: -0.02em;
+  letter-spacing: var(--tracking-display);
 }
 
 .pillar-card p {
@@ -161,7 +161,7 @@
   font-size: 2em;
   font-weight: 600;
   margin-bottom: 32px;
-  letter-spacing: -0.03em;
+  letter-spacing: var(--tracking-display);
   background: linear-gradient(90deg, var(--color-page-accent), var(--color-page-accent-light));
   -webkit-background-clip: text;
   background-clip: text;

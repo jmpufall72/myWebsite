@@ -6,8 +6,6 @@
 (function () {
   'use strict';
 
-  var body = document.body;
-
   // ---- Footer Year ----
   var yearEl = document.getElementById('footer-year');
   if (yearEl) {
@@ -47,54 +45,6 @@
   function gtag() { window.dataLayer.push(arguments); }
   gtag('js', new Date());
   gtag('config', 'G-SF82PDKYSH');
-
-  // ---- Page Transition ----
-  (function initPageTransition() {
-    var overlay = document.createElement('div');
-    overlay.className = 'page-transition-overlay entering';
-    body.appendChild(overlay);
-
-    overlay.addEventListener('animationend', function () {
-      overlay.classList.remove('entering');
-    });
-
-    // Clear the overlay when the page is restored from the back/forward cache
-    window.addEventListener('pageshow', function (e) {
-      if (e.persisted) {
-        overlay.classList.remove('fade-in', 'entering');
-      }
-    });
-
-    document.addEventListener('click', function (e) {
-      // Let the browser handle new-tab/new-window clicks
-      if (e.defaultPrevented || e.button !== 0 ||
-          e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) {
-        return;
-      }
-
-      var link = e.target.closest ? e.target.closest('a[href]') : null;
-      if (!link) return;
-
-      var href = link.getAttribute('href');
-      if (!href) return;
-
-      // Skip external links, anchors, downloads, new-tab links
-      if (href.charAt(0) === '#' ||
-          href.indexOf('http') === 0 ||
-          href.indexOf('mailto:') === 0 ||
-          link.hasAttribute('download') ||
-          link.getAttribute('target') === '_blank') {
-        return;
-      }
-
-      e.preventDefault();
-      overlay.classList.add('fade-in');
-
-      setTimeout(function () {
-        window.location.href = href;
-      }, 300);
-    });
-  })();
 
   // ---- Scroll Reveal via IntersectionObserver ----
   (function initScrollReveal() {

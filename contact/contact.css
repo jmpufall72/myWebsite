@@ -13,7 +13,7 @@
   font-size: 2.2em;
   font-weight: 600;
   margin-bottom: 16px;
-  letter-spacing: -0.03em;
+  letter-spacing: var(--tracking-display);
   background: linear-gradient(90deg, var(--color-page-accent), var(--color-page-accent-light));
   -webkit-background-clip: text;
   background-clip: text;
@@ -76,7 +76,7 @@
   font-weight: 600;
   margin: 0 0 8px;
   color: var(--color-text-primary);
-  letter-spacing: -0.02em;
+  letter-spacing: var(--tracking-display);
 }
 
 .contact-card p {

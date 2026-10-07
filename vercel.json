@@ -1,3 +1,6 @@
 {
-  "trailingSlash": true
+  "trailingSlash": true,
+  "redirects": [
+    { "source": "/", "destination": "/home/", "permanent": true }
+  ]
 }

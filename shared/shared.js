@@ -35,6 +35,57 @@
     }
   }
 
+  // ---- Sliding Nav Highlight ----
+  // A separate pill sits behind the active tab; the page transition animates
+  // it from the old tab's position to the new one.
+  (function initNavIndicator() {
+    var list = document.getElementById('nav-links');
+    var active = list && list.querySelector('a.active');
+    if (!active) return;
+
+    var indicator = document.createElement('li');
+    indicator.className = 'nav-indicator';
+    indicator.setAttribute('aria-hidden', 'true');
+    list.insertBefore(indicator, list.firstChild);
+    list.classList.add('has-indicator');
+
+    // Position relative to the list's padding box (inside its border)
+    function place() {
+      var listRect = list.getBoundingClientRect();
+      var linkRect = active.getBoundingClientRect();
+      var x = linkRect.left - listRect.left - list.clientLeft;
+      var y = linkRect.top - listRect.top - list.clientTop;
+      indicator.style.width = linkRect.width + 'px';
+      indicator.style.height = linkRect.height + 'px';
+      indicator.style.transform = 'translate(' + x + 'px, ' + y + 'px)';
+    }
+
+    place();
+    window.addEventListener('resize', place);
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(place);
+    }
+  })();
+
+  // ---- Page Transition: skip the accent-line fade when the color doesn't change ----
+  function accentColor() {
+    return getComputedStyle(document.body).getPropertyValue('--color-page-accent').trim();
+  }
+
+  window.addEventListener('pageswap', function (e) {
+    if (!e.viewTransition) return;
+    try { sessionStorage.setItem('vt-accent', accentColor()); } catch (err) { /* storage unavailable */ }
+  });
+
+  window.addEventListener('pagereveal', function (e) {
+    if (!e.viewTransition) return;
+    var previous = null;
+    try { previous = sessionStorage.getItem('vt-accent'); } catch (err) { /* storage unavailable */ }
+    if (previous && previous === accentColor() && e.viewTransition.types) {
+      e.viewTransition.types.add('same-accent');
+    }
+  });
+
   // ---- Google Analytics ----
   var gaScript = document.createElement('script');
   gaScript.async = true;

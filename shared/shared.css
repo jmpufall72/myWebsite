@@ -228,8 +228,7 @@ nav {
 }
 
 /* Accent line between header and nav, in each page's color */
-nav::before {
-  content: "";
+.nav-accent {
   position: absolute;
   top: 0;
   left: 0;
@@ -237,6 +236,7 @@ nav::before {
   height: 2px;
   background: linear-gradient(90deg, transparent, var(--color-page-accent) 30%, var(--color-page-accent-light) 70%, transparent);
   pointer-events: none;
+  view-transition-name: nav-accent;
 }
 
 .nav-toggle {
@@ -285,13 +285,40 @@ nav::before {
   background: rgba(255, 255, 255, 0.1);
 }
 
+/* Current-page highlight that slides between tabs (added by shared.js) */
+.nav-indicator {
+  display: none;
+}
+
 /* Desktop: links sit inside an outlined pill */
 @media screen and (min-width: 1101px) {
   .nav-links {
+    position: relative;
     padding: 5px;
     border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: 980px;
     background: rgba(28, 28, 31, 0.8);
+  }
+
+  .nav-links li {
+    position: relative;
+    z-index: 1;
+  }
+
+  .nav-links .nav-indicator {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    border-radius: 980px;
+    background: rgba(255, 255, 255, 0.1);
+    pointer-events: none;
+    view-transition-name: nav-indicator;
+  }
+
+  .nav-links.has-indicator li a.active {
+    background: transparent;
   }
 }
 
@@ -360,13 +387,14 @@ nav::before {
   }
 
   .nav-links li {
-    margin: 4px 0;
+    margin: 3px 0;
   }
 
   .nav-links li a {
-    width: 100%;
+    display: inline-block;
     font-size: 1rem;
-    padding: 8px 22px;
+    line-height: 1.4;
+    padding: 7px 18px;
     text-align: center;
     border-radius: 980px;
   }
@@ -479,8 +507,42 @@ nav {
   animation: vtFadeIn 0.35s cubic-bezier(0.25, 0.1, 0.25, 1) 0.05s both;
 }
 
+/* The highlight is drawn by the transition group itself, so it stays a crisp
+   pill while it slides and resizes (no stretched snapshot) */
+::view-transition-group(nav-indicator) {
+  animation-duration: 0.45s;
+  animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1);
+  border-radius: 980px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+::view-transition-old(nav-indicator),
+::view-transition-new(nav-indicator) {
+  animation: none;
+  opacity: 0;
+}
+
+/* Accent line: old color fades out, then the new color fades in */
+::view-transition-old(nav-accent) {
+  animation: vtFadeOut 0.22s ease-out both;
+}
+
+::view-transition-new(nav-accent) {
+  animation: vtFadeInPlain 0.28s ease-in 0.22s both;
+}
+
+/* Same color on both pages: keep the line steady */
+html:active-view-transition-type(same-accent)::view-transition-old(nav-accent),
+html:active-view-transition-type(same-accent)::view-transition-new(nav-accent) {
+  animation: none;
+}
+
 @keyframes vtFadeOut {
   to { opacity: 0; }
+}
+
+@keyframes vtFadeInPlain {
+  from { opacity: 0; }
 }
 
 @keyframes vtFadeIn {

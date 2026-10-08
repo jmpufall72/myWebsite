@@ -504,7 +504,7 @@ nav {
 }
 
 ::view-transition-new(root) {
-  animation: vtFadeIn 0.35s cubic-bezier(0.25, 0.1, 0.25, 1) 0.05s both;
+  animation: vtFadeInPlain 0.35s cubic-bezier(0.25, 0.1, 0.25, 1) 0.05s both;
 }
 
 /* The highlight is drawn by the transition group itself, so it stays a crisp
@@ -543,11 +543,6 @@ html:active-view-transition-type(same-accent)::view-transition-new(nav-accent) {
 
 @keyframes vtFadeInPlain {
   from { opacity: 0; }
-}
-
-@keyframes vtFadeIn {
-  from { opacity: 0; transform: translateY(8px); }
-  to   { opacity: 1; transform: translateY(0); }
 }
 
 /* ---------- Shared Overview Section ---------- */

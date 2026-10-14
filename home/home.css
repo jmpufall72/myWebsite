@@ -4,12 +4,9 @@
 
 /* ---------- Hero Section ---------- */
 #welcome {
-  background: linear-gradient(135deg, #0a0a0a, #1a0810, #2a0a14, #1a0c12, #0a0a0a);
-  background-size: 300% 300%;
-  animation: gradientFlow 18s ease infinite;
+  background: linear-gradient(135deg, #0a0a0a, #1a0810, #1a0c12, #0a0a0a);
   color: var(--color-text-primary);
   padding: 120px 24px 100px;
-  position: relative;
 }
 
 .welcome-container {

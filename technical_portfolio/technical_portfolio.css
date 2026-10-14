@@ -21,9 +21,7 @@
 /* ---------- Overview ---------- */
 .tech-overview {
   padding: 80px 24px;
-  background: linear-gradient(135deg, #0a0a0a, #0c1a10, #102818, #0a1510, #0a0a0a);
-  background-size: 300% 300%;
-  animation: gradientFlow 18s ease infinite;
+  background: linear-gradient(135deg, #0a0a0a, #0c1a10, #0a1510, #0a0a0a);
 }
 
 .tech-overview h2 {

@@ -437,10 +437,60 @@ footer a:hover {
   to   { opacity: 1; transform: translateY(0); }
 }
 
-@keyframes gradientFlow {
-  0%   { background-position: 0% 50%; }
-  50%  { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+/* ---------- Color Bloom ----------
+   Two soft glows in the page's accent color drift along separate wandering
+   paths. Their loops have different lengths (23s / 31s), so the combined
+   motion takes ~12 minutes to repeat and never reads as back-and-forth. */
+.color-bloom {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.color-bloom::before,
+.color-bloom::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: max(70%, 460px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  pointer-events: none;
+  will-change: transform;
+}
+
+.color-bloom::before {
+  top: -35%;
+  left: -10%;
+  background: radial-gradient(circle, color-mix(in srgb, var(--color-page-accent) 26%, transparent) 0%, transparent 62%);
+  animation: bloomDriftA 23s ease-in-out infinite;
+}
+
+.color-bloom::after {
+  bottom: -40%;
+  right: -10%;
+  background: radial-gradient(circle, color-mix(in srgb, var(--color-page-accent-light) 18%, transparent) 0%, transparent 62%);
+  animation: bloomDriftB 31s ease-in-out infinite;
+}
+
+@keyframes bloomDriftA {
+  0%   { transform: translate(0, 0) scale(1); }
+  17%  { transform: translate(38%, 22%) scale(1.15); }
+  33%  { transform: translate(12%, 48%) scale(0.92); }
+  51%  { transform: translate(58%, 30%) scale(1.08); }
+  68%  { transform: translate(30%, -4%) scale(1.2); }
+  84%  { transform: translate(-6%, 26%) scale(0.98); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+
+@keyframes bloomDriftB {
+  0%   { transform: translate(0, 0) scale(1); }
+  14%  { transform: translate(-30%, -18%) scale(0.9); }
+  31%  { transform: translate(-54%, 6%) scale(1.12); }
+  47%  { transform: translate(-22%, -40%) scale(1.04); }
+  63%  { transform: translate(-60%, -26%) scale(0.94); }
+  80%  { transform: translate(-12%, -8%) scale(1.18); }
+  100% { transform: translate(0, 0) scale(1); }
 }
 
 /* ---------- Scroll Reveal ---------- */
@@ -522,13 +572,13 @@ nav {
   opacity: 0;
 }
 
-/* Accent line: old color fades out, then the new color fades in */
+/* Accent line: old color fades out, then the new color sweeps out from the center */
 ::view-transition-old(nav-accent) {
-  animation: vtFadeOut 0.22s ease-out both;
+  animation: vtFadeOut 0.25s ease-out both;
 }
 
 ::view-transition-new(nav-accent) {
-  animation: vtFadeInPlain 0.28s ease-in 0.22s both;
+  animation: vtAccentIn 0.55s cubic-bezier(0.22, 1, 0.36, 1) 0.15s both;
 }
 
 /* Same color on both pages: keep the line steady */
@@ -539,6 +589,11 @@ html:active-view-transition-type(same-accent)::view-transition-new(nav-accent) {
 
 @keyframes vtFadeOut {
   to { opacity: 0; }
+}
+
+@keyframes vtAccentIn {
+  from { clip-path: inset(0 50% 0 50%); opacity: 0.5; }
+  to   { clip-path: inset(0 0 0 0); opacity: 1; }
 }
 
 @keyframes vtFadeInPlain {

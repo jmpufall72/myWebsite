@@ -20,9 +20,7 @@
 /* ---------- Overview ---------- */
 .biz-overview {
   padding: 80px 24px;
-  background: linear-gradient(135deg, #0a0a0a, #0c1020, #101830, #0c1225, #0a0a0a);
-  background-size: 300% 300%;
-  animation: gradientFlow 18s ease infinite;
+  background: linear-gradient(135deg, #0a0a0a, #0c1020, #0c1225, #0a0a0a);
 }
 
 .biz-overview h2 {

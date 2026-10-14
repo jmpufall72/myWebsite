@@ -627,6 +627,13 @@ html:active-view-transition-type(same-accent)::view-transition-new(nav-accent) {
   border-color: rgba(255, 255, 255, 0.3);
 }
 
+/* ---------- Resume "last updated" note ---------- */
+.resume-updated {
+  margin: 14px 0 0;
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+}
+
 /* ---------- Section Heading Utility ---------- */
 .section-heading {
   font-size: 2em;

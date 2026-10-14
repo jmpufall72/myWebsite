@@ -290,6 +290,12 @@
   margin: 0 0 28px;
 }
 
+.biz-cta .resume-updated {
+  margin: 20px 0 0;
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+}
+
 .cta-buttons {
   display: flex;
   gap: 12px;

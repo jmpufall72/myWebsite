@@ -168,6 +168,10 @@
   -webkit-text-fill-color: transparent;
 }
 
+.featured-project + .featured-project {
+  margin-top: 24px;
+}
+
 .featured-project {
   max-width: 860px;
   margin: 0 auto;
